@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
-
+import StarryBackground from "@/components/ui/StarryBackground/StarryBackground";
 const montserrat = Montserrat({
   subsets: ["latin"],
   variable: "--font-montserrat",
@@ -14,7 +14,8 @@ export const metadata: Metadata = {
 export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
   return (
     <html lang="fr">
-      <body style={{fontFamily: 'var(--font-montserrat)'}} className={montserrat.variable}>
+      <body style={{fontFamily: 'var(--font-montserrat)', height: '100vh', margin: 0, padding: 0, width: '100vw'}} className={montserrat.variable}>
+        <StarryBackground />
         <main>
           {children}
         </main>
