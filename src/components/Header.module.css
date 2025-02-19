@@ -3,9 +3,8 @@
   position: fixed;
   top: 0;
   z-index: 50;
-  background-color: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid #e5e5e5;
+  background-color: transparent;
+  box-shadow: 0 1px 2px 0 rgba(255, 255, 255, 0.05);
 }
 
 .container {
@@ -19,10 +18,11 @@
 
 .logo {
   font-size: 1.125rem;
-  font-weight: 500;
+  font-weight: 600;
   display: flex;
   align-items: center;
   gap: 1rem;
+  color: #f1f1f1;
 }
 
 .profileImage {
@@ -44,17 +44,17 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: #4b5563;
+  color: #f1f1f1;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .navLink:hover {
-  color: #2563eb;
+  color: #748cda;
 }
 
 .active {
-  color: #2563eb;
+  color: #748cda;
 }
 
 .icon {
