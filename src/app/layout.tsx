@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import StarryBackground from "@/components/ui/StarryBackground/StarryBackground";
+import Header from "@/components/ui/Header/Header";
+
 const montserrat = Montserrat({
   subsets: ["latin"],
   variable: "--font-montserrat",
@@ -16,7 +18,12 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
     <html lang="fr">
       <body style={{fontFamily: 'var(--font-montserrat)', height: '100vh', margin: 0, padding: 0, width: '100vw'}} className={montserrat.variable}>
         <StarryBackground />
-        <main>
+        <Header />
+        <main style={{
+          paddingTop: '70px', // Pour compenser la hauteur du header fixe
+          position: 'relative',
+          zIndex: 1
+        }}>
           {children}
         </main>
       </body>
