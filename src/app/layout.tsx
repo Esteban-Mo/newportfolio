@@ -16,7 +16,37 @@ export const metadata: Metadata = {
 export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
   return (
     <html lang="fr">
-      <body style={{fontFamily: 'var(--font-montserrat)', height: '100vh', margin: 0, padding: 0, width: '100vw', overflowX: 'hidden'}} className={montserrat.variable}>
+      <head>
+        <style>
+          {`
+            ::-webkit-scrollbar {
+              width: 8px;
+            }
+            ::-webkit-scrollbar-track {
+              background:rgb(17, 17, 17);
+            }
+            ::-webkit-scrollbar-thumb {
+              background: rgba(148, 163, 184, 0.3);
+              border-radius: 4px;
+            }
+            ::-webkit-scrollbar-thumb:hover {
+              background: rgba(148, 163, 184, 0.5);
+            }
+            * {
+              scrollbar-width: thin;
+              scrollbar-color: rgba(148, 163, 184, 0.3) rgb(17, 17, 17);
+            }
+          `}
+        </style>
+      </head>
+      <body style={{
+        fontFamily: 'var(--font-montserrat)',
+        height: '100vh',
+        margin: 0,
+        padding: 0,
+        width: '100vw',
+        overflowX: 'hidden'
+      }} className={montserrat.variable}>
         <StarryBackground />
         <Header />
         <main style={{
