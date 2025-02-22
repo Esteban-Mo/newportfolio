@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
   return (
     <html lang="fr">
-      <body style={{fontFamily: 'var(--font-montserrat)', height: '100vh', margin: 0, padding: 0, width: '100vw'}} className={montserrat.variable}>
+      <body style={{fontFamily: 'var(--font-montserrat)', height: '100vh', margin: 0, padding: 0, width: '100vw', overflowX: 'hidden'}} className={montserrat.variable}>
         <StarryBackground />
         <Header />
         <main style={{
