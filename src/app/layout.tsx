@@ -35,24 +35,35 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
             * {
               scrollbar-width: thin;
               scrollbar-color: rgba(148, 163, 184, 0.3) rgb(17, 17, 17);
+              box-sizing: border-box;
+            }
+            body {
+              margin: 0;
+              padding: 0;
+              overflow-x: hidden;
+              width: 100%;
             }
           `}
         </style>
       </head>
       <body style={{
         fontFamily: 'var(--font-montserrat)',
-        height: '100vh',
+        minHeight: '100vh',
         margin: 0,
         padding: 0,
-        width: '100vw',
-        overflowX: 'hidden'
+        width: '100%',
+        overflowX: 'hidden',
+        position: 'relative'
       }} className={montserrat.variable}>
         <StarryBackground />
         <Header />
         <main style={{
-          paddingTop: '70px', // Pour compenser la hauteur du header fixe
+          paddingTop: '70px',
           position: 'relative',
-          zIndex: 1
+          zIndex: 1,
+          width: '100%',
+          maxWidth: '100%',
+          overflowX: 'hidden'
         }}>
           {children}
         </main>

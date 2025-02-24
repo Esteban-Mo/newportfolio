@@ -1,5 +1,6 @@
 'use client';
 
+import './style.css';
 export default function Home() {
   return (
     <div style={{
@@ -16,7 +17,8 @@ export default function Home() {
         justifyContent: 'center',
         alignItems: 'center',
         padding: '2rem 1rem',
-        boxSizing: 'border-box'
+        boxSizing: 'border-box',
+        position: 'relative'
       }}>
         <h1 style={{
           color: '#fff',
@@ -46,6 +48,29 @@ export default function Home() {
         }}>
           EXPERT EN INGÉNIERIE LOGICIELLE
         </h2>
+
+        {/* Indicateur de scroll avec chevrons améliorés */}
+        <div style={{
+          position: 'absolute',
+          bottom: '2rem',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: '8px'
+        }}>
+          <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            gap: '4px'
+          }}>
+            <div className="scroll-chevron scroll-chevron-1" />
+            <div className="scroll-chevron scroll-chevron-2" />
+            <div className="scroll-chevron scroll-chevron-3" />
+          </div>
+        </div>
       </section>
 
       {/* Section Compétences */}
