@@ -8,19 +8,13 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import Image from 'next/image';
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
+import styles from './Header.module.css';
 
 export default function Header() {
     const pathname = usePathname();
-    const linkStyle = {
-        display: 'flex',
-        alignItems: 'center',
-        gap: '0.5rem',
-        color: '#fff',
-        textDecoration: 'none',
-        fontSize: '1rem',
-        transition: 'color 0.3s ease'
-    };
-
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [hoveredLink, setHoveredLink] = useState<string | null>(null);
 
     const getLinkColor = (path: string, linkId: string) => {
@@ -29,58 +23,31 @@ export default function Header() {
     };
 
     return (
-        <header style={{
-            width: '100%',
-            height: '70px',
-            backdropFilter: 'blur(10px)',
-            display: 'grid',
-            gridTemplateColumns: '300px 1fr 300px',
-            alignItems: 'center',
-            padding: '0 2rem',
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            zIndex: 1000,
-            borderBottom: '1px solid rgba(148, 163, 184, 0.1)'
-        }}>
-            <div style={{
-                color: '#fff',
-                fontSize: '1.5rem',
-                fontWeight: 'bold',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '1rem'
-            }}>
-                <div style={{
-                    position: 'relative',
-                    width: '45px',
-                    height: '45px',
-                    borderRadius: '8px',
-                    overflow: 'hidden'
-                }}>
+        <header className={styles.header}>
+            <div className={styles.logo}>
+                <div className={styles.imageContainer}>
                     <Image
                         src="/images/me.jpg"
                         alt="Esteban Mortier"
                         fill
-                        style={{
-                            objectFit: 'cover'
-                        }}
+                        style={{ objectFit: 'cover' }}
                     />
                 </div>
                 Esteban Mortier
             </div>
             
-            <nav style={{
-                display: 'flex',
-                gap: '2rem',
-                justifyContent: 'center'
-            }}>
+            <button 
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className={styles.mobileMenuButton}
+            >
+                {isMenuOpen ? <CloseIcon /> : <MenuIcon />}
+            </button>
+
+            <nav className={styles.desktopNav}>
                 <Link 
                     href="/" 
-                    style={{
-                        ...linkStyle,
-                        color: getLinkColor('/', 'home')
-                    }}
+                    className={styles.link}
+                    style={{ color: getLinkColor('/', 'home') }}
                     onMouseEnter={() => setHoveredLink('home')}
                     onMouseLeave={() => setHoveredLink(null)}
                 >
@@ -88,10 +55,8 @@ export default function Header() {
                 </Link>
                 <Link 
                     href="/realisations" 
-                    style={{
-                        ...linkStyle,
-                        color: getLinkColor('/realisations', 'realisations')
-                    }}
+                    className={styles.link}
+                    style={{ color: getLinkColor('/realisations', 'realisations') }}
                     onMouseEnter={() => setHoveredLink('realisations')}
                     onMouseLeave={() => setHoveredLink(null)}
                 >
@@ -99,10 +64,8 @@ export default function Header() {
                 </Link>
                 <Link 
                     href="/competences" 
-                    style={{
-                        ...linkStyle,
-                        color: getLinkColor('/competences', 'competences')
-                    }}
+                    className={styles.link}
+                    style={{ color: getLinkColor('/competences', 'competences') }}
                     onMouseEnter={() => setHoveredLink('competences')}
                     onMouseLeave={() => setHoveredLink(null)}
                 >
@@ -110,17 +73,57 @@ export default function Header() {
                 </Link>
                 <Link 
                     href="/contact" 
-                    style={{
-                        ...linkStyle,
-                        color: getLinkColor('/contact', 'contact')
-                    }}
+                    className={styles.link}
+                    style={{ color: getLinkColor('/contact', 'contact') }}
                     onMouseEnter={() => setHoveredLink('contact')}
                     onMouseLeave={() => setHoveredLink(null)}
                 >
                     <ContactMailIcon /> Contact
                 </Link>
             </nav>
-            <div></div>
+
+            <nav className={`${styles.mobileMenu} ${isMenuOpen ? styles.mobileMenuOpen : ''}`}>
+                <Link 
+                    href="/" 
+                    className={`${styles.link} ${styles.mobileLink}`}
+                    style={{ color: getLinkColor('/', 'home') }}
+                    onMouseEnter={() => setHoveredLink('home')}
+                    onMouseLeave={() => setHoveredLink(null)}
+                    onClick={() => setIsMenuOpen(false)}
+                >
+                    <HomeIcon /> Accueil
+                </Link>
+                <Link 
+                    href="/realisations" 
+                    className={`${styles.link} ${styles.mobileLink}`}
+                    style={{ color: getLinkColor('/realisations', 'realisations') }}
+                    onMouseEnter={() => setHoveredLink('realisations')}
+                    onMouseLeave={() => setHoveredLink(null)}
+                    onClick={() => setIsMenuOpen(false)}
+                >
+                    <WorkIcon /> Réalisations
+                </Link>
+                <Link 
+                    href="/competences" 
+                    className={`${styles.link} ${styles.mobileLink}`}
+                    style={{ color: getLinkColor('/competences', 'competences') }}
+                    onMouseEnter={() => setHoveredLink('competences')}
+                    onMouseLeave={() => setHoveredLink(null)}
+                    onClick={() => setIsMenuOpen(false)}
+                >
+                    <CodeIcon /> Compétences
+                </Link>
+                <Link 
+                    href="/contact" 
+                    className={`${styles.link} ${styles.mobileLink}`}
+                    style={{ color: getLinkColor('/contact', 'contact') }}
+                    onMouseEnter={() => setHoveredLink('contact')}
+                    onMouseLeave={() => setHoveredLink(null)}
+                    onClick={() => setIsMenuOpen(false)}
+                >
+                    <ContactMailIcon /> Contact
+                </Link>
+            </nav>
         </header>
     );
 } 
