@@ -2,6 +2,46 @@
 
 import './style.css';
 export default function Home() {
+  // Style commun pour toutes les cartes
+  const cardStyle = {
+    backgroundColor: 'rgba(255,255,255,0.05)',
+    borderRadius: '1rem',
+    border: '1px solid rgba(255,255,255,0.1)',
+    padding: '2rem',
+    paddingBottom: '4rem',
+    display: 'flex',
+    flexDirection: 'column' as const,
+    gap: '1.5rem',
+    position: 'relative' as const,
+    transition: 'all 0.3s ease',
+    cursor: 'pointer',
+    boxSizing: 'border-box' as const,
+    overflow: 'hidden' as const,
+    minHeight: '200px', // Assure une hauteur minimale pour le positionnement
+  };
+
+  // Indicateur "En savoir plus"
+  const moreInfoIndicator = (
+    <div style={{
+      position: 'absolute',
+      bottom: '1.5rem',
+      left: '2rem',
+      display: 'flex',
+      alignItems: 'center',
+      gap: '0.5rem',
+      fontSize: '0.9rem',
+      color: '#60A5FA',
+      opacity: 0.8,
+      transition: 'all 0.3s ease',
+    }}>
+      <span>En savoir plus</span>
+      <span style={{ 
+        fontSize: '1.2rem',
+        transition: 'transform 0.3s ease'
+      }}>→</span>
+    </div>
+  );
+
   return (
     <div style={{
       width: '100%',
@@ -120,29 +160,42 @@ export default function Home() {
             boxSizing: 'border-box'
           }}>
             {/* Architecture Logicielle */}
-            <div style={{
-              backgroundColor: 'rgba(255,255,255,0.05)',
-              borderRadius: '1rem',
-              border: '1px solid rgba(255,255,255,0.1)',
-              padding: '2rem',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '1.5rem',
-              position: 'relative',
-              transition: 'all 0.3s ease',
-              cursor: 'pointer',
-              boxSizing: 'border-box'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'translateY(-5px)';
-              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.08)';
-              e.currentTarget.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.05)';
-              e.currentTarget.style.boxShadow = 'none';
-            }}>
+            <div 
+              style={cardStyle}
+              onMouseEnter={(e) => {
+                const target = e.currentTarget as HTMLDivElement;
+                target.style.transform = 'translateY(-5px)';
+                target.style.backgroundColor = 'rgba(255,255,255,0.08)';
+                target.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
+                
+                const moreInfo = target.querySelector('[data-more-info]') as HTMLDivElement;
+                if (moreInfo) {
+                  moreInfo.style.color = '#93C5FD';
+                  moreInfo.style.opacity = '1';
+                  const arrow = moreInfo.querySelector('span:last-child') as HTMLSpanElement;
+                  if (arrow) {
+                    arrow.style.transform = 'translateX(5px)';
+                  }
+                }
+              }}
+              onMouseLeave={(e) => {
+                const target = e.currentTarget as HTMLDivElement;
+                target.style.transform = 'translateY(0)';
+                target.style.backgroundColor = 'rgba(255,255,255,0.05)';
+                target.style.boxShadow = 'none';
+                
+                const moreInfo = target.querySelector('[data-more-info]') as HTMLDivElement;
+                if (moreInfo) {
+                  moreInfo.style.color = '#60A5FA';
+                  moreInfo.style.opacity = '0.8';
+                  const arrow = moreInfo.querySelector('span:last-child') as HTMLSpanElement;
+                  if (arrow) {
+                    arrow.style.transform = 'translateX(0)';
+                  }
+                }
+              }}
+            >
+              {moreInfoIndicator}
               <div style={{
                 position: 'absolute',
                 top: '1rem',
@@ -172,29 +225,42 @@ export default function Home() {
             </div>
 
             {/* Développement Frontend */}
-            <div style={{
-              backgroundColor: 'rgba(255,255,255,0.05)',
-              borderRadius: '1rem',
-              border: '1px solid rgba(255,255,255,0.1)',
-              padding: '2rem',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '1.5rem',
-              position: 'relative',
-              transition: 'all 0.3s ease',
-              cursor: 'pointer',
-              boxSizing: 'border-box'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'translateY(-5px)';
-              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.08)';
-              e.currentTarget.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.05)';
-              e.currentTarget.style.boxShadow = 'none';
-            }}>
+            <div 
+              style={cardStyle}
+              onMouseEnter={(e) => {
+                const target = e.currentTarget as HTMLDivElement;
+                target.style.transform = 'translateY(-5px)';
+                target.style.backgroundColor = 'rgba(255,255,255,0.08)';
+                target.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
+                
+                const moreInfo = target.querySelector('[data-more-info]') as HTMLDivElement;
+                if (moreInfo) {
+                  moreInfo.style.color = '#93C5FD';
+                  moreInfo.style.opacity = '1';
+                  const arrow = moreInfo.querySelector('span:last-child') as HTMLSpanElement;
+                  if (arrow) {
+                    arrow.style.transform = 'translateX(5px)';
+                  }
+                }
+              }}
+              onMouseLeave={(e) => {
+                const target = e.currentTarget as HTMLDivElement;
+                target.style.transform = 'translateY(0)';
+                target.style.backgroundColor = 'rgba(255,255,255,0.05)';
+                target.style.boxShadow = 'none';
+                
+                const moreInfo = target.querySelector('[data-more-info]') as HTMLDivElement;
+                if (moreInfo) {
+                  moreInfo.style.color = '#60A5FA';
+                  moreInfo.style.opacity = '0.8';
+                  const arrow = moreInfo.querySelector('span:last-child') as HTMLSpanElement;
+                  if (arrow) {
+                    arrow.style.transform = 'translateX(0)';
+                  }
+                }
+              }}
+            >
+              {moreInfoIndicator}
               <div style={{
                 position: 'absolute',
                 top: '1rem',
@@ -224,29 +290,42 @@ export default function Home() {
             </div>
 
             {/* Développement Backend */}
-            <div style={{
-              backgroundColor: 'rgba(255,255,255,0.05)',
-              borderRadius: '1rem',
-              border: '1px solid rgba(255,255,255,0.1)',
-              padding: '2rem',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '1.5rem',
-              position: 'relative',
-              transition: 'all 0.3s ease',
-              cursor: 'pointer',
-              boxSizing: 'border-box'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'translateY(-5px)';
-              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.08)';
-              e.currentTarget.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.05)';
-              e.currentTarget.style.boxShadow = 'none';
-            }}>
+            <div 
+              style={cardStyle}
+              onMouseEnter={(e) => {
+                const target = e.currentTarget as HTMLDivElement;
+                target.style.transform = 'translateY(-5px)';
+                target.style.backgroundColor = 'rgba(255,255,255,0.08)';
+                target.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
+                
+                const moreInfo = target.querySelector('[data-more-info]') as HTMLDivElement;
+                if (moreInfo) {
+                  moreInfo.style.color = '#93C5FD';
+                  moreInfo.style.opacity = '1';
+                  const arrow = moreInfo.querySelector('span:last-child') as HTMLSpanElement;
+                  if (arrow) {
+                    arrow.style.transform = 'translateX(5px)';
+                  }
+                }
+              }}
+              onMouseLeave={(e) => {
+                const target = e.currentTarget as HTMLDivElement;
+                target.style.transform = 'translateY(0)';
+                target.style.backgroundColor = 'rgba(255,255,255,0.05)';
+                target.style.boxShadow = 'none';
+                
+                const moreInfo = target.querySelector('[data-more-info]') as HTMLDivElement;
+                if (moreInfo) {
+                  moreInfo.style.color = '#60A5FA';
+                  moreInfo.style.opacity = '0.8';
+                  const arrow = moreInfo.querySelector('span:last-child') as HTMLSpanElement;
+                  if (arrow) {
+                    arrow.style.transform = 'translateX(0)';
+                  }
+                }
+              }}
+            >
+              {moreInfoIndicator}
               <div style={{
                 position: 'absolute',
                 top: '1rem',
@@ -276,29 +355,42 @@ export default function Home() {
             </div>
 
             {/* Tests & Qualité */}
-            <div style={{
-              backgroundColor: 'rgba(255,255,255,0.05)',
-              borderRadius: '1rem',
-              border: '1px solid rgba(255,255,255,0.1)',
-              padding: '2rem',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '1.5rem',
-              position: 'relative',
-              transition: 'all 0.3s ease',
-              cursor: 'pointer',
-              boxSizing: 'border-box'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'translateY(-5px)';
-              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.08)';
-              e.currentTarget.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.05)';
-              e.currentTarget.style.boxShadow = 'none';
-            }}>
+            <div 
+              style={cardStyle}
+              onMouseEnter={(e) => {
+                const target = e.currentTarget as HTMLDivElement;
+                target.style.transform = 'translateY(-5px)';
+                target.style.backgroundColor = 'rgba(255,255,255,0.08)';
+                target.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
+                
+                const moreInfo = target.querySelector('[data-more-info]') as HTMLDivElement;
+                if (moreInfo) {
+                  moreInfo.style.color = '#93C5FD';
+                  moreInfo.style.opacity = '1';
+                  const arrow = moreInfo.querySelector('span:last-child') as HTMLSpanElement;
+                  if (arrow) {
+                    arrow.style.transform = 'translateX(5px)';
+                  }
+                }
+              }}
+              onMouseLeave={(e) => {
+                const target = e.currentTarget as HTMLDivElement;
+                target.style.transform = 'translateY(0)';
+                target.style.backgroundColor = 'rgba(255,255,255,0.05)';
+                target.style.boxShadow = 'none';
+                
+                const moreInfo = target.querySelector('[data-more-info]') as HTMLDivElement;
+                if (moreInfo) {
+                  moreInfo.style.color = '#60A5FA';
+                  moreInfo.style.opacity = '0.8';
+                  const arrow = moreInfo.querySelector('span:last-child') as HTMLSpanElement;
+                  if (arrow) {
+                    arrow.style.transform = 'translateX(0)';
+                  }
+                }
+              }}
+            >
+              {moreInfoIndicator}
               <div style={{
                 position: 'absolute',
                 top: '1rem',
@@ -328,29 +420,42 @@ export default function Home() {
             </div>
 
             {/* DevOps */}
-            <div style={{
-              backgroundColor: 'rgba(255,255,255,0.05)',
-              borderRadius: '1rem',
-              border: '1px solid rgba(255,255,255,0.1)',
-              padding: '2rem',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '1.5rem',
-              position: 'relative',
-              transition: 'all 0.3s ease',
-              cursor: 'pointer',
-              boxSizing: 'border-box'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'translateY(-5px)';
-              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.08)';
-              e.currentTarget.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.05)';
-              e.currentTarget.style.boxShadow = 'none';
-            }}>
+            <div 
+              style={cardStyle}
+              onMouseEnter={(e) => {
+                const target = e.currentTarget as HTMLDivElement;
+                target.style.transform = 'translateY(-5px)';
+                target.style.backgroundColor = 'rgba(255,255,255,0.08)';
+                target.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
+                
+                const moreInfo = target.querySelector('[data-more-info]') as HTMLDivElement;
+                if (moreInfo) {
+                  moreInfo.style.color = '#93C5FD';
+                  moreInfo.style.opacity = '1';
+                  const arrow = moreInfo.querySelector('span:last-child') as HTMLSpanElement;
+                  if (arrow) {
+                    arrow.style.transform = 'translateX(5px)';
+                  }
+                }
+              }}
+              onMouseLeave={(e) => {
+                const target = e.currentTarget as HTMLDivElement;
+                target.style.transform = 'translateY(0)';
+                target.style.backgroundColor = 'rgba(255,255,255,0.05)';
+                target.style.boxShadow = 'none';
+                
+                const moreInfo = target.querySelector('[data-more-info]') as HTMLDivElement;
+                if (moreInfo) {
+                  moreInfo.style.color = '#60A5FA';
+                  moreInfo.style.opacity = '0.8';
+                  const arrow = moreInfo.querySelector('span:last-child') as HTMLSpanElement;
+                  if (arrow) {
+                    arrow.style.transform = 'translateX(0)';
+                  }
+                }
+              }}
+            >
+              {moreInfoIndicator}
               <div style={{
                 position: 'absolute',
                 top: '1rem',
@@ -380,29 +485,42 @@ export default function Home() {
             </div>
 
             {/* Clean Code */}
-            <div style={{
-              backgroundColor: 'rgba(255,255,255,0.05)',
-              borderRadius: '1rem',
-              border: '1px solid rgba(255,255,255,0.1)',
-              padding: '2rem',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '1.5rem',
-              position: 'relative',
-              transition: 'all 0.3s ease',
-              cursor: 'pointer',
-              boxSizing: 'border-box'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'translateY(-5px)';
-              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.08)';
-              e.currentTarget.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.05)';
-              e.currentTarget.style.boxShadow = 'none';
-            }}>
+            <div 
+              style={cardStyle}
+              onMouseEnter={(e) => {
+                const target = e.currentTarget as HTMLDivElement;
+                target.style.transform = 'translateY(-5px)';
+                target.style.backgroundColor = 'rgba(255,255,255,0.08)';
+                target.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
+                
+                const moreInfo = target.querySelector('[data-more-info]') as HTMLDivElement;
+                if (moreInfo) {
+                  moreInfo.style.color = '#93C5FD';
+                  moreInfo.style.opacity = '1';
+                  const arrow = moreInfo.querySelector('span:last-child') as HTMLSpanElement;
+                  if (arrow) {
+                    arrow.style.transform = 'translateX(5px)';
+                  }
+                }
+              }}
+              onMouseLeave={(e) => {
+                const target = e.currentTarget as HTMLDivElement;
+                target.style.transform = 'translateY(0)';
+                target.style.backgroundColor = 'rgba(255,255,255,0.05)';
+                target.style.boxShadow = 'none';
+                
+                const moreInfo = target.querySelector('[data-more-info]') as HTMLDivElement;
+                if (moreInfo) {
+                  moreInfo.style.color = '#60A5FA';
+                  moreInfo.style.opacity = '0.8';
+                  const arrow = moreInfo.querySelector('span:last-child') as HTMLSpanElement;
+                  if (arrow) {
+                    arrow.style.transform = 'translateX(0)';
+                  }
+                }
+              }}
+            >
+              {moreInfoIndicator}
               <div style={{
                 position: 'absolute',
                 top: '1rem',
@@ -432,29 +550,42 @@ export default function Home() {
             </div>
 
             {/* Base de données */}
-            <div style={{
-              backgroundColor: 'rgba(255,255,255,0.05)',
-              borderRadius: '1rem',
-              border: '1px solid rgba(255,255,255,0.1)',
-              padding: '2rem',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '1.5rem',
-              position: 'relative',
-              transition: 'all 0.3s ease',
-              cursor: 'pointer',
-              boxSizing: 'border-box'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'translateY(-5px)';
-              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.08)';
-              e.currentTarget.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.05)';
-              e.currentTarget.style.boxShadow = 'none';
-            }}>
+            <div 
+              style={cardStyle}
+              onMouseEnter={(e) => {
+                const target = e.currentTarget as HTMLDivElement;
+                target.style.transform = 'translateY(-5px)';
+                target.style.backgroundColor = 'rgba(255,255,255,0.08)';
+                target.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
+                
+                const moreInfo = target.querySelector('[data-more-info]') as HTMLDivElement;
+                if (moreInfo) {
+                  moreInfo.style.color = '#93C5FD';
+                  moreInfo.style.opacity = '1';
+                  const arrow = moreInfo.querySelector('span:last-child') as HTMLSpanElement;
+                  if (arrow) {
+                    arrow.style.transform = 'translateX(5px)';
+                  }
+                }
+              }}
+              onMouseLeave={(e) => {
+                const target = e.currentTarget as HTMLDivElement;
+                target.style.transform = 'translateY(0)';
+                target.style.backgroundColor = 'rgba(255,255,255,0.05)';
+                target.style.boxShadow = 'none';
+                
+                const moreInfo = target.querySelector('[data-more-info]') as HTMLDivElement;
+                if (moreInfo) {
+                  moreInfo.style.color = '#60A5FA';
+                  moreInfo.style.opacity = '0.8';
+                  const arrow = moreInfo.querySelector('span:last-child') as HTMLSpanElement;
+                  if (arrow) {
+                    arrow.style.transform = 'translateX(0)';
+                  }
+                }
+              }}
+            >
+              {moreInfoIndicator}
               <div style={{
                 position: 'absolute',
                 top: '1rem',
@@ -484,29 +615,42 @@ export default function Home() {
             </div>
 
             {/* Sécurité */}
-            <div style={{
-              backgroundColor: 'rgba(255,255,255,0.05)',
-              borderRadius: '1rem',
-              border: '1px solid rgba(255,255,255,0.1)',
-              padding: '2rem',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '1.5rem',
-              position: 'relative',
-              transition: 'all 0.3s ease',
-              cursor: 'pointer',
-              boxSizing: 'border-box'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'translateY(-5px)';
-              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.08)';
-              e.currentTarget.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.05)';
-              e.currentTarget.style.boxShadow = 'none';
-            }}>
+            <div 
+              style={cardStyle}
+              onMouseEnter={(e) => {
+                const target = e.currentTarget as HTMLDivElement;
+                target.style.transform = 'translateY(-5px)';
+                target.style.backgroundColor = 'rgba(255,255,255,0.08)';
+                target.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
+                
+                const moreInfo = target.querySelector('[data-more-info]') as HTMLDivElement;
+                if (moreInfo) {
+                  moreInfo.style.color = '#93C5FD';
+                  moreInfo.style.opacity = '1';
+                  const arrow = moreInfo.querySelector('span:last-child') as HTMLSpanElement;
+                  if (arrow) {
+                    arrow.style.transform = 'translateX(5px)';
+                  }
+                }
+              }}
+              onMouseLeave={(e) => {
+                const target = e.currentTarget as HTMLDivElement;
+                target.style.transform = 'translateY(0)';
+                target.style.backgroundColor = 'rgba(255,255,255,0.05)';
+                target.style.boxShadow = 'none';
+                
+                const moreInfo = target.querySelector('[data-more-info]') as HTMLDivElement;
+                if (moreInfo) {
+                  moreInfo.style.color = '#60A5FA';
+                  moreInfo.style.opacity = '0.8';
+                  const arrow = moreInfo.querySelector('span:last-child') as HTMLSpanElement;
+                  if (arrow) {
+                    arrow.style.transform = 'translateX(0)';
+                  }
+                }
+              }}
+            >
+              {moreInfoIndicator}
               <div style={{
                 position: 'absolute',
                 top: '1rem',
@@ -536,29 +680,42 @@ export default function Home() {
             </div>
 
             {/* Agilité */}
-            <div style={{
-              backgroundColor: 'rgba(255,255,255,0.05)',
-              borderRadius: '1rem',
-              border: '1px solid rgba(255,255,255,0.1)',
-              padding: '2rem',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '1.5rem',
-              position: 'relative',
-              transition: 'all 0.3s ease',
-              cursor: 'pointer',
-              boxSizing: 'border-box'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'translateY(-5px)';
-              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.08)';
-              e.currentTarget.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.05)';
-              e.currentTarget.style.boxShadow = 'none';
-            }}>
+            <div 
+              style={cardStyle}
+              onMouseEnter={(e) => {
+                const target = e.currentTarget as HTMLDivElement;
+                target.style.transform = 'translateY(-5px)';
+                target.style.backgroundColor = 'rgba(255,255,255,0.08)';
+                target.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
+                
+                const moreInfo = target.querySelector('[data-more-info]') as HTMLDivElement;
+                if (moreInfo) {
+                  moreInfo.style.color = '#93C5FD';
+                  moreInfo.style.opacity = '1';
+                  const arrow = moreInfo.querySelector('span:last-child') as HTMLSpanElement;
+                  if (arrow) {
+                    arrow.style.transform = 'translateX(5px)';
+                  }
+                }
+              }}
+              onMouseLeave={(e) => {
+                const target = e.currentTarget as HTMLDivElement;
+                target.style.transform = 'translateY(0)';
+                target.style.backgroundColor = 'rgba(255,255,255,0.05)';
+                target.style.boxShadow = 'none';
+                
+                const moreInfo = target.querySelector('[data-more-info]') as HTMLDivElement;
+                if (moreInfo) {
+                  moreInfo.style.color = '#60A5FA';
+                  moreInfo.style.opacity = '0.8';
+                  const arrow = moreInfo.querySelector('span:last-child') as HTMLSpanElement;
+                  if (arrow) {
+                    arrow.style.transform = 'translateX(0)';
+                  }
+                }
+              }}
+            >
+              {moreInfoIndicator}
               <div style={{
                 position: 'absolute',
                 top: '1rem',
@@ -588,29 +745,42 @@ export default function Home() {
             </div>
 
             {/* Veille Technologique */}
-            <div style={{
-              backgroundColor: 'rgba(255,255,255,0.05)',
-              borderRadius: '1rem',
-              border: '1px solid rgba(255,255,255,0.1)',
-              padding: '2rem',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '1.5rem',
-              position: 'relative',
-              transition: 'all 0.3s ease',
-              cursor: 'pointer',
-              boxSizing: 'border-box'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'translateY(-5px)';
-              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.08)';
-              e.currentTarget.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.05)';
-              e.currentTarget.style.boxShadow = 'none';
-            }}>
+            <div 
+              style={cardStyle}
+              onMouseEnter={(e) => {
+                const target = e.currentTarget as HTMLDivElement;
+                target.style.transform = 'translateY(-5px)';
+                target.style.backgroundColor = 'rgba(255,255,255,0.08)';
+                target.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
+                
+                const moreInfo = target.querySelector('[data-more-info]') as HTMLDivElement;
+                if (moreInfo) {
+                  moreInfo.style.color = '#93C5FD';
+                  moreInfo.style.opacity = '1';
+                  const arrow = moreInfo.querySelector('span:last-child') as HTMLSpanElement;
+                  if (arrow) {
+                    arrow.style.transform = 'translateX(5px)';
+                  }
+                }
+              }}
+              onMouseLeave={(e) => {
+                const target = e.currentTarget as HTMLDivElement;
+                target.style.transform = 'translateY(0)';
+                target.style.backgroundColor = 'rgba(255,255,255,0.05)';
+                target.style.boxShadow = 'none';
+                
+                const moreInfo = target.querySelector('[data-more-info]') as HTMLDivElement;
+                if (moreInfo) {
+                  moreInfo.style.color = '#60A5FA';
+                  moreInfo.style.opacity = '0.8';
+                  const arrow = moreInfo.querySelector('span:last-child') as HTMLSpanElement;
+                  if (arrow) {
+                    arrow.style.transform = 'translateX(0)';
+                  }
+                }
+              }}
+            >
+              {moreInfoIndicator}
               <div style={{
                 position: 'absolute',
                 top: '1rem',
@@ -689,29 +859,42 @@ export default function Home() {
             boxSizing: 'border-box'
           }}>
             {/* Communication */}
-            <div style={{
-              backgroundColor: 'rgba(255,255,255,0.05)',
-              borderRadius: '1rem',
-              border: '1px solid rgba(255,255,255,0.1)',
-              padding: '2rem',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '1.5rem',
-              position: 'relative',
-              transition: 'all 0.3s ease',
-              cursor: 'pointer',
-              boxSizing: 'border-box'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'translateY(-5px)';
-              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.08)';
-              e.currentTarget.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.05)';
-              e.currentTarget.style.boxShadow = 'none';
-            }}>
+            <div 
+              style={cardStyle}
+              onMouseEnter={(e) => {
+                const target = e.currentTarget as HTMLDivElement;
+                target.style.transform = 'translateY(-5px)';
+                target.style.backgroundColor = 'rgba(255,255,255,0.08)';
+                target.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
+                
+                const moreInfo = target.querySelector('[data-more-info]') as HTMLDivElement;
+                if (moreInfo) {
+                  moreInfo.style.color = '#93C5FD';
+                  moreInfo.style.opacity = '1';
+                  const arrow = moreInfo.querySelector('span:last-child') as HTMLSpanElement;
+                  if (arrow) {
+                    arrow.style.transform = 'translateX(5px)';
+                  }
+                }
+              }}
+              onMouseLeave={(e) => {
+                const target = e.currentTarget as HTMLDivElement;
+                target.style.transform = 'translateY(0)';
+                target.style.backgroundColor = 'rgba(255,255,255,0.05)';
+                target.style.boxShadow = 'none';
+                
+                const moreInfo = target.querySelector('[data-more-info]') as HTMLDivElement;
+                if (moreInfo) {
+                  moreInfo.style.color = '#60A5FA';
+                  moreInfo.style.opacity = '0.8';
+                  const arrow = moreInfo.querySelector('span:last-child') as HTMLSpanElement;
+                  if (arrow) {
+                    arrow.style.transform = 'translateX(0)';
+                  }
+                }
+              }}
+            >
+              {moreInfoIndicator}
               <div style={{
                 position: 'absolute',
                 top: '1rem',
@@ -741,29 +924,42 @@ export default function Home() {
             </div>
 
             {/* Leadership */}
-            <div style={{
-              backgroundColor: 'rgba(255,255,255,0.05)',
-              borderRadius: '1rem',
-              border: '1px solid rgba(255,255,255,0.1)',
-              padding: '2rem',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '1.5rem',
-              position: 'relative',
-              transition: 'all 0.3s ease',
-              cursor: 'pointer',
-              boxSizing: 'border-box'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'translateY(-5px)';
-              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.08)';
-              e.currentTarget.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.05)';
-              e.currentTarget.style.boxShadow = 'none';
-            }}>
+            <div 
+              style={cardStyle}
+              onMouseEnter={(e) => {
+                const target = e.currentTarget as HTMLDivElement;
+                target.style.transform = 'translateY(-5px)';
+                target.style.backgroundColor = 'rgba(255,255,255,0.08)';
+                target.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
+                
+                const moreInfo = target.querySelector('[data-more-info]') as HTMLDivElement;
+                if (moreInfo) {
+                  moreInfo.style.color = '#93C5FD';
+                  moreInfo.style.opacity = '1';
+                  const arrow = moreInfo.querySelector('span:last-child') as HTMLSpanElement;
+                  if (arrow) {
+                    arrow.style.transform = 'translateX(5px)';
+                  }
+                }
+              }}
+              onMouseLeave={(e) => {
+                const target = e.currentTarget as HTMLDivElement;
+                target.style.transform = 'translateY(0)';
+                target.style.backgroundColor = 'rgba(255,255,255,0.05)';
+                target.style.boxShadow = 'none';
+                
+                const moreInfo = target.querySelector('[data-more-info]') as HTMLDivElement;
+                if (moreInfo) {
+                  moreInfo.style.color = '#60A5FA';
+                  moreInfo.style.opacity = '0.8';
+                  const arrow = moreInfo.querySelector('span:last-child') as HTMLSpanElement;
+                  if (arrow) {
+                    arrow.style.transform = 'translateX(0)';
+                  }
+                }
+              }}
+            >
+              {moreInfoIndicator}
               <div style={{
                 position: 'absolute',
                 top: '1rem',
@@ -793,29 +989,42 @@ export default function Home() {
             </div>
 
             {/* Adaptabilité */}
-            <div style={{
-              backgroundColor: 'rgba(255,255,255,0.05)',
-              borderRadius: '1rem',
-              border: '1px solid rgba(255,255,255,0.1)',
-              padding: '2rem',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '1.5rem',
-              position: 'relative',
-              transition: 'all 0.3s ease',
-              cursor: 'pointer',
-              boxSizing: 'border-box'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'translateY(-5px)';
-              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.08)';
-              e.currentTarget.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.05)';
-              e.currentTarget.style.boxShadow = 'none';
-            }}>
+            <div 
+              style={cardStyle}
+              onMouseEnter={(e) => {
+                const target = e.currentTarget as HTMLDivElement;
+                target.style.transform = 'translateY(-5px)';
+                target.style.backgroundColor = 'rgba(255,255,255,0.08)';
+                target.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
+                
+                const moreInfo = target.querySelector('[data-more-info]') as HTMLDivElement;
+                if (moreInfo) {
+                  moreInfo.style.color = '#93C5FD';
+                  moreInfo.style.opacity = '1';
+                  const arrow = moreInfo.querySelector('span:last-child') as HTMLSpanElement;
+                  if (arrow) {
+                    arrow.style.transform = 'translateX(5px)';
+                  }
+                }
+              }}
+              onMouseLeave={(e) => {
+                const target = e.currentTarget as HTMLDivElement;
+                target.style.transform = 'translateY(0)';
+                target.style.backgroundColor = 'rgba(255,255,255,0.05)';
+                target.style.boxShadow = 'none';
+                
+                const moreInfo = target.querySelector('[data-more-info]') as HTMLDivElement;
+                if (moreInfo) {
+                  moreInfo.style.color = '#60A5FA';
+                  moreInfo.style.opacity = '0.8';
+                  const arrow = moreInfo.querySelector('span:last-child') as HTMLSpanElement;
+                  if (arrow) {
+                    arrow.style.transform = 'translateX(0)';
+                  }
+                }
+              }}
+            >
+              {moreInfoIndicator}
               <div style={{
                 position: 'absolute',
                 top: '1rem',
@@ -845,29 +1054,42 @@ export default function Home() {
             </div>
 
             {/* Résolution de problèmes */}
-            <div style={{
-              backgroundColor: 'rgba(255,255,255,0.05)',
-              borderRadius: '1rem',
-              border: '1px solid rgba(255,255,255,0.1)',
-              padding: '2rem',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '1.5rem',
-              position: 'relative',
-              transition: 'all 0.3s ease',
-              cursor: 'pointer',
-              boxSizing: 'border-box'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'translateY(-5px)';
-              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.08)';
-              e.currentTarget.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.05)';
-              e.currentTarget.style.boxShadow = 'none';
-            }}>
+            <div 
+              style={cardStyle}
+              onMouseEnter={(e) => {
+                const target = e.currentTarget as HTMLDivElement;
+                target.style.transform = 'translateY(-5px)';
+                target.style.backgroundColor = 'rgba(255,255,255,0.08)';
+                target.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
+                
+                const moreInfo = target.querySelector('[data-more-info]') as HTMLDivElement;
+                if (moreInfo) {
+                  moreInfo.style.color = '#93C5FD';
+                  moreInfo.style.opacity = '1';
+                  const arrow = moreInfo.querySelector('span:last-child') as HTMLSpanElement;
+                  if (arrow) {
+                    arrow.style.transform = 'translateX(5px)';
+                  }
+                }
+              }}
+              onMouseLeave={(e) => {
+                const target = e.currentTarget as HTMLDivElement;
+                target.style.transform = 'translateY(0)';
+                target.style.backgroundColor = 'rgba(255,255,255,0.05)';
+                target.style.boxShadow = 'none';
+                
+                const moreInfo = target.querySelector('[data-more-info]') as HTMLDivElement;
+                if (moreInfo) {
+                  moreInfo.style.color = '#60A5FA';
+                  moreInfo.style.opacity = '0.8';
+                  const arrow = moreInfo.querySelector('span:last-child') as HTMLSpanElement;
+                  if (arrow) {
+                    arrow.style.transform = 'translateX(0)';
+                  }
+                }
+              }}
+            >
+              {moreInfoIndicator}
               <div style={{
                 position: 'absolute',
                 top: '1rem',
@@ -945,29 +1167,42 @@ export default function Home() {
             boxSizing: 'border-box'
           }}>
             {/* Projet GSB */}
-            <div style={{
-              backgroundColor: 'rgba(255,255,255,0.05)',
-              borderRadius: '1rem',
-              border: '1px solid rgba(255,255,255,0.1)',
-              padding: '2rem',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '1.5rem',
-              position: 'relative',
-              transition: 'all 0.3s ease',
-              cursor: 'pointer',
-              boxSizing: 'border-box'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'translateY(-5px)';
-              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.08)';
-              e.currentTarget.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.05)';
-              e.currentTarget.style.boxShadow = 'none';
-            }}>
+            <div 
+              style={cardStyle}
+              onMouseEnter={(e) => {
+                const target = e.currentTarget as HTMLDivElement;
+                target.style.transform = 'translateY(-5px)';
+                target.style.backgroundColor = 'rgba(255,255,255,0.08)';
+                target.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
+                
+                const moreInfo = target.querySelector('[data-more-info]') as HTMLDivElement;
+                if (moreInfo) {
+                  moreInfo.style.color = '#93C5FD';
+                  moreInfo.style.opacity = '1';
+                  const arrow = moreInfo.querySelector('span:last-child') as HTMLSpanElement;
+                  if (arrow) {
+                    arrow.style.transform = 'translateX(5px)';
+                  }
+                }
+              }}
+              onMouseLeave={(e) => {
+                const target = e.currentTarget as HTMLDivElement;
+                target.style.transform = 'translateY(0)';
+                target.style.backgroundColor = 'rgba(255,255,255,0.05)';
+                target.style.boxShadow = 'none';
+                
+                const moreInfo = target.querySelector('[data-more-info]') as HTMLDivElement;
+                if (moreInfo) {
+                  moreInfo.style.color = '#60A5FA';
+                  moreInfo.style.opacity = '0.8';
+                  const arrow = moreInfo.querySelector('span:last-child') as HTMLSpanElement;
+                  if (arrow) {
+                    arrow.style.transform = 'translateX(0)';
+                  }
+                }
+              }}
+            >
+              {moreInfoIndicator}
               <div style={{
                 position: 'absolute',
                 top: '1rem',
@@ -997,29 +1232,42 @@ export default function Home() {
             </div>
 
             {/* Projet E-Lawvation */}
-            <div style={{
-              backgroundColor: 'rgba(255,255,255,0.05)',
-              borderRadius: '1rem',
-              border: '1px solid rgba(255,255,255,0.1)',
-              padding: '2rem',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '1.5rem',
-              position: 'relative',
-              transition: 'all 0.3s ease',
-              cursor: 'pointer',
-              boxSizing: 'border-box'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'translateY(-5px)';
-              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.08)';
-              e.currentTarget.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.05)';
-              e.currentTarget.style.boxShadow = 'none';
-            }}>
+            <div 
+              style={cardStyle}
+              onMouseEnter={(e) => {
+                const target = e.currentTarget as HTMLDivElement;
+                target.style.transform = 'translateY(-5px)';
+                target.style.backgroundColor = 'rgba(255,255,255,0.08)';
+                target.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
+                
+                const moreInfo = target.querySelector('[data-more-info]') as HTMLDivElement;
+                if (moreInfo) {
+                  moreInfo.style.color = '#93C5FD';
+                  moreInfo.style.opacity = '1';
+                  const arrow = moreInfo.querySelector('span:last-child') as HTMLSpanElement;
+                  if (arrow) {
+                    arrow.style.transform = 'translateX(5px)';
+                  }
+                }
+              }}
+              onMouseLeave={(e) => {
+                const target = e.currentTarget as HTMLDivElement;
+                target.style.transform = 'translateY(0)';
+                target.style.backgroundColor = 'rgba(255,255,255,0.05)';
+                target.style.boxShadow = 'none';
+                
+                const moreInfo = target.querySelector('[data-more-info]') as HTMLDivElement;
+                if (moreInfo) {
+                  moreInfo.style.color = '#60A5FA';
+                  moreInfo.style.opacity = '0.8';
+                  const arrow = moreInfo.querySelector('span:last-child') as HTMLSpanElement;
+                  if (arrow) {
+                    arrow.style.transform = 'translateX(0)';
+                  }
+                }
+              }}
+            >
+              {moreInfoIndicator}
               <div style={{
                 position: 'absolute',
                 top: '1rem',
@@ -1049,29 +1297,42 @@ export default function Home() {
             </div>
 
             {/* Projet CMDB */}
-            <div style={{
-              backgroundColor: 'rgba(255,255,255,0.05)',
-              borderRadius: '1rem',
-              border: '1px solid rgba(255,255,255,0.1)',
-              padding: '2rem',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '1.5rem',
-              position: 'relative',
-              transition: 'all 0.3s ease',
-              cursor: 'pointer',
-              boxSizing: 'border-box'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'translateY(-5px)';
-              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.08)';
-              e.currentTarget.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.05)';
-              e.currentTarget.style.boxShadow = 'none';
-            }}>
+            <div 
+              style={cardStyle}
+              onMouseEnter={(e) => {
+                const target = e.currentTarget as HTMLDivElement;
+                target.style.transform = 'translateY(-5px)';
+                target.style.backgroundColor = 'rgba(255,255,255,0.08)';
+                target.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
+                
+                const moreInfo = target.querySelector('[data-more-info]') as HTMLDivElement;
+                if (moreInfo) {
+                  moreInfo.style.color = '#93C5FD';
+                  moreInfo.style.opacity = '1';
+                  const arrow = moreInfo.querySelector('span:last-child') as HTMLSpanElement;
+                  if (arrow) {
+                    arrow.style.transform = 'translateX(5px)';
+                  }
+                }
+              }}
+              onMouseLeave={(e) => {
+                const target = e.currentTarget as HTMLDivElement;
+                target.style.transform = 'translateY(0)';
+                target.style.backgroundColor = 'rgba(255,255,255,0.05)';
+                target.style.boxShadow = 'none';
+                
+                const moreInfo = target.querySelector('[data-more-info]') as HTMLDivElement;
+                if (moreInfo) {
+                  moreInfo.style.color = '#60A5FA';
+                  moreInfo.style.opacity = '0.8';
+                  const arrow = moreInfo.querySelector('span:last-child') as HTMLSpanElement;
+                  if (arrow) {
+                    arrow.style.transform = 'translateX(0)';
+                  }
+                }
+              }}
+            >
+              {moreInfoIndicator}
               <div style={{
                 position: 'absolute',
                 top: '1rem',
@@ -1101,29 +1362,42 @@ export default function Home() {
             </div>
 
             {/* Devops & Run MCO */}
-            <div style={{
-              backgroundColor: 'rgba(255,255,255,0.05)',
-              borderRadius: '1rem',
-              border: '1px solid rgba(255,255,255,0.1)',
-              padding: '2rem',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '1.5rem',
-              position: 'relative',
-              transition: 'all 0.3s ease',
-              cursor: 'pointer',
-              boxSizing: 'border-box'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'translateY(-5px)';
-              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.08)';
-              e.currentTarget.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.05)';
-              e.currentTarget.style.boxShadow = 'none';
-            }}>
+            <div 
+              style={cardStyle}
+              onMouseEnter={(e) => {
+                const target = e.currentTarget as HTMLDivElement;
+                target.style.transform = 'translateY(-5px)';
+                target.style.backgroundColor = 'rgba(255,255,255,0.08)';
+                target.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
+                
+                const moreInfo = target.querySelector('[data-more-info]') as HTMLDivElement;
+                if (moreInfo) {
+                  moreInfo.style.color = '#93C5FD';
+                  moreInfo.style.opacity = '1';
+                  const arrow = moreInfo.querySelector('span:last-child') as HTMLSpanElement;
+                  if (arrow) {
+                    arrow.style.transform = 'translateX(5px)';
+                  }
+                }
+              }}
+              onMouseLeave={(e) => {
+                const target = e.currentTarget as HTMLDivElement;
+                target.style.transform = 'translateY(0)';
+                target.style.backgroundColor = 'rgba(255,255,255,0.05)';
+                target.style.boxShadow = 'none';
+                
+                const moreInfo = target.querySelector('[data-more-info]') as HTMLDivElement;
+                if (moreInfo) {
+                  moreInfo.style.color = '#60A5FA';
+                  moreInfo.style.opacity = '0.8';
+                  const arrow = moreInfo.querySelector('span:last-child') as HTMLSpanElement;
+                  if (arrow) {
+                    arrow.style.transform = 'translateX(0)';
+                  }
+                }
+              }}
+            >
+              {moreInfoIndicator}
               <div style={{
                 position: 'absolute',
                 top: '1rem',
@@ -1153,29 +1427,42 @@ export default function Home() {
             </div>
 
             {/* Gestion des incidents Google Cloud */}
-            <div style={{
-              backgroundColor: 'rgba(255,255,255,0.05)',
-              borderRadius: '1rem',
-              border: '1px solid rgba(255,255,255,0.1)',
-              padding: '2rem',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '1.5rem',
-              position: 'relative',
-              transition: 'all 0.3s ease',
-              cursor: 'pointer',
-              boxSizing: 'border-box'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'translateY(-5px)';
-              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.08)';
-              e.currentTarget.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.05)';
-              e.currentTarget.style.boxShadow = 'none';
-            }}>
+            <div 
+              style={cardStyle}
+              onMouseEnter={(e) => {
+                const target = e.currentTarget as HTMLDivElement;
+                target.style.transform = 'translateY(-5px)';
+                target.style.backgroundColor = 'rgba(255,255,255,0.08)';
+                target.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
+                
+                const moreInfo = target.querySelector('[data-more-info]') as HTMLDivElement;
+                if (moreInfo) {
+                  moreInfo.style.color = '#93C5FD';
+                  moreInfo.style.opacity = '1';
+                  const arrow = moreInfo.querySelector('span:last-child') as HTMLSpanElement;
+                  if (arrow) {
+                    arrow.style.transform = 'translateX(5px)';
+                  }
+                }
+              }}
+              onMouseLeave={(e) => {
+                const target = e.currentTarget as HTMLDivElement;
+                target.style.transform = 'translateY(0)';
+                target.style.backgroundColor = 'rgba(255,255,255,0.05)';
+                target.style.boxShadow = 'none';
+                
+                const moreInfo = target.querySelector('[data-more-info]') as HTMLDivElement;
+                if (moreInfo) {
+                  moreInfo.style.color = '#60A5FA';
+                  moreInfo.style.opacity = '0.8';
+                  const arrow = moreInfo.querySelector('span:last-child') as HTMLSpanElement;
+                  if (arrow) {
+                    arrow.style.transform = 'translateX(0)';
+                  }
+                }
+              }}
+            >
+              {moreInfoIndicator}
               <div style={{
                 position: 'absolute',
                 top: '1rem',
