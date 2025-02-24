@@ -49,7 +49,7 @@ export default function Home() {
       overflow: 'hidden'
     }}>
       {/* Section Hero */}
-      <section style={{
+      <section id="home" style={{
         width: '100%',
         minHeight: 'calc(100vh - 70px)',
         display: 'flex',
@@ -114,7 +114,7 @@ export default function Home() {
       </section>
 
       {/* Section Compétences Techniques */}
-      <section style={{
+      <section id="competences" style={{
         width: '100%',
         backgroundColor: 'rgba(0, 0, 0, 0.1)',
         backdropFilter: 'blur(10px)',
@@ -1122,7 +1122,7 @@ export default function Home() {
       </section>
 
       {/* Section Réalisations */}
-      <section style={{
+      <section id="realisations" style={{
         width: '100%',
         backdropFilter: 'blur(2px)',
         borderTop: '1px solid rgba(255, 255, 255, 0.1)',
@@ -1495,7 +1495,7 @@ export default function Home() {
       </section>
 
       {/* Section Contact */}
-      <section style={{
+      <section id="contact" style={{
         width: '100%',
         backgroundColor: 'rgba(0, 0, 0, 0.1)',
         backdropFilter: 'blur(10px)',
