@@ -73,7 +73,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Section Compétences */}
+      {/* Section Compétences Techniques */}
       <section style={{
         width: '100%',
         backgroundColor: 'rgba(0, 0, 0, 0.1)',
@@ -99,7 +99,7 @@ export default function Home() {
             paddingBottom: '1rem',
             margin: 0
           }}>
-            Mes compétences
+            Compétences Techniques
             <div style={{
               position: 'absolute',
               bottom: 0,
@@ -636,6 +636,263 @@ export default function Home() {
                 opacity: 0.9
               }}>
                 Suivi constant des nouvelles technologies et des bonnes pratiques pour maintenir une expertise à jour.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section Compétences Humaines */}
+      <section style={{
+        width: '100%',
+        backgroundColor: 'rgba(0, 0, 0, 0.2)',
+        backdropFilter: 'blur(10px)',
+        borderTop: '1px solid rgba(255, 255, 255, 0.1)',
+        padding: '4rem 1rem',
+        boxSizing: 'border-box'
+      }}>
+        <div style={{
+          maxWidth: '1400px',
+          margin: '0 auto',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: '3rem'
+        }}>
+          <h2 style={{
+            color: '#fff',
+            fontSize: 'clamp(2rem, 5vw, 2.5rem)',
+            fontWeight: '700',
+            textAlign: 'center',
+            position: 'relative',
+            paddingBottom: '1rem',
+            margin: 0
+          }}>
+            Compétences Humaines
+            <div style={{
+              position: 'absolute',
+              bottom: 0,
+              left: '50%',
+              transform: 'translateX(-50%)',
+              width: '60px',
+              height: '4px',
+              background: '#60A5FA',
+              borderRadius: '2px'
+            }}/>
+          </h2>
+
+          <div style={{
+            width: '100%',
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+            gap: '2rem',
+            boxSizing: 'border-box'
+          }}>
+            {/* Communication */}
+            <div style={{
+              backgroundColor: 'rgba(255,255,255,0.05)',
+              borderRadius: '1rem',
+              border: '1px solid rgba(255,255,255,0.1)',
+              padding: '2rem',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '1.5rem',
+              position: 'relative',
+              transition: 'all 0.3s ease',
+              cursor: 'pointer',
+              boxSizing: 'border-box'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateY(-5px)';
+              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.08)';
+              e.currentTarget.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.05)';
+              e.currentTarget.style.boxShadow = 'none';
+            }}>
+              <div style={{
+                position: 'absolute',
+                top: '1rem',
+                right: '1rem',
+                fontSize: '2.5rem',
+                opacity: 0.2
+              }}>
+                💬
+              </div>
+              <h3 style={{
+                color: '#60A5FA',
+                fontSize: 'clamp(1.2rem, 3vw, 1.5rem)',
+                fontWeight: '600',
+                margin: 0
+              }}>
+                Communication
+              </h3>
+              <p style={{
+                color: '#fff',
+                fontSize: 'clamp(0.9rem, 2vw, 1.1rem)',
+                lineHeight: '1.6',
+                margin: 0,
+                opacity: 0.9
+              }}>
+                Excellentes capacités de communication écrite et orale, facilitant la collaboration avec les équipes et les clients.
+              </p>
+            </div>
+
+            {/* Leadership */}
+            <div style={{
+              backgroundColor: 'rgba(255,255,255,0.05)',
+              borderRadius: '1rem',
+              border: '1px solid rgba(255,255,255,0.1)',
+              padding: '2rem',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '1.5rem',
+              position: 'relative',
+              transition: 'all 0.3s ease',
+              cursor: 'pointer',
+              boxSizing: 'border-box'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateY(-5px)';
+              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.08)';
+              e.currentTarget.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.05)';
+              e.currentTarget.style.boxShadow = 'none';
+            }}>
+              <div style={{
+                position: 'absolute',
+                top: '1rem',
+                right: '1rem',
+                fontSize: '2.5rem',
+                opacity: 0.2
+              }}>
+                👥
+              </div>
+              <h3 style={{
+                color: '#60A5FA',
+                fontSize: 'clamp(1.2rem, 3vw, 1.5rem)',
+                fontWeight: '600',
+                margin: 0
+              }}>
+                Leadership
+              </h3>
+              <p style={{
+                color: '#fff',
+                fontSize: 'clamp(0.9rem, 2vw, 1.1rem)',
+                lineHeight: '1.6',
+                margin: 0,
+                opacity: 0.9
+              }}>
+                Capacité à guider et motiver les équipes, à prendre des initiatives et à gérer des projets.
+              </p>
+            </div>
+
+            {/* Adaptabilité */}
+            <div style={{
+              backgroundColor: 'rgba(255,255,255,0.05)',
+              borderRadius: '1rem',
+              border: '1px solid rgba(255,255,255,0.1)',
+              padding: '2rem',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '1.5rem',
+              position: 'relative',
+              transition: 'all 0.3s ease',
+              cursor: 'pointer',
+              boxSizing: 'border-box'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateY(-5px)';
+              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.08)';
+              e.currentTarget.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.05)';
+              e.currentTarget.style.boxShadow = 'none';
+            }}>
+              <div style={{
+                position: 'absolute',
+                top: '1rem',
+                right: '1rem',
+                fontSize: '2.5rem',
+                opacity: 0.2
+              }}>
+                🔄
+              </div>
+              <h3 style={{
+                color: '#60A5FA',
+                fontSize: 'clamp(1.2rem, 3vw, 1.5rem)',
+                fontWeight: '600',
+                margin: 0
+              }}>
+                Adaptabilité
+              </h3>
+              <p style={{
+                color: '#fff',
+                fontSize: 'clamp(0.9rem, 2vw, 1.1rem)',
+                lineHeight: '1.6',
+                margin: 0,
+                opacity: 0.9
+              }}>
+                Grande capacité d'adaptation aux changements et aux nouvelles technologies.
+              </p>
+            </div>
+
+            {/* Résolution de problèmes */}
+            <div style={{
+              backgroundColor: 'rgba(255,255,255,0.05)',
+              borderRadius: '1rem',
+              border: '1px solid rgba(255,255,255,0.1)',
+              padding: '2rem',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '1.5rem',
+              position: 'relative',
+              transition: 'all 0.3s ease',
+              cursor: 'pointer',
+              boxSizing: 'border-box'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateY(-5px)';
+              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.08)';
+              e.currentTarget.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.05)';
+              e.currentTarget.style.boxShadow = 'none';
+            }}>
+              <div style={{
+                position: 'absolute',
+                top: '1rem',
+                right: '1rem',
+                fontSize: '2.5rem',
+                opacity: 0.2
+              }}>
+                🔍
+              </div>
+              <h3 style={{
+                color: '#60A5FA',
+                fontSize: 'clamp(1.2rem, 3vw, 1.5rem)',
+                fontWeight: '600',
+                margin: 0
+              }}>
+                Résolution de problèmes
+              </h3>
+              <p style={{
+                color: '#fff',
+                fontSize: 'clamp(0.9rem, 2vw, 1.1rem)',
+                lineHeight: '1.6',
+                margin: 0,
+                opacity: 0.9
+              }}>
+                Approche analytique et créative dans la résolution de problèmes complexes.
               </p>
             </div>
           </div>
