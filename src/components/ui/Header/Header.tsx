@@ -7,6 +7,7 @@ import ContactMailIcon from '@mui/icons-material/ContactMail';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
+import Image from 'next/image';
 
 export default function Header() {
     const pathname = usePathname();
@@ -33,7 +34,7 @@ export default function Header() {
             height: '70px',
             backdropFilter: 'blur(10px)',
             display: 'grid',
-            gridTemplateColumns: '250px 1fr 250px',
+            gridTemplateColumns: '300px 1fr 300px',
             alignItems: 'center',
             padding: '0 2rem',
             position: 'fixed',
@@ -45,8 +46,27 @@ export default function Header() {
             <div style={{
                 color: '#fff',
                 fontSize: '1.5rem',
-                fontWeight: 'bold'
+                fontWeight: 'bold',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '1rem'
             }}>
+                <div style={{
+                    position: 'relative',
+                    width: '45px',
+                    height: '45px',
+                    borderRadius: '8px',
+                    overflow: 'hidden'
+                }}>
+                    <Image
+                        src="/images/me.jpg"
+                        alt="Esteban Mortier"
+                        fill
+                        style={{
+                            objectFit: 'cover'
+                        }}
+                    />
+                </div>
                 Esteban Mortier
             </div>
             
