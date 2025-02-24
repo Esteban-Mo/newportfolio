@@ -616,6 +616,314 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Section Réalisations */}
+      <section style={{
+        width: '100%',
+        backdropFilter: 'blur(2px)',
+        borderTop: '1px solid rgba(255, 255, 255, 0.1)',
+        padding: '4rem 1rem',
+        boxSizing: 'border-box'
+      }}>
+        <div style={{
+          maxWidth: '1400px',
+          margin: '0 auto',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: '3rem'
+        }}>
+          <h2 style={{
+            color: '#fff',
+            fontSize: 'clamp(2rem, 5vw, 2.5rem)',
+            fontWeight: '700',
+            textAlign: 'center',
+            position: 'relative',
+            paddingBottom: '1rem',
+            margin: 0
+          }}>
+            Panorama de mes réalisations
+            <div style={{
+              position: 'absolute',
+              bottom: 0,
+              left: '50%',
+              transform: 'translateX(-50%)',
+              width: '60px',
+              height: '4px',
+              background: '#60A5FA',
+              borderRadius: '2px'
+            }}/>
+          </h2>
+
+          <div style={{
+            width: '100%',
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+            gap: '2rem',
+            boxSizing: 'border-box'
+          }}>
+            {/* Projet GSB */}
+            <div style={{
+              backgroundColor: 'rgba(255,255,255,0.05)',
+              borderRadius: '1rem',
+              border: '1px solid rgba(255,255,255,0.1)',
+              padding: '2rem',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '1.5rem',
+              position: 'relative',
+              transition: 'all 0.3s ease',
+              cursor: 'pointer',
+              boxSizing: 'border-box'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateY(-5px)';
+              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.08)';
+              e.currentTarget.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.05)';
+              e.currentTarget.style.boxShadow = 'none';
+            }}>
+              <div style={{
+                position: 'absolute',
+                top: '1rem',
+                right: '1rem',
+                fontSize: '2.5rem',
+                opacity: 0.2
+              }}>
+                🏢
+              </div>
+              <h3 style={{
+                color: '#60A5FA',
+                fontSize: 'clamp(1.2rem, 3vw, 1.5rem)',
+                fontWeight: '600',
+                margin: 0
+              }}>
+                Projet GSB
+              </h3>
+              <p style={{
+                color: '#fff',
+                fontSize: 'clamp(0.9rem, 2vw, 1.1rem)',
+                lineHeight: '1.6',
+                margin: 0,
+                opacity: 0.9
+              }}>
+                GSB est une infrastructure réseau que nous devions intégralement créer grâce à un cahier des charges. Ce projet nous a permis principalement de comprendre correctement le fonctionnement d'un datacenter.
+              </p>
+            </div>
+
+            {/* Projet E-Lawvation */}
+            <div style={{
+              backgroundColor: 'rgba(255,255,255,0.05)',
+              borderRadius: '1rem',
+              border: '1px solid rgba(255,255,255,0.1)',
+              padding: '2rem',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '1.5rem',
+              position: 'relative',
+              transition: 'all 0.3s ease',
+              cursor: 'pointer',
+              boxSizing: 'border-box'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateY(-5px)';
+              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.08)';
+              e.currentTarget.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.05)';
+              e.currentTarget.style.boxShadow = 'none';
+            }}>
+              <div style={{
+                position: 'absolute',
+                top: '1rem',
+                right: '1rem',
+                fontSize: '2.5rem',
+                opacity: 0.2
+              }}>
+                ⚖️
+              </div>
+              <h3 style={{
+                color: '#60A5FA',
+                fontSize: 'clamp(1.2rem, 3vw, 1.5rem)',
+                fontWeight: '600',
+                margin: 0
+              }}>
+                Projet E-Lawvation
+              </h3>
+              <p style={{
+                color: '#fff',
+                fontSize: 'clamp(0.9rem, 2vw, 1.1rem)',
+                lineHeight: '1.6',
+                margin: 0,
+                opacity: 0.9
+              }}>
+                Rédaction d'une étude visant à proposer différentes solutions technique pour répondre au besoin de notre client.
+              </p>
+            </div>
+
+            {/* Projet CMDB */}
+            <div style={{
+              backgroundColor: 'rgba(255,255,255,0.05)',
+              borderRadius: '1rem',
+              border: '1px solid rgba(255,255,255,0.1)',
+              padding: '2rem',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '1.5rem',
+              position: 'relative',
+              transition: 'all 0.3s ease',
+              cursor: 'pointer',
+              boxSizing: 'border-box'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateY(-5px)';
+              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.08)';
+              e.currentTarget.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.05)';
+              e.currentTarget.style.boxShadow = 'none';
+            }}>
+              <div style={{
+                position: 'absolute',
+                top: '1rem',
+                right: '1rem',
+                fontSize: '2.5rem',
+                opacity: 0.2
+              }}>
+                🗄️
+              </div>
+              <h3 style={{
+                color: '#60A5FA',
+                fontSize: 'clamp(1.2rem, 3vw, 1.5rem)',
+                fontWeight: '600',
+                margin: 0
+              }}>
+                Projet CMDB
+              </h3>
+              <p style={{
+                color: '#fff',
+                fontSize: 'clamp(0.9rem, 2vw, 1.1rem)',
+                lineHeight: '1.6',
+                margin: 0,
+                opacity: 0.9
+              }}>
+                Rédaction d'une expression de besoin pour déployer et maintenir une base de données de gestion de configuration (CMDB en anglais).
+              </p>
+            </div>
+
+            {/* Devops & Run MCO */}
+            <div style={{
+              backgroundColor: 'rgba(255,255,255,0.05)',
+              borderRadius: '1rem',
+              border: '1px solid rgba(255,255,255,0.1)',
+              padding: '2rem',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '1.5rem',
+              position: 'relative',
+              transition: 'all 0.3s ease',
+              cursor: 'pointer',
+              boxSizing: 'border-box'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateY(-5px)';
+              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.08)';
+              e.currentTarget.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.05)';
+              e.currentTarget.style.boxShadow = 'none';
+            }}>
+              <div style={{
+                position: 'absolute',
+                top: '1rem',
+                right: '1rem',
+                fontSize: '2.5rem',
+                opacity: 0.2
+              }}>
+                🔄
+              </div>
+              <h3 style={{
+                color: '#60A5FA',
+                fontSize: 'clamp(1.2rem, 3vw, 1.5rem)',
+                fontWeight: '600',
+                margin: 0
+              }}>
+                Devops & Run MCO
+              </h3>
+              <p style={{
+                color: '#fff',
+                fontSize: 'clamp(0.9rem, 2vw, 1.1rem)',
+                lineHeight: '1.6',
+                margin: 0,
+                opacity: 0.9
+              }}>
+                J'ai réalisé différents travaux de DevOps pour le logiciel Reveelium et je l'ai maintenu en conditions opérationnelles.
+              </p>
+            </div>
+
+            {/* Gestion des incidents Google Cloud */}
+            <div style={{
+              backgroundColor: 'rgba(255,255,255,0.05)',
+              borderRadius: '1rem',
+              border: '1px solid rgba(255,255,255,0.1)',
+              padding: '2rem',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '1.5rem',
+              position: 'relative',
+              transition: 'all 0.3s ease',
+              cursor: 'pointer',
+              boxSizing: 'border-box'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateY(-5px)';
+              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.08)';
+              e.currentTarget.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.05)';
+              e.currentTarget.style.boxShadow = 'none';
+            }}>
+              <div style={{
+                position: 'absolute',
+                top: '1rem',
+                right: '1rem',
+                fontSize: '2.5rem',
+                opacity: 0.2
+              }}>
+                ☁️
+              </div>
+              <h3 style={{
+                color: '#60A5FA',
+                fontSize: 'clamp(1.2rem, 3vw, 1.5rem)',
+                fontWeight: '600',
+                margin: 0
+              }}>
+                Gestion des incidents Google Cloud
+              </h3>
+              <p style={{
+                color: '#fff',
+                fontSize: 'clamp(0.9rem, 2vw, 1.1rem)',
+                lineHeight: '1.6',
+                margin: 0,
+                opacity: 0.9
+              }}>
+                Depuis 2021, je suis passionné par le Cloud et plus précisément Google Cloud. J'interviens bénévolement sur des incidents Google Cloud.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
