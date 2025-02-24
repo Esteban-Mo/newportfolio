@@ -924,6 +924,28 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Footer */}
+      <footer style={{
+        width: '100%',
+        backgroundColor: 'rgba(0, 0, 0, 0.2)',
+        backdropFilter: 'blur(10px)',
+        borderTop: '1px solid rgba(255, 255, 255, 0.1)',
+        padding: '2rem 1rem',
+        boxSizing: 'border-box',
+        marginTop: 'auto'
+      }}>
+        <div style={{
+          maxWidth: '1400px',
+          margin: '0 auto',
+          textAlign: 'center',
+          color: 'rgba(255, 255, 255, 0.7)',
+          fontSize: 'clamp(0.9rem, 2vw, 1rem)',
+          fontWeight: '400'
+        }}>
+          © 2025 Esteban Mortier - Portfolio.
+        </div>
+      </footer>
     </div>
   );
 }
