@@ -94,7 +94,7 @@ export default function Home() {
             gap: '2rem',
             boxSizing: 'border-box'
           }}>
-            {/* Organisation */}
+            {/* Architecture Logicielle */}
             <div style={{
               backgroundColor: 'rgba(255,255,255,0.05)',
               borderRadius: '1rem',
@@ -125,7 +125,7 @@ export default function Home() {
                 fontSize: '2.5rem',
                 opacity: 0.2
               }}>
-                📋
+                🏗️
               </div>
               <h3 style={{
                 color: '#60A5FA',
@@ -133,7 +133,7 @@ export default function Home() {
                 fontWeight: '600',
                 margin: 0
               }}>
-                Organisation
+                Architecture Logicielle
               </h3>
               <p style={{
                 color: '#fff',
@@ -142,11 +142,11 @@ export default function Home() {
                 margin: 0,
                 opacity: 0.9
               }}>
-                Capacité à planifier et structurer les tâches de manière méthodique pour une exécution efficace des projets.
+                Conception d'architectures évolutives et maintenables en appliquant les principes SOLID et les patterns de conception.
               </p>
             </div>
 
-            {/* Flexibilité */}
+            {/* Développement Frontend */}
             <div style={{
               backgroundColor: 'rgba(255,255,255,0.05)',
               borderRadius: '1rem',
@@ -177,7 +177,7 @@ export default function Home() {
                 fontSize: '2.5rem',
                 opacity: 0.2
               }}>
-                🔄
+                🎨
               </div>
               <h3 style={{
                 color: '#60A5FA',
@@ -185,7 +185,7 @@ export default function Home() {
                 fontWeight: '600',
                 margin: 0
               }}>
-                Flexibilité
+                Développement Frontend
               </h3>
               <p style={{
                 color: '#fff',
@@ -194,11 +194,11 @@ export default function Home() {
                 margin: 0,
                 opacity: 0.9
               }}>
-                Adaptation rapide aux changements de priorités et capacité à gérer efficacement plusieurs projets en parallèle.
+                Maîtrise des frameworks modernes (React, Next.js) et création d'interfaces utilisateur performantes et responsives.
               </p>
             </div>
 
-            {/* Communication */}
+            {/* Développement Backend */}
             <div style={{
               backgroundColor: 'rgba(255,255,255,0.05)',
               borderRadius: '1rem',
@@ -229,7 +229,7 @@ export default function Home() {
                 fontSize: '2.5rem',
                 opacity: 0.2
               }}>
-                💬
+                ⚙️
               </div>
               <h3 style={{
                 color: '#60A5FA',
@@ -237,7 +237,7 @@ export default function Home() {
                 fontWeight: '600',
                 margin: 0
               }}>
-                Communication
+                Développement Backend
               </h3>
               <p style={{
                 color: '#fff',
@@ -246,63 +246,11 @@ export default function Home() {
                 margin: 0,
                 opacity: 0.9
               }}>
-                Expression claire et précise, tant à l'oral qu'à l'écrit, facilitant la collaboration et le partage d'informations.
+                Création d'APIs RESTful robustes et évolutives, gestion efficace des bases de données et des services web.
               </p>
             </div>
 
-            {/* Travail d'équipe */}
-            <div style={{
-              backgroundColor: 'rgba(255,255,255,0.05)',
-              borderRadius: '1rem',
-              border: '1px solid rgba(255,255,255,0.1)',
-              padding: '2rem',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '1.5rem',
-              position: 'relative',
-              transition: 'all 0.3s ease',
-              cursor: 'pointer',
-              boxSizing: 'border-box'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'translateY(-5px)';
-              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.08)';
-              e.currentTarget.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.05)';
-              e.currentTarget.style.boxShadow = 'none';
-            }}>
-              <div style={{
-                position: 'absolute',
-                top: '1rem',
-                right: '1rem',
-                fontSize: '2.5rem',
-                opacity: 0.2
-              }}>
-                👥
-              </div>
-              <h3 style={{
-                color: '#60A5FA',
-                fontSize: 'clamp(1.2rem, 3vw, 1.5rem)',
-                fontWeight: '600',
-                margin: 0
-              }}>
-                Travail d'équipe
-              </h3>
-              <p style={{
-                color: '#fff',
-                fontSize: 'clamp(0.9rem, 2vw, 1.1rem)',
-                lineHeight: '1.6',
-                margin: 0,
-                opacity: 0.9
-              }}>
-                Collaboration active au sein d'équipes pluridisciplinaires pour atteindre des objectifs communs et partager les connaissances.
-              </p>
-            </div>
-
-            {/* Autonomie */}
+            {/* Tests & Qualité */}
             <div style={{
               backgroundColor: 'rgba(255,255,255,0.05)',
               borderRadius: '1rem',
@@ -341,7 +289,7 @@ export default function Home() {
                 fontWeight: '600',
                 margin: 0
               }}>
-                Autonomie
+                Tests & Qualité
               </h3>
               <p style={{
                 color: '#fff',
@@ -350,11 +298,11 @@ export default function Home() {
                 margin: 0,
                 opacity: 0.9
               }}>
-                Capacité à prendre des initiatives et à mener des projets de manière indépendante tout en respectant les objectifs fixés.
+                Implémentation de tests unitaires, d'intégration et E2E pour garantir la fiabilité et la maintenabilité du code.
               </p>
             </div>
 
-            {/* Cloud Computing */}
+            {/* DevOps */}
             <div style={{
               backgroundColor: 'rgba(255,255,255,0.05)',
               borderRadius: '1rem',
@@ -385,7 +333,7 @@ export default function Home() {
                 fontSize: '2.5rem',
                 opacity: 0.2
               }}>
-                ☁️
+                🔄
               </div>
               <h3 style={{
                 color: '#60A5FA',
@@ -393,7 +341,7 @@ export default function Home() {
                 fontWeight: '600',
                 margin: 0
               }}>
-                Cloud Computing
+                DevOps
               </h3>
               <p style={{
                 color: '#fff',
@@ -402,11 +350,11 @@ export default function Home() {
                 margin: 0,
                 opacity: 0.9
               }}>
-                Expert en solutions Cloud, spécialisé dans Google Cloud Platform avec trois ans d'expérience en conception et optimisation d'infrastructures.
+                Mise en place de CI/CD, automatisation des déploiements et monitoring des applications en production.
               </p>
             </div>
 
-            {/* Conception & Maintien des infrastructures */}
+            {/* Clean Code */}
             <div style={{
               backgroundColor: 'rgba(255,255,255,0.05)',
               borderRadius: '1rem',
@@ -437,7 +385,7 @@ export default function Home() {
                 fontSize: '2.5rem',
                 opacity: 0.2
               }}>
-                🔧
+                ✨
               </div>
               <h3 style={{
                 color: '#60A5FA',
@@ -445,7 +393,7 @@ export default function Home() {
                 fontWeight: '600',
                 margin: 0
               }}>
-                Infrastructure
+                Clean Code
               </h3>
               <p style={{
                 color: '#fff',
@@ -454,11 +402,11 @@ export default function Home() {
                 margin: 0,
                 opacity: 0.9
               }}>
-                Expertise dans la création et la maintenance d'infrastructures réseau robustes, sécurisées et évolutives.
+                Écriture de code maintenable, lisible et efficace en suivant les meilleures pratiques de développement.
               </p>
             </div>
 
-            {/* Gestion d'équipements réseaux */}
+            {/* Base de données */}
             <div style={{
               backgroundColor: 'rgba(255,255,255,0.05)',
               borderRadius: '1rem',
@@ -489,7 +437,7 @@ export default function Home() {
                 fontSize: '2.5rem',
                 opacity: 0.2
               }}>
-                🌐
+                🗄️
               </div>
               <h3 style={{
                 color: '#60A5FA',
@@ -497,7 +445,7 @@ export default function Home() {
                 fontWeight: '600',
                 margin: 0
               }}>
-                Réseaux
+                Base de données
               </h3>
               <p style={{
                 color: '#fff',
@@ -506,11 +454,11 @@ export default function Home() {
                 margin: 0,
                 opacity: 0.9
               }}>
-                Maîtrise approfondie de la configuration et du dépannage d'équipements réseau pour des infrastructures performantes.
+                Conception de schémas optimisés et gestion efficace des données avec SQL et NoSQL.
               </p>
             </div>
 
-            {/* Algorithmie */}
+            {/* Sécurité */}
             <div style={{
               backgroundColor: 'rgba(255,255,255,0.05)',
               borderRadius: '1rem',
@@ -541,7 +489,7 @@ export default function Home() {
                 fontSize: '2.5rem',
                 opacity: 0.2
               }}>
-                🧮
+                🔒
               </div>
               <h3 style={{
                 color: '#60A5FA',
@@ -549,7 +497,7 @@ export default function Home() {
                 fontWeight: '600',
                 margin: 0
               }}>
-                Algorithmie
+                Sécurité
               </h3>
               <p style={{
                 color: '#fff',
@@ -558,11 +506,63 @@ export default function Home() {
                 margin: 0,
                 opacity: 0.9
               }}>
-                Conception et optimisation de solutions algorithmiques efficaces pour résoudre des problèmes complexes.
+                Implémentation des meilleures pratiques de sécurité et protection des données sensibles dans les applications.
               </p>
             </div>
 
-            {/* Documentation */}
+            {/* Agilité */}
+            <div style={{
+              backgroundColor: 'rgba(255,255,255,0.05)',
+              borderRadius: '1rem',
+              border: '1px solid rgba(255,255,255,0.1)',
+              padding: '2rem',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '1.5rem',
+              position: 'relative',
+              transition: 'all 0.3s ease',
+              cursor: 'pointer',
+              boxSizing: 'border-box'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateY(-5px)';
+              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.08)';
+              e.currentTarget.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.05)';
+              e.currentTarget.style.boxShadow = 'none';
+            }}>
+              <div style={{
+                position: 'absolute',
+                top: '1rem',
+                right: '1rem',
+                fontSize: '2.5rem',
+                opacity: 0.2
+              }}>
+                🔄
+              </div>
+              <h3 style={{
+                color: '#60A5FA',
+                fontSize: 'clamp(1.2rem, 3vw, 1.5rem)',
+                fontWeight: '600',
+                margin: 0
+              }}>
+                Agilité
+              </h3>
+              <p style={{
+                color: '#fff',
+                fontSize: 'clamp(0.9rem, 2vw, 1.1rem)',
+                lineHeight: '1.6',
+                margin: 0,
+                opacity: 0.9
+              }}>
+                Expérience en méthodologies agiles, participation active aux cérémonies Scrum et amélioration continue des processus.
+              </p>
+            </div>
+
+            {/* Veille Technologique */}
             <div style={{
               backgroundColor: 'rgba(255,255,255,0.05)',
               borderRadius: '1rem',
@@ -601,7 +601,7 @@ export default function Home() {
                 fontWeight: '600',
                 margin: 0
               }}>
-                Documentation
+                Veille Technologique
               </h3>
               <p style={{
                 color: '#fff',
@@ -610,7 +610,7 @@ export default function Home() {
                 margin: 0,
                 opacity: 0.9
               }}>
-                Rédaction précise et structurée de documentations techniques facilitant la maintenance et le transfert de connaissances.
+                Suivi constant des nouvelles technologies et des bonnes pratiques pour maintenir une expertise à jour.
               </p>
             </div>
           </div>
