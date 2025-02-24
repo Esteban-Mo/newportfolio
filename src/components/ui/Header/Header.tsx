@@ -21,21 +21,42 @@ export default function Header() {
     useEffect(() => {
         const handleScroll = () => {
             const sections = ['home', 'competences', 'realisations', 'contact'];
-            const scrollPosition = window.scrollY + 100; // offset pour le header
+            const viewportHeight = window.innerHeight;
+            const headerHeight = 70;
+            
+            // Point de référence au centre de l'écran
+            const viewportMiddle = window.scrollY + (viewportHeight / 2);
 
-            for (const section of sections) {
-                const element = document.getElementById(section);
+            // Trouver la section la plus proche du centre de l'écran
+            let closestSection = sections[0];
+            let closestDistance = Infinity;
+
+            sections.forEach(sectionId => {
+                const element = document.getElementById(sectionId);
                 if (element) {
-                    const { offsetTop, offsetHeight } = element;
-                    if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-                        setActiveSection(section);
-                        break;
+                    const rect = element.getBoundingClientRect();
+                    const sectionMiddle = window.scrollY + rect.top + (rect.height / 2);
+                    const distance = Math.abs(viewportMiddle - sectionMiddle);
+
+                    if (distance < closestDistance) {
+                        closestDistance = distance;
+                        closestSection = sectionId;
                     }
                 }
+            });
+
+            // Cas spécial pour la dernière section (contact)
+            const isAtBottom = window.scrollY + viewportHeight >= document.documentElement.scrollHeight - 50;
+            if (isAtBottom) {
+                setActiveSection('contact');
+            } else {
+                setActiveSection(closestSection);
             }
         };
 
         window.addEventListener('scroll', handleScroll);
+        handleScroll(); // Appel initial
+        
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
