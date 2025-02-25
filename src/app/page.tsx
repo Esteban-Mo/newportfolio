@@ -3,6 +3,7 @@
 import './style.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Chip } from '@mui/material';
 
 export default function Home() {
   // Style commun pour toutes les cartes
@@ -239,6 +240,38 @@ export default function Home() {
               }}>
                 Conception d'architectures évolutives et maintenables en appliquant les principes SOLID et les patterns de conception.
               </p>
+              <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginTop: '0.5rem' }}>
+                <Chip 
+                  label="Design Patterns" 
+                  sx={{ 
+                    bgcolor: 'rgba(255, 255, 255, 0.05)', 
+                    color: '#fff', 
+                    borderColor: '#34D399', 
+                    border: '1px solid',
+                    borderRadius: '5px'
+                  }} 
+                />
+                <Chip 
+                  label="SOLID" 
+                  sx={{ 
+                    bgcolor: 'rgba(255, 255, 255, 0.05)', 
+                    color: '#fff', 
+                    borderColor: '#34D399', 
+                    border: '1px solid',
+                    borderRadius: '5px'
+                  }} 
+                />
+                <Chip 
+                  label="Clean Architecture" 
+                  sx={{ 
+                    bgcolor: 'rgba(255, 255, 255, 0.05)', 
+                    color: '#fff', 
+                    borderColor: '#34D399', 
+                    border: '1px solid',
+                    borderRadius: '5px'
+                  }} 
+                />
+              </div>
             </div>
 
             {/* Développement Frontend */}
@@ -302,8 +335,50 @@ export default function Home() {
                 margin: 0,
                 opacity: 0.9
               }}>
-                Maîtrise des frameworks modernes (React, Next.js) et création d'interfaces utilisateur performantes et responsives.
+                Maîtrise des frameworks modernes et création d'interfaces utilisateur performantes et responsives.
               </p>
+              <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginTop: '0.5rem' }}>
+                <Chip 
+                  label="React" 
+                  sx={{ 
+                    bgcolor: 'rgba(255, 255, 255, 0.05)', 
+                    color: '#fff', 
+                    borderColor: '#61DAFB', 
+                    border: '1px solid',
+                    borderRadius: '5px'
+                  }} 
+                />
+                <Chip 
+                  label="Next.js" 
+                  sx={{ 
+                    bgcolor: 'rgba(255, 255, 255, 0.05)', 
+                    color: '#fff', 
+                    borderColor: '#fff', 
+                    border: '1px solid',
+                    borderRadius: '5px'
+                  }} 
+                />
+                <Chip 
+                  label="TypeScript" 
+                  sx={{ 
+                    bgcolor: 'rgba(255, 255, 255, 0.05)', 
+                    color: '#fff', 
+                    borderColor: '#3178C6', 
+                    border: '1px solid',
+                    borderRadius: '5px'
+                  }} 
+                />
+                <Chip 
+                  label="JavaScript" 
+                  sx={{ 
+                    bgcolor: 'rgba(255, 255, 255, 0.05)', 
+                    color: '#fff', 
+                    borderColor: '#F7DF1E', 
+                    border: '1px solid',
+                    borderRadius: '5px'
+                  }} 
+                />
+              </div>
             </div>
 
             {/* Développement Backend */}
@@ -369,6 +444,28 @@ export default function Home() {
               }}>
                 Création d'APIs RESTful robustes et évolutives, gestion efficace des bases de données et des services web.
               </p>
+              <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginTop: '0.5rem' }}>
+                <Chip 
+                  label="Node.js" 
+                  sx={{ 
+                    bgcolor: 'rgba(255, 255, 255, 0.05)', 
+                    color: '#fff', 
+                    borderColor: '#68A063', 
+                    border: '1px solid',
+                    borderRadius: '5px'
+                  }} 
+                />
+                <Chip 
+                  label="Next.js API" 
+                  sx={{ 
+                    bgcolor: 'rgba(255, 255, 255, 0.05)', 
+                    color: '#fff', 
+                    borderColor: '#fff', 
+                    border: '1px solid',
+                    borderRadius: '5px'
+                  }} 
+                />
+              </div>
             </div>
 
             {/* Tests & Qualité */}
@@ -434,6 +531,18 @@ export default function Home() {
               }}>
                 Implémentation de tests unitaires, d'intégration et E2E pour garantir la fiabilité et la maintenabilité du code.
               </p>
+              <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginTop: '0.5rem' }}>
+                <Chip 
+                  label="Jest" 
+                  sx={{ 
+                    bgcolor: 'rgba(255, 255, 255, 0.05)', 
+                    color: '#fff', 
+                    borderColor: '#99425B', 
+                    border: '1px solid',
+                    borderRadius: '5px'
+                  }} 
+                />
+              </div>
             </div>
 
             {/* DevOps */}
@@ -499,71 +608,38 @@ export default function Home() {
               }}>
                 Mise en place de CI/CD, automatisation des déploiements et monitoring des applications en production.
               </p>
-            </div>
-
-            {/* Clean Code */}
-            <div 
-              style={cardStyle}
-              onMouseEnter={(e) => {
-                const target = e.currentTarget as HTMLDivElement;
-                target.style.transform = 'translateY(-5px)';
-                target.style.backgroundColor = 'rgba(255,255,255,0.08)';
-                target.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
-                
-                const moreInfo = target.querySelector('[data-more-info]') as HTMLDivElement;
-                if (moreInfo) {
-                  moreInfo.style.color = '#93C5FD';
-                  moreInfo.style.opacity = '1';
-                  const arrow = moreInfo.querySelector('span:last-child') as HTMLSpanElement;
-                  if (arrow) {
-                    arrow.style.transform = 'translateX(5px)';
-                  }
-                }
-              }}
-              onMouseLeave={(e) => {
-                const target = e.currentTarget as HTMLDivElement;
-                target.style.transform = 'translateY(0)';
-                target.style.backgroundColor = 'rgba(255,255,255,0.05)';
-                target.style.boxShadow = 'none';
-                
-                const moreInfo = target.querySelector('[data-more-info]') as HTMLDivElement;
-                if (moreInfo) {
-                  moreInfo.style.color = '#60A5FA';
-                  moreInfo.style.opacity = '0.8';
-                  const arrow = moreInfo.querySelector('span:last-child') as HTMLSpanElement;
-                  if (arrow) {
-                    arrow.style.transform = 'translateX(0)';
-                  }
-                }
-              }}
-            >
-              {moreInfoIndicator}
-              <div style={{
-                position: 'absolute',
-                top: '1rem',
-                right: '1rem',
-                fontSize: '2.5rem',
-                opacity: 0.2
-              }}>
-                ✨
+              <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginTop: '0.5rem' }}>
+                <Chip 
+                  label="Docker" 
+                  sx={{ 
+                    bgcolor: 'rgba(255, 255, 255, 0.05)', 
+                    color: '#fff', 
+                    borderColor: '#2188FF', 
+                    border: '1px solid',
+                    borderRadius: '5px'
+                  }} 
+                />
+                <Chip 
+                  label="GitHub Enterprise" 
+                  sx={{ 
+                    bgcolor: 'rgba(255, 255, 255, 0.05)', 
+                    color: '#fff', 
+                    borderColor: '#2F81F7', 
+                    border: '1px solid',
+                    borderRadius: '5px'
+                  }} 
+                />
+                <Chip 
+                  label="Azure DevOps" 
+                  sx={{ 
+                    bgcolor: 'rgba(255, 255, 255, 0.05)', 
+                    color: '#fff', 
+                    borderColor: '#0078D7', 
+                    border: '1px solid',
+                    borderRadius: '5px'
+                  }} 
+                />
               </div>
-              <h3 style={{
-                color: '#60A5FA',
-                fontSize: 'clamp(1.2rem, 3vw, 1.5rem)',
-                fontWeight: '600',
-                margin: 0
-              }}>
-                Clean Code
-              </h3>
-              <p style={{
-                color: '#fff',
-                fontSize: 'clamp(0.9rem, 2vw, 1.1rem)',
-                lineHeight: '1.6',
-                margin: 0,
-                opacity: 0.9
-              }}>
-                Écriture de code maintenable, lisible et efficace en suivant les meilleures pratiques de développement.
-              </p>
             </div>
 
             {/* Base de données */}
@@ -629,6 +705,38 @@ export default function Home() {
               }}>
                 Conception de schémas optimisés et gestion efficace des données avec SQL et NoSQL.
               </p>
+              <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginTop: '0.5rem' }}>
+                <Chip 
+                  label="PostgreSQL" 
+                  sx={{ 
+                    bgcolor: 'rgba(255, 255, 255, 0.05)', 
+                    color: '#fff', 
+                    borderColor: '#336791', 
+                    border: '1px solid',
+                    borderRadius: '5px'
+                  }} 
+                />
+                <Chip 
+                  label="MySQL" 
+                  sx={{ 
+                    bgcolor: 'rgba(255, 255, 255, 0.05)', 
+                    color: '#fff', 
+                    borderColor: '#4479A1', 
+                    border: '1px solid',
+                    borderRadius: '5px'
+                  }} 
+                />
+                <Chip 
+                  label="MongoDB" 
+                  sx={{ 
+                    bgcolor: 'rgba(255, 255, 255, 0.05)', 
+                    color: '#fff', 
+                    borderColor: '#00ED64', 
+                    border: '1px solid',
+                    borderRadius: '5px'
+                  }} 
+                />
+              </div>
             </div>
 
             {/* Sécurité */}
@@ -692,8 +800,40 @@ export default function Home() {
                 margin: 0,
                 opacity: 0.9
               }}>
-                Implémentation des meilleures pratiques de sécurité et protection des données sensibles dans les applications.
+                Implémentation des meilleures pratiques de sécurité et protection des données sensibles.
               </p>
+              <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginTop: '0.5rem' }}>
+                <Chip 
+                  label="Auth0" 
+                  sx={{ 
+                    bgcolor: 'rgba(255, 255, 255, 0.05)', 
+                    color: '#fff', 
+                    borderColor: '#EB4432', 
+                    border: '1px solid',
+                    borderRadius: '5px'
+                  }} 
+                />
+                <Chip 
+                  label="JWT" 
+                  sx={{ 
+                    bgcolor: 'rgba(255, 255, 255, 0.05)', 
+                    color: '#fff', 
+                    borderColor: '#D73A49', 
+                    border: '1px solid',
+                    borderRadius: '5px'
+                  }} 
+                />
+                <Chip 
+                  label="BCRYPT" 
+                  sx={{ 
+                    bgcolor: 'rgba(255, 255, 255, 0.05)', 
+                    color: '#fff', 
+                    borderColor: '#8B4513', 
+                    border: '1px solid',
+                    borderRadius: '5px'
+                  }} 
+                />
+              </div>
             </div>
 
             {/* Agilité */}
