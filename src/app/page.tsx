@@ -1,6 +1,9 @@
 'use client';
 
 import './style.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 export default function Home() {
   // Style commun pour toutes les cartes
   const cardStyle = {
@@ -41,6 +44,20 @@ export default function Home() {
       }}>→</span>
     </div>
   );
+
+  const copyEmail = () => {
+    navigator.clipboard.writeText('e.mortier@proton.me');
+    toast.success('Email copié !', {
+      position: "bottom-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
+  };
 
   return (
     <div style={{
@@ -1541,12 +1558,14 @@ export default function Home() {
           }}>
             {/* Email */}
             <div 
+              onClick={copyEmail}
               style={{
                 backgroundColor: 'rgba(255,255,255,0.05)',
                 borderRadius: '1rem',
                 border: '1px solid rgba(255,255,255,0.1)',
                 padding: '2rem',
                 display: 'flex',
+                flexDirection: 'column',
                 alignItems: 'center',
                 gap: '1rem',
                 cursor: 'pointer',
@@ -1566,11 +1585,22 @@ export default function Home() {
               }}
             >
               <span style={{ fontSize: '2rem' }}>📧</span>
-              <span style={{
-                color: '#fff',
-                fontSize: '1.2rem',
-                fontWeight: '600'
-              }}>Email</span>
+              <div style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                gap: '0.5rem'
+              }}>
+                <span style={{
+                  color: '#fff',
+                  fontSize: '1.2rem',
+                  fontWeight: '600'
+                }}>Email</span>
+                <span style={{
+                  color: '#60A5FA',
+                  fontSize: '1rem'
+                }}>e.mortier@proton.me</span>
+              </div>
             </div>
 
             {/* LinkedIn */}
@@ -1665,6 +1695,8 @@ export default function Home() {
           © 2025 Esteban Mortier - Portfolio.
         </div>
       </footer>
+
+      <ToastContainer />
     </div>
   );
 }
