@@ -1228,7 +1228,137 @@ export default function Home() {
             gap: '2rem',
             boxSizing: 'border-box'
           }}>
-            {/* Projet GSB */}
+            {/* BDD Turbine */}
+            <div 
+              style={cardStyle}
+              onMouseEnter={(e) => {
+                const target = e.currentTarget as HTMLDivElement;
+                target.style.transform = 'translateY(-5px)';
+                target.style.backgroundColor = 'rgba(255,255,255,0.08)';
+                target.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
+                
+                const moreInfo = target.querySelector('[data-more-info]') as HTMLDivElement;
+                if (moreInfo) {
+                  moreInfo.style.color = '#93C5FD';
+                  moreInfo.style.opacity = '1';
+                  const arrow = moreInfo.querySelector('span:last-child') as HTMLSpanElement;
+                  if (arrow) {
+                    arrow.style.transform = 'translateX(5px)';
+                  }
+                }
+              }}
+              onMouseLeave={(e) => {
+                const target = e.currentTarget as HTMLDivElement;
+                target.style.transform = 'translateY(0)';
+                target.style.backgroundColor = 'rgba(255,255,255,0.05)';
+                target.style.boxShadow = 'none';
+                
+                const moreInfo = target.querySelector('[data-more-info]') as HTMLDivElement;
+                if (moreInfo) {
+                  moreInfo.style.color = '#60A5FA';
+                  moreInfo.style.opacity = '0.8';
+                  const arrow = moreInfo.querySelector('span:last-child') as HTMLSpanElement;
+                  if (arrow) {
+                    arrow.style.transform = 'translateX(0)';
+                  }
+                }
+              }}
+            >
+              {moreInfoIndicator}
+              <div style={{
+                position: 'absolute',
+                top: '1rem',
+                right: '1rem',
+                fontSize: '2.5rem',
+                opacity: 0.2
+              }}>
+                💾
+              </div>
+              <h3 style={{
+                color: '#60A5FA',
+                fontSize: 'clamp(1.2rem, 3vw, 1.5rem)',
+                fontWeight: '600',
+                margin: 0
+              }}>
+                BDD Turbine
+              </h3>
+              <p style={{
+                color: '#fff',
+                fontSize: 'clamp(0.9rem, 2vw, 1.1rem)',
+                lineHeight: '1.6',
+                margin: 0,
+                opacity: 0.9
+              }}>
+                Application web innovante de gestion de turbines industrielles avec une interface intuitive pour la création et l'administration des données. API RESTful sécurisée permettant l'exportation des données au format CSV pour une intégration transparente avec d'autres systèmes.
+              </p>
+            </div>
+
+            {/* Atlas Eolien */}
+            <div 
+              style={cardStyle}
+              onMouseEnter={(e) => {
+                const target = e.currentTarget as HTMLDivElement;
+                target.style.transform = 'translateY(-5px)';
+                target.style.backgroundColor = 'rgba(255,255,255,0.08)';
+                target.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
+                
+                const moreInfo = target.querySelector('[data-more-info]') as HTMLDivElement;
+                if (moreInfo) {
+                  moreInfo.style.color = '#93C5FD';
+                  moreInfo.style.opacity = '1';
+                  const arrow = moreInfo.querySelector('span:last-child') as HTMLSpanElement;
+                  if (arrow) {
+                    arrow.style.transform = 'translateX(5px)';
+                  }
+                }
+              }}
+              onMouseLeave={(e) => {
+                const target = e.currentTarget as HTMLDivElement;
+                target.style.transform = 'translateY(0)';
+                target.style.backgroundColor = 'rgba(255,255,255,0.05)';
+                target.style.boxShadow = 'none';
+                
+                const moreInfo = target.querySelector('[data-more-info]') as HTMLDivElement;
+                if (moreInfo) {
+                  moreInfo.style.color = '#60A5FA';
+                  moreInfo.style.opacity = '0.8';
+                  const arrow = moreInfo.querySelector('span:last-child') as HTMLSpanElement;
+                  if (arrow) {
+                    arrow.style.transform = 'translateX(0)';
+                  }
+                }
+              }}
+            >
+              {moreInfoIndicator}
+              <div style={{
+                position: 'absolute',
+                top: '1rem',
+                right: '1rem',
+                fontSize: '2.5rem',
+                opacity: 0.2
+              }}>
+                🌪️
+              </div>
+              <h3 style={{
+                color: '#60A5FA',
+                fontSize: 'clamp(1.2rem, 3vw, 1.5rem)',
+                fontWeight: '600',
+                margin: 0
+              }}>
+                Atlas Eolien
+              </h3>
+              <p style={{
+                color: '#fff',
+                fontSize: 'clamp(0.9rem, 2vw, 1.1rem)',
+                lineHeight: '1.6',
+                margin: 0,
+                opacity: 0.9
+              }}>
+                Solution cartographique interactive visualisant en temps réel les données éoliennes en France. Interface moderne intégrant les données météorologiques et techniques des installations publiques et privées pour une prise de décision optimale.
+              </p>
+            </div>
+
+            {/* Module Foncier */}
             <div 
               style={cardStyle}
               onMouseEnter={(e) => {
@@ -1280,7 +1410,7 @@ export default function Home() {
                 fontWeight: '600',
                 margin: 0
               }}>
-                Projet GSB
+                Module Foncier
               </h3>
               <p style={{
                 color: '#fff',
@@ -1289,11 +1419,11 @@ export default function Home() {
                 margin: 0,
                 opacity: 0.9
               }}>
-                GSB est une infrastructure réseau que nous devions intégralement créer grâce à un cahier des charges. Ce projet nous a permis principalement de comprendre correctement le fonctionnement d'un datacenter.
+                Plateforme complète de gestion immobilière d'entreprise avec suivi des baux, optimisation des espaces et reporting avancé. Solution sur mesure permettant une gestion efficace et centralisée du patrimoine immobilier.
               </p>
             </div>
 
-            {/* Projet E-Lawvation */}
+            {/* Agence Walker */}
             <div 
               style={cardStyle}
               onMouseEnter={(e) => {
@@ -1337,7 +1467,7 @@ export default function Home() {
                 fontSize: '2.5rem',
                 opacity: 0.2
               }}>
-                ⚖️
+                🏠
               </div>
               <h3 style={{
                 color: '#60A5FA',
@@ -1345,7 +1475,7 @@ export default function Home() {
                 fontWeight: '600',
                 margin: 0
               }}>
-                Projet E-Lawvation
+                Agence Walker
               </h3>
               <p style={{
                 color: '#fff',
@@ -1354,204 +1484,7 @@ export default function Home() {
                 margin: 0,
                 opacity: 0.9
               }}>
-                Rédaction d'une étude visant à proposer différentes solutions technique pour répondre au besoin de notre client.
-              </p>
-            </div>
-
-            {/* Projet CMDB */}
-            <div 
-              style={cardStyle}
-              onMouseEnter={(e) => {
-                const target = e.currentTarget as HTMLDivElement;
-                target.style.transform = 'translateY(-5px)';
-                target.style.backgroundColor = 'rgba(255,255,255,0.08)';
-                target.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
-                
-                const moreInfo = target.querySelector('[data-more-info]') as HTMLDivElement;
-                if (moreInfo) {
-                  moreInfo.style.color = '#93C5FD';
-                  moreInfo.style.opacity = '1';
-                  const arrow = moreInfo.querySelector('span:last-child') as HTMLSpanElement;
-                  if (arrow) {
-                    arrow.style.transform = 'translateX(5px)';
-                  }
-                }
-              }}
-              onMouseLeave={(e) => {
-                const target = e.currentTarget as HTMLDivElement;
-                target.style.transform = 'translateY(0)';
-                target.style.backgroundColor = 'rgba(255,255,255,0.05)';
-                target.style.boxShadow = 'none';
-                
-                const moreInfo = target.querySelector('[data-more-info]') as HTMLDivElement;
-                if (moreInfo) {
-                  moreInfo.style.color = '#60A5FA';
-                  moreInfo.style.opacity = '0.8';
-                  const arrow = moreInfo.querySelector('span:last-child') as HTMLSpanElement;
-                  if (arrow) {
-                    arrow.style.transform = 'translateX(0)';
-                  }
-                }
-              }}
-            >
-              {moreInfoIndicator}
-              <div style={{
-                position: 'absolute',
-                top: '1rem',
-                right: '1rem',
-                fontSize: '2.5rem',
-                opacity: 0.2
-              }}>
-                🗄️
-              </div>
-              <h3 style={{
-                color: '#60A5FA',
-                fontSize: 'clamp(1.2rem, 3vw, 1.5rem)',
-                fontWeight: '600',
-                margin: 0
-              }}>
-                Projet CMDB
-              </h3>
-              <p style={{
-                color: '#fff',
-                fontSize: 'clamp(0.9rem, 2vw, 1.1rem)',
-                lineHeight: '1.6',
-                margin: 0,
-                opacity: 0.9
-              }}>
-                Rédaction d'une expression de besoin pour déployer et maintenir une base de données de gestion de configuration (CMDB en anglais).
-              </p>
-            </div>
-
-            {/* Devops & Run MCO */}
-            <div 
-              style={cardStyle}
-              onMouseEnter={(e) => {
-                const target = e.currentTarget as HTMLDivElement;
-                target.style.transform = 'translateY(-5px)';
-                target.style.backgroundColor = 'rgba(255,255,255,0.08)';
-                target.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
-                
-                const moreInfo = target.querySelector('[data-more-info]') as HTMLDivElement;
-                if (moreInfo) {
-                  moreInfo.style.color = '#93C5FD';
-                  moreInfo.style.opacity = '1';
-                  const arrow = moreInfo.querySelector('span:last-child') as HTMLSpanElement;
-                  if (arrow) {
-                    arrow.style.transform = 'translateX(5px)';
-                  }
-                }
-              }}
-              onMouseLeave={(e) => {
-                const target = e.currentTarget as HTMLDivElement;
-                target.style.transform = 'translateY(0)';
-                target.style.backgroundColor = 'rgba(255,255,255,0.05)';
-                target.style.boxShadow = 'none';
-                
-                const moreInfo = target.querySelector('[data-more-info]') as HTMLDivElement;
-                if (moreInfo) {
-                  moreInfo.style.color = '#60A5FA';
-                  moreInfo.style.opacity = '0.8';
-                  const arrow = moreInfo.querySelector('span:last-child') as HTMLSpanElement;
-                  if (arrow) {
-                    arrow.style.transform = 'translateX(0)';
-                  }
-                }
-              }}
-            >
-              {moreInfoIndicator}
-              <div style={{
-                position: 'absolute',
-                top: '1rem',
-                right: '1rem',
-                fontSize: '2.5rem',
-                opacity: 0.2
-              }}>
-                🔄
-              </div>
-              <h3 style={{
-                color: '#60A5FA',
-                fontSize: 'clamp(1.2rem, 3vw, 1.5rem)',
-                fontWeight: '600',
-                margin: 0
-              }}>
-                Devops & Run MCO
-              </h3>
-              <p style={{
-                color: '#fff',
-                fontSize: 'clamp(0.9rem, 2vw, 1.1rem)',
-                lineHeight: '1.6',
-                margin: 0,
-                opacity: 0.9
-              }}>
-                J'ai réalisé différents travaux de DevOps pour le logiciel Reveelium et je l'ai maintenu en conditions opérationnelles.
-              </p>
-            </div>
-
-            {/* Gestion des incidents Google Cloud */}
-            <div 
-              id="cloud-computing"
-              style={cardStyle}
-              onClick={() => window.location.href = '/competences/cloud-computing'}
-              onMouseEnter={(e) => {
-                const target = e.currentTarget as HTMLDivElement;
-                target.style.transform = 'translateY(-5px)';
-                target.style.backgroundColor = 'rgba(255,255,255,0.08)';
-                target.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
-                
-                const moreInfo = target.querySelector('[data-more-info]') as HTMLDivElement;
-                if (moreInfo) {
-                  moreInfo.style.color = '#93C5FD';
-                  moreInfo.style.opacity = '1';
-                  const arrow = moreInfo.querySelector('span:last-child') as HTMLSpanElement;
-                  if (arrow) {
-                    arrow.style.transform = 'translateX(5px)';
-                  }
-                }
-              }}
-              onMouseLeave={(e) => {
-                const target = e.currentTarget as HTMLDivElement;
-                target.style.transform = 'translateY(0)';
-                target.style.backgroundColor = 'rgba(255,255,255,0.05)';
-                target.style.boxShadow = 'none';
-                
-                const moreInfo = target.querySelector('[data-more-info]') as HTMLDivElement;
-                if (moreInfo) {
-                  moreInfo.style.color = '#60A5FA';
-                  moreInfo.style.opacity = '0.8';
-                  const arrow = moreInfo.querySelector('span:last-child') as HTMLSpanElement;
-                  if (arrow) {
-                    arrow.style.transform = 'translateX(0)';
-                  }
-                }
-              }}
-            >
-              {moreInfoIndicator}
-              <div style={{
-                position: 'absolute',
-                top: '1rem',
-                right: '1rem',
-                fontSize: '2.5rem',
-                opacity: 0.2
-              }}>
-                ☁️
-              </div>
-              <h3 style={{
-                color: '#60A5FA',
-                fontSize: 'clamp(1.2rem, 3vw, 1.5rem)',
-                fontWeight: '600',
-                margin: 0
-              }}>
-                Gestion des incidents Google Cloud
-              </h3>
-              <p style={{
-                color: '#fff',
-                fontSize: 'clamp(0.9rem, 2vw, 1.1rem)',
-                lineHeight: '1.6',
-                margin: 0,
-                opacity: 0.9
-              }}>
-                Depuis 2021, je suis passionné par le Cloud et plus précisément Google Cloud. J'interviens bénévolement sur des incidents Google Cloud.
+                Application immobilière nouvelle génération avec cartographie interactive des biens. Interface élégante offrant une visualisation en temps réel des propriétés disponibles et louées, enrichie de fonctionnalités avancées de gestion locative.
               </p>
             </div>
           </div>
