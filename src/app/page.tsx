@@ -476,7 +476,9 @@ export default function Home() {
 
             {/* Tests & Qualité */}
             <div 
+              id="tests-qualite"
               style={cardStyle}
+              onClick={() => window.location.href = '/competences/tests-qualite'}
               onMouseEnter={(e) => {
                 const target = e.currentTarget as HTMLDivElement;
                 target.style.transform = 'translateY(-5px)';
