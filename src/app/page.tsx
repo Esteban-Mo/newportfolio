@@ -857,136 +857,6 @@ export default function Home() {
                 />
               </div>
             </div>
-
-            {/* Agilité */}
-            <div 
-              style={cardStyle}
-              onMouseEnter={(e) => {
-                const target = e.currentTarget as HTMLDivElement;
-                target.style.transform = 'translateY(-5px)';
-                target.style.backgroundColor = 'rgba(255,255,255,0.08)';
-                target.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
-                
-                const moreInfo = target.querySelector('[data-more-info]') as HTMLDivElement;
-                if (moreInfo) {
-                  moreInfo.style.color = '#93C5FD';
-                  moreInfo.style.opacity = '1';
-                  const arrow = moreInfo.querySelector('span:last-child') as HTMLSpanElement;
-                  if (arrow) {
-                    arrow.style.transform = 'translateX(5px)';
-                  }
-                }
-              }}
-              onMouseLeave={(e) => {
-                const target = e.currentTarget as HTMLDivElement;
-                target.style.transform = 'translateY(0)';
-                target.style.backgroundColor = 'rgba(255,255,255,0.05)';
-                target.style.boxShadow = 'none';
-                
-                const moreInfo = target.querySelector('[data-more-info]') as HTMLDivElement;
-                if (moreInfo) {
-                  moreInfo.style.color = '#60A5FA';
-                  moreInfo.style.opacity = '0.8';
-                  const arrow = moreInfo.querySelector('span:last-child') as HTMLSpanElement;
-                  if (arrow) {
-                    arrow.style.transform = 'translateX(0)';
-                  }
-                }
-              }}
-            >
-              {moreInfoIndicator}
-              <div style={{
-                position: 'absolute',
-                top: '1rem',
-                right: '1rem',
-                fontSize: '2.5rem',
-                opacity: 0.2
-              }}>
-                🔄
-              </div>
-              <h3 style={{
-                color: '#60A5FA',
-                fontSize: 'clamp(1.2rem, 3vw, 1.5rem)',
-                fontWeight: '600',
-                margin: 0
-              }}>
-                Agilité
-              </h3>
-              <p style={{
-                color: '#fff',
-                fontSize: 'clamp(0.9rem, 2vw, 1.1rem)',
-                lineHeight: '1.6',
-                margin: 0,
-                opacity: 0.9
-              }}>
-                Expérience en méthodologies agiles, participation active aux cérémonies Scrum et amélioration continue des processus.
-              </p>
-            </div>
-
-            {/* Veille Technologique */}
-            <div 
-              style={cardStyle}
-              onMouseEnter={(e) => {
-                const target = e.currentTarget as HTMLDivElement;
-                target.style.transform = 'translateY(-5px)';
-                target.style.backgroundColor = 'rgba(255,255,255,0.08)';
-                target.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
-                
-                const moreInfo = target.querySelector('[data-more-info]') as HTMLDivElement;
-                if (moreInfo) {
-                  moreInfo.style.color = '#93C5FD';
-                  moreInfo.style.opacity = '1';
-                  const arrow = moreInfo.querySelector('span:last-child') as HTMLSpanElement;
-                  if (arrow) {
-                    arrow.style.transform = 'translateX(5px)';
-                  }
-                }
-              }}
-              onMouseLeave={(e) => {
-                const target = e.currentTarget as HTMLDivElement;
-                target.style.transform = 'translateY(0)';
-                target.style.backgroundColor = 'rgba(255,255,255,0.05)';
-                target.style.boxShadow = 'none';
-                
-                const moreInfo = target.querySelector('[data-more-info]') as HTMLDivElement;
-                if (moreInfo) {
-                  moreInfo.style.color = '#60A5FA';
-                  moreInfo.style.opacity = '0.8';
-                  const arrow = moreInfo.querySelector('span:last-child') as HTMLSpanElement;
-                  if (arrow) {
-                    arrow.style.transform = 'translateX(0)';
-                  }
-                }
-              }}
-            >
-              {moreInfoIndicator}
-              <div style={{
-                position: 'absolute',
-                top: '1rem',
-                right: '1rem',
-                fontSize: '2.5rem',
-                opacity: 0.2
-              }}>
-                📚
-              </div>
-              <h3 style={{
-                color: '#60A5FA',
-                fontSize: 'clamp(1.2rem, 3vw, 1.5rem)',
-                fontWeight: '600',
-                margin: 0
-              }}>
-                Veille Technologique
-              </h3>
-              <p style={{
-                color: '#fff',
-                fontSize: 'clamp(0.9rem, 2vw, 1.1rem)',
-                lineHeight: '1.6',
-                margin: 0,
-                opacity: 0.9
-              }}>
-                Suivi constant des nouvelles technologies et des bonnes pratiques pour maintenir une expertise à jour.
-              </p>
-            </div>
           </div>
         </div>
       </section>
@@ -1039,7 +909,9 @@ export default function Home() {
           }}>
             {/* Communication */}
             <div 
+              id="communication"
               style={cardStyle}
+              onClick={() => window.location.href = '/competences/communication'}
               onMouseEnter={(e) => {
                 const target = e.currentTarget as HTMLDivElement;
                 target.style.transform = 'translateY(-5px)';
