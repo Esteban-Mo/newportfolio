@@ -662,7 +662,9 @@ export default function Home() {
 
             {/* DevOps */}
             <div 
+              id="devops"
               style={cardStyle}
+              onClick={() => window.location.href = '/competences/devops'}
               onMouseEnter={(e) => {
                 const target = e.currentTarget as HTMLDivElement;
                 target.style.transform = 'translateY(-5px)';
