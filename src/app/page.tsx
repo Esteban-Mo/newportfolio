@@ -179,7 +179,9 @@ export default function Home() {
           }}>
             {/* Architecture Logicielle */}
             <div 
+              id="architecture-logicielle"
               style={cardStyle}
+              onClick={() => window.location.href = '/competences/architecture-logicielle'}
               onMouseEnter={(e) => {
                 const target = e.currentTarget as HTMLDivElement;
                 target.style.transform = 'translateY(-5px)';
@@ -276,7 +278,9 @@ export default function Home() {
 
             {/* Développement Frontend */}
             <div 
+              id="developpement-frontend"
               style={cardStyle}
+              onClick={() => window.location.href = '/competences/developpement-frontend'}
               onMouseEnter={(e) => {
                 const target = e.currentTarget as HTMLDivElement;
                 target.style.transform = 'translateY(-5px)';
@@ -383,7 +387,9 @@ export default function Home() {
 
             {/* Développement Backend */}
             <div 
+              id="developpement-backend"
               style={cardStyle}
+              onClick={() => window.location.href = '/competences/developpement-backend'}
               onMouseEnter={(e) => {
                 const target = e.currentTarget as HTMLDivElement;
                 target.style.transform = 'translateY(-5px)';
@@ -1585,7 +1591,9 @@ export default function Home() {
 
             {/* Gestion des incidents Google Cloud */}
             <div 
+              id="cloud-computing"
               style={cardStyle}
+              onClick={() => window.location.href = '/competences/cloud-computing'}
               onMouseEnter={(e) => {
                 const target = e.currentTarget as HTMLDivElement;
                 target.style.transform = 'translateY(-5px)';
