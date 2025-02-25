@@ -4,8 +4,6 @@ import HomeIcon from '@mui/icons-material/Home';
 import WorkIcon from '@mui/icons-material/Work';
 import CodeIcon from '@mui/icons-material/Code';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -13,21 +11,19 @@ import CloseIcon from '@mui/icons-material/Close';
 import styles from './Header.module.css';
 
 export default function Header() {
-    const pathname = usePathname();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [hoveredLink, setHoveredLink] = useState<string | null>(null);
-    const [activeSection, setActiveSection] = useState('home');
+    const [activeSection, setActiveSection] = useState(`home`);
 
     useEffect(() => {
         const handleScroll = () => {
-            const sections = ['home', 'competences', 'realisations', 'contact'];
+            const sections = [`home`, `competences`, `realisations`, `contact`];
             const viewportHeight = window.innerHeight;
-            const headerHeight = 70;
             
-            // Point de référence au centre de l'écran
+            // Point de référence au centre de l`écran
             const viewportMiddle = window.scrollY + (viewportHeight / 2);
 
-            // Trouver la section la plus proche du centre de l'écran
+            // Trouver la section la plus proche du centre de l`écran
             let closestSection = sections[0];
             let closestDistance = Infinity;
 
@@ -48,27 +44,27 @@ export default function Header() {
             // Cas spécial pour la dernière section (contact)
             const isAtBottom = window.scrollY + viewportHeight >= document.documentElement.scrollHeight - 50;
             if (isAtBottom) {
-                setActiveSection('contact');
+                setActiveSection(`contact`);
             } else {
                 setActiveSection(closestSection);
             }
         };
 
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener(`scroll`, handleScroll);
         handleScroll(); // Appel initial
         
-        return () => window.removeEventListener('scroll', handleScroll);
+        return () => window.removeEventListener(`scroll`, handleScroll);
     }, []);
 
     const getLinkColor = (sectionId: string, linkId: string) => {
-        if (activeSection === sectionId) return '#60A5FA';
-        return hoveredLink === linkId ? '#60A5FA' : '#fff';
+        if (activeSection === sectionId) return `#60A5FA`;
+        return hoveredLink === linkId ? `#60A5FA` : `#fff`;
     };
 
     const scrollToSection = (sectionId: string) => {
         const element = document.getElementById(sectionId);
         if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
+            element.scrollIntoView({ behavior: `smooth` });
         }
         setIsMenuOpen(false);
     };
@@ -81,7 +77,7 @@ export default function Header() {
                         src="/images/me.jpg"
                         alt="Esteban Mortier"
                         fill
-                        style={{ objectFit: 'cover' }}
+                        style={{ objectFit: `cover` }}
                     />
                 </div>
                 Esteban Mortier
@@ -96,76 +92,76 @@ export default function Header() {
 
             <nav className={styles.desktopNav}>
                 <a 
-                    onClick={() => scrollToSection('home')}
+                    onClick={() => scrollToSection(`home`)}
                     className={styles.link}
-                    style={{ color: getLinkColor('home', 'home'), cursor: 'pointer' }}
-                    onMouseEnter={() => setHoveredLink('home')}
+                    style={{ color: getLinkColor(`home`, `home`), cursor: `pointer` }}
+                    onMouseEnter={() => setHoveredLink(`home`)}
                     onMouseLeave={() => setHoveredLink(null)}
                 >
                     <HomeIcon /> Accueil
                 </a>
                 <a 
-                    onClick={() => scrollToSection('competences')}
+                    onClick={() => scrollToSection(`competences`)}
                     className={styles.link}
-                    style={{ color: getLinkColor('competences', 'competences'), cursor: 'pointer' }}
-                    onMouseEnter={() => setHoveredLink('competences')}
+                    style={{ color: getLinkColor(`competences`, `competences`), cursor: `pointer` }}
+                    onMouseEnter={() => setHoveredLink(`competences`)}
                     onMouseLeave={() => setHoveredLink(null)}
                 >
                     <CodeIcon /> Compétences
                 </a>
                 <a 
-                    onClick={() => scrollToSection('realisations')}
+                    onClick={() => scrollToSection(`realisations`)}
                     className={styles.link}
-                    style={{ color: getLinkColor('realisations', 'realisations'), cursor: 'pointer' }}
-                    onMouseEnter={() => setHoveredLink('realisations')}
+                    style={{ color: getLinkColor(`realisations`, `realisations`), cursor: `pointer` }}
+                    onMouseEnter={() => setHoveredLink(`realisations`)}
                     onMouseLeave={() => setHoveredLink(null)}
                 >
                     <WorkIcon /> Réalisations
                 </a>
                 <a 
-                    onClick={() => scrollToSection('contact')}
+                    onClick={() => scrollToSection(`contact`)}
                     className={styles.link}
-                    style={{ color: getLinkColor('contact', 'contact'), cursor: 'pointer' }}
-                    onMouseEnter={() => setHoveredLink('contact')}
+                    style={{ color: getLinkColor(`contact`, `contact`), cursor: `pointer` }}
+                    onMouseEnter={() => setHoveredLink(`contact`)}
                     onMouseLeave={() => setHoveredLink(null)}
                 >
                     <ContactMailIcon /> Contact
                 </a>
             </nav>
 
-            <nav className={`${styles.mobileMenu} ${isMenuOpen ? styles.mobileMenuOpen : ''}`}>
+            <nav className={`${styles.mobileMenu} ${isMenuOpen ? styles.mobileMenuOpen : ``}`}>
                 <a 
-                    onClick={() => scrollToSection('home')}
+                    onClick={() => scrollToSection(`home`)}
                     className={`${styles.link} ${styles.mobileLink}`}
-                    style={{ color: getLinkColor('home', 'home'), cursor: 'pointer' }}
-                    onMouseEnter={() => setHoveredLink('home')}
+                    style={{ color: getLinkColor(`home`, `home`), cursor: `pointer` }}
+                    onMouseEnter={() => setHoveredLink(`home`)}
                     onMouseLeave={() => setHoveredLink(null)}
                 >
                     <HomeIcon /> Accueil
                 </a>
                 <a 
-                    onClick={() => scrollToSection('competences')}
+                    onClick={() => scrollToSection(`competences`)}
                     className={`${styles.link} ${styles.mobileLink}`}
-                    style={{ color: getLinkColor('competences', 'competences'), cursor: 'pointer' }}
-                    onMouseEnter={() => setHoveredLink('competences')}
+                    style={{ color: getLinkColor(`competences`, `competences`), cursor: `pointer` }}
+                    onMouseEnter={() => setHoveredLink(`competences`)}
                     onMouseLeave={() => setHoveredLink(null)}
                 >
                     <CodeIcon /> Compétences
                 </a>
                 <a 
-                    onClick={() => scrollToSection('realisations')}
+                    onClick={() => scrollToSection(`realisations`)}
                     className={`${styles.link} ${styles.mobileLink}`}
-                    style={{ color: getLinkColor('realisations', 'realisations'), cursor: 'pointer' }}
-                    onMouseEnter={() => setHoveredLink('realisations')}
+                    style={{ color: getLinkColor(`realisations`, `realisations`), cursor: `pointer` }}
+                    onMouseEnter={() => setHoveredLink(`realisations`)}
                     onMouseLeave={() => setHoveredLink(null)}
                 >
                     <WorkIcon /> Réalisations
                 </a>
                 <a 
-                    onClick={() => scrollToSection('contact')}
+                    onClick={() => scrollToSection(`contact`)}
                     className={`${styles.link} ${styles.mobileLink}`}
-                    style={{ color: getLinkColor('contact', 'contact'), cursor: 'pointer' }}
-                    onMouseEnter={() => setHoveredLink('contact')}
+                    style={{ color: getLinkColor(`contact`, `contact`), cursor: `pointer` }}
+                    onMouseEnter={() => setHoveredLink(`contact`)}
                     onMouseLeave={() => setHoveredLink(null)}
                 >
                     <ContactMailIcon /> Contact
