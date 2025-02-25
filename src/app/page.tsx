@@ -4,8 +4,13 @@ import './style.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Chip } from '@mui/material';
+import { useRouter } from 'next/navigation';
+import { useState } from 'react';
 
 export default function Home() {
+  const router = useRouter();
+  const [hoveredCard, setHoveredCard] = useState<string | null>(null);
+
   // Style commun pour toutes les cartes
   const cardStyle = {
     backgroundColor: 'rgba(255,255,255,0.05)',
@@ -976,7 +981,9 @@ export default function Home() {
 
             {/* Leadership */}
             <div 
+              id="leadership"
               style={cardStyle}
+              onClick={() => window.location.href = '/competences/leadership'}
               onMouseEnter={(e) => {
                 const target = e.currentTarget as HTMLDivElement;
                 target.style.transform = 'translateY(-5px)';
@@ -1035,13 +1042,15 @@ export default function Home() {
                 margin: 0,
                 opacity: 0.9
               }}>
-                Capacité à guider et motiver les équipes, à prendre des initiatives et à gérer des projets.
+                Capacité à guider, inspirer et mobiliser les équipes vers des objectifs communs tout en favorisant l'innovation et l'excellence technique.
               </p>
             </div>
 
             {/* Adaptabilité */}
             <div 
+              id="adaptabilite"
               style={cardStyle}
+              onClick={() => window.location.href = '/competences/adaptabilite'}
               onMouseEnter={(e) => {
                 const target = e.currentTarget as HTMLDivElement;
                 target.style.transform = 'translateY(-5px)';
@@ -1106,7 +1115,9 @@ export default function Home() {
 
             {/* Résolution de problèmes */}
             <div 
+              id="resolution-de-problemes"
               style={cardStyle}
+              onClick={() => window.location.href = '/competences/resolution-de-problemes'}
               onMouseEnter={(e) => {
                 const target = e.currentTarget as HTMLDivElement;
                 target.style.transform = 'translateY(-5px)';
