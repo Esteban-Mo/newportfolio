@@ -81,7 +81,7 @@ export default function CompetencePage({ title, sections }: CompetencePageProps)
             color: 'rgba(255,255,255,0.9)',
           }}>
             {section.content.map((paragraph, pIndex) => (
-              <p key={pIndex}>
+              <p key={pIndex} style={{ textAlign: 'justify', marginBottom: '1rem' }}>
                 {paragraph}
               </p>
             ))}
