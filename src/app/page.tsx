@@ -761,7 +761,9 @@ export default function Home() {
 
             {/* Sécurité */}
             <div 
+              id="securite"
               style={cardStyle}
+              onClick={() => window.location.href = '/competences/securite'}
               onMouseEnter={(e) => {
                 const target = e.currentTarget as HTMLDivElement;
                 target.style.transform = 'translateY(-5px)';
