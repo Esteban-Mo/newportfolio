@@ -1744,72 +1744,114 @@ export default function Home() {
             </div>
 
             {/* LinkedIn */}
-            <div 
+            <a 
+              href="https://www.linkedin.com/in/esteban-mortier/"
+              target="_blank"
+              rel="noopener noreferrer"
               style={{
-                backgroundColor: 'rgba(255,255,255,0.05)',
-                borderRadius: '1rem',
-                border: '1px solid rgba(255,255,255,0.1)',
-                padding: '2rem',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '1rem',
-                cursor: 'pointer',
-                transition: 'all 0.3s ease'
-              }}
-              onMouseEnter={(e) => {
-                const target = e.currentTarget as HTMLDivElement;
-                target.style.transform = 'translateY(-5px)';
-                target.style.backgroundColor = 'rgba(255,255,255,0.08)';
-                target.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
-              }}
-              onMouseLeave={(e) => {
-                const target = e.currentTarget as HTMLDivElement;
-                target.style.transform = 'translateY(0)';
-                target.style.backgroundColor = 'rgba(255,255,255,0.05)';
-                target.style.boxShadow = 'none';
+                textDecoration: 'none'
               }}
             >
-              <span style={{ fontSize: '2rem' }}>💼</span>
-              <span style={{
-                color: '#fff',
-                fontSize: '1.2rem',
-                fontWeight: '600'
-              }}>LinkedIn</span>
-            </div>
+              <div 
+                style={{
+                  backgroundColor: 'rgba(255,255,255,0.05)',
+                  borderRadius: '1rem',
+                  border: '1px solid rgba(255,255,255,0.1)',
+                  padding: '2rem',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  gap: '1rem',
+                  cursor: 'pointer',
+                  transition: 'all 0.3s ease'
+                }}
+                onMouseEnter={(e) => {
+                  const target = e.currentTarget as HTMLDivElement;
+                  target.style.transform = 'translateY(-5px)';
+                  target.style.backgroundColor = 'rgba(255,255,255,0.08)';
+                  target.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
+                }}
+                onMouseLeave={(e) => {
+                  const target = e.currentTarget as HTMLDivElement;
+                  target.style.transform = 'translateY(0)';
+                  target.style.backgroundColor = 'rgba(255,255,255,0.05)';
+                  target.style.boxShadow = 'none';
+                }}
+              >
+                <span style={{ fontSize: '2rem' }}>💼</span>
+                <div style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  gap: '0.5rem'
+                }}>
+                  <span style={{
+                    color: '#fff',
+                    fontSize: '1.2rem',
+                    fontWeight: '600'
+                  }}>LinkedIn</span>
+                  <span style={{
+                    color: '#60A5FA',
+                    fontSize: '1rem'
+                  }}>Esteban mortier</span>
+                </div>
+              </div>
+            </a>
 
             {/* GitHub */}
-            <div 
+            <a 
+              href="https://github.com/Esteban-Mo"
+              target="_blank"
+              rel="noopener noreferrer"
               style={{
-                backgroundColor: 'rgba(255,255,255,0.05)',
-                borderRadius: '1rem',
-                border: '1px solid rgba(255,255,255,0.1)',
-                padding: '2rem',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '1rem',
-                cursor: 'pointer',
-                transition: 'all 0.3s ease'
-              }}
-              onMouseEnter={(e) => {
-                const target = e.currentTarget as HTMLDivElement;
-                target.style.transform = 'translateY(-5px)';
-                target.style.backgroundColor = 'rgba(255,255,255,0.08)';
-                target.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
-              }}
-              onMouseLeave={(e) => {
-                const target = e.currentTarget as HTMLDivElement;
-                target.style.transform = 'translateY(0)';
-                target.style.backgroundColor = 'rgba(255,255,255,0.05)';
-                target.style.boxShadow = 'none';
+                textDecoration: 'none'
               }}
             >
-              <span style={{ fontSize: '2rem' }}>🐱</span>
-              <span style={{
-                color: '#fff',
-                fontSize: '1.2rem',
-                fontWeight: '600'
-              }}>GitHub</span>
-            </div>
+              <div 
+                style={{
+                  backgroundColor: 'rgba(255,255,255,0.05)',
+                  borderRadius: '1rem',
+                  border: '1px solid rgba(255,255,255,0.1)',
+                  padding: '2rem',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  gap: '1rem',
+                  cursor: 'pointer',
+                  transition: 'all 0.3s ease'
+                }}
+                onMouseEnter={(e) => {
+                  const target = e.currentTarget as HTMLDivElement;
+                  target.style.transform = 'translateY(-5px)';
+                  target.style.backgroundColor = 'rgba(255,255,255,0.08)';
+                  target.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
+                }}
+                onMouseLeave={(e) => {
+                  const target = e.currentTarget as HTMLDivElement;
+                  target.style.transform = 'translateY(0)';
+                  target.style.backgroundColor = 'rgba(255,255,255,0.05)';
+                  target.style.boxShadow = 'none';
+                }}
+              >
+                <span style={{ fontSize: '2rem' }}>🐱</span>
+                <div style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  gap: '0.5rem'
+                }}>
+                  <span style={{
+                    color: '#fff',
+                    fontSize: '1.2rem',
+                    fontWeight: '600'
+                  }}>GitHub</span>
+                  <span style={{
+                    color: '#60A5FA',
+                    fontSize: '1rem'
+                  }}>@Esteban-Mo</span>
+                </div>
+              </div>
+            </a>
           </div>
         </div>
       </section>
