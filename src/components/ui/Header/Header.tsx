@@ -65,6 +65,9 @@ export default function Header() {
         const element = document.getElementById(sectionId);
         if (element) {
             element.scrollIntoView({ behavior: `smooth` });
+        } else {
+            // Si l'élément n'existe pas, on est probablement sur une autre page
+            window.location.href = `/#${sectionId}`;
         }
         setIsMenuOpen(false);
     };
@@ -72,7 +75,11 @@ export default function Header() {
     return (
         <header className={styles.header}>
             <div className={styles.logo}>
-                <div className={styles.imageContainer}>
+                <div 
+                    className={styles.imageContainer}
+                    onClick={() => window.location.href = '/'}
+                    style={{ cursor: 'pointer' }}
+                >
                     <Image
                         src="/images/me.jpg"
                         alt="Esteban Mortier"
@@ -80,7 +87,9 @@ export default function Header() {
                         style={{ objectFit: `cover` }}
                     />
                 </div>
-                Esteban Mortier
+                <span onClick={() => window.location.href = '/'} style={{ cursor: 'pointer' }}>
+                    Esteban Mortier
+                </span>
             </div>
             
             <button 
