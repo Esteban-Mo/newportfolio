@@ -22,10 +22,28 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr">
-      <body className={`${montserrat.variable} layout-body`}>
+      <body style={{
+        margin: 0,
+        padding: 0,
+        minHeight: '100vh',
+        backgroundColor: '#0a0a0a',
+        color: '#ffffff',
+        fontFamily: 'var(--font-montserrat)',
+        transition: 'all 0.3s ease-in-out',
+        position: 'relative',
+        overflowX: 'hidden'
+      }}>
         <StarryBackground />
         <Header />
-        <main className="layout-main">
+        <main style={{
+          paddingTop: '70px',
+          position: 'relative',
+          zIndex: 1,
+          width: '100%',
+          maxWidth: '100%',
+          overflowX: 'hidden',
+          animation: 'fadeIn 0.5s ease-in-out'
+        }}>
           {children}
         </main>
       </body>

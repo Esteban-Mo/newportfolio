@@ -5,27 +5,94 @@
   padding: 0;
 }
 
+/* Variables globales */
+:root {
+  --primary-color: #007AFF;
+  --secondary-color: #5856D6;
+  --text-color: #ffffff;
+  --background-color: #0a0a0a;
+  --transition-speed: 0.3s;
+}
+
+/* Animations globales */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
 /* Scrollbar styles */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: rgb(17, 17, 17);
+  background: var(--background-color);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(148, 163, 184, 0.3);
-  border-radius: 4px;
+  background: var(--primary-color);
+  border-radius: 3px;
+  transition: var(--transition-speed);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(148, 163, 184, 0.5);
+  background: var(--secondary-color);
 }
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: rgba(148, 163, 184, 0.3) rgb(17, 17, 17);
+  scrollbar-color: var(--primary-color) var(--background-color);
+}
+
+/* Sélection de texte */
+::selection {
+  background: var(--primary-color);
+  color: var(--text-color);
+}
+
+/* Animations des liens */
+a {
+  position: relative;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: var(--transition-speed);
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--primary-color);
+  transition: var(--transition-speed);
+}
+
+a:hover::after {
+  width: 100%;
 }
 
 /* Layout styles */
@@ -52,9 +119,10 @@
 .scroll-chevron {
   width: 16px;
   height: 16px;
-  border: solid #fff;
+  border: solid var(--text-color);
   border-width: 0 3px 3px 0;
   transform: rotate(45deg);
+  transition: var(--transition-speed);
 }
 
 .scroll-chevron-1 {
