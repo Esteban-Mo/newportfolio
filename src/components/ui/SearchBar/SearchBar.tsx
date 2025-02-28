@@ -60,10 +60,33 @@ const searchableContent = {
     }
 };
 
+interface SearchResult {
+    title: string;
+    url: string;
+    keywords: string[];
+    description: string;
+    relevance: number;
+}
+
+interface SearchableItem {
+    title: string;
+    url: string;
+    keywords: string[];
+    description: string;
+}
+
+interface SearchableSection {
+    [key: string]: SearchableItem;
+}
+
+interface SearchableContent {
+    [key: string]: SearchableSection;
+}
+
 export default function SearchBar() {
     const [isOpen, setIsOpen] = useState(false);
     const [searchQuery, setSearchQuery] = useState('');
-    const [searchResults, setSearchResults] = useState<any[]>([]);
+    const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
     const searchRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -85,11 +108,11 @@ export default function SearchBar() {
             return;
         }
 
-        const results: any[] = [];
+        const results: SearchResult[] = [];
         const searchTerm = query.toLowerCase();
 
         // Fonction pour calculer le score de pertinence
-        const calculateRelevance = (item: any, searchTerm: string) => {
+        const calculateRelevance = (item: SearchableItem, searchTerm: string): number => {
             let score = 0;
             
             // Le titre correspond exactement
@@ -112,8 +135,8 @@ export default function SearchBar() {
         };
 
         // Recherche dans toutes les sections
-        Object.values(searchableContent).forEach((section: any) => {
-            Object.values(section).forEach((item: any) => {
+        Object.values(searchableContent as SearchableContent).forEach((section: SearchableSection) => {
+            Object.values(section).forEach((item: SearchableItem) => {
                 const relevance = calculateRelevance(item, searchTerm);
                 if (relevance > 0) {
                     results.push({
@@ -232,4 +255,4 @@ export default function SearchBar() {
             )}
         </div>
     );
-} 
+}
