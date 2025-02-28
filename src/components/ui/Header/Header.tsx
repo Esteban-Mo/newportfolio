@@ -9,12 +9,14 @@ import Image from 'next/image';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import SearchBar from '../SearchBar/SearchBar';
+import CompetencesMenu from '../CompetencesMenu/CompetencesMenu';
 import styles from './Header.module.css';
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [hoveredLink, setHoveredLink] = useState<string | null>(null);
     const [activeSection, setActiveSection] = useState(`home`);
+    const [showCompetencesMenu, setShowCompetencesMenu] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -104,15 +106,22 @@ export default function Header() {
                 >
                     <HomeIcon /> Accueil
                 </a>
-                <a 
-                    onClick={() => scrollToSection(`competences`)}
-                    className={styles.link}
-                    style={{ color: getLinkColor(`competences`, `competences`), cursor: `pointer` }}
-                    onMouseEnter={() => setHoveredLink(`competences`)}
-                    onMouseLeave={() => setHoveredLink(null)}
+                <div 
+                    style={{ position: 'relative' }}
+                    onMouseEnter={() => setShowCompetencesMenu(true)}
+                    onMouseLeave={() => setShowCompetencesMenu(false)}
                 >
-                    <CodeIcon /> Compétences
-                </a>
+                    <a 
+                        onClick={() => scrollToSection(`competences`)}
+                        className={styles.link}
+                        style={{ color: getLinkColor(`competences`, `competences`), cursor: `pointer` }}
+                        onMouseEnter={() => setHoveredLink(`competences`)}
+                        onMouseLeave={() => setHoveredLink(null)}
+                    >
+                        <CodeIcon /> Compétences
+                    </a>
+                    {showCompetencesMenu && <CompetencesMenu />}
+                </div>
                 <a 
                     onClick={() => scrollToSection(`realisations`)}
                     className={styles.link}
@@ -151,15 +160,20 @@ export default function Header() {
                 >
                     <HomeIcon /> Accueil
                 </a>
-                <a 
-                    onClick={() => scrollToSection(`competences`)}
-                    className={`${styles.link} ${styles.mobileLink}`}
-                    style={{ color: getLinkColor(`competences`, `competences`), cursor: `pointer` }}
-                    onMouseEnter={() => setHoveredLink(`competences`)}
-                    onMouseLeave={() => setHoveredLink(null)}
+                <div 
+                    style={{ position: 'relative' }}
+                    onClick={() => setShowCompetencesMenu(!showCompetencesMenu)}
                 >
-                    <CodeIcon /> Compétences
-                </a>
+                    <a 
+                        className={`${styles.link} ${styles.mobileLink}`}
+                        style={{ color: getLinkColor(`competences`, `competences`), cursor: `pointer` }}
+                        onMouseEnter={() => setHoveredLink(`competences`)}
+                        onMouseLeave={() => setHoveredLink(null)}
+                    >
+                        <CodeIcon /> Compétences
+                    </a>
+                    {showCompetencesMenu && <CompetencesMenu />}
+                </div>
                 <a 
                     onClick={() => scrollToSection(`realisations`)}
                     className={`${styles.link} ${styles.mobileLink}`}
