@@ -1,44 +1,52 @@
 export default function CompetencesMenu() {
     const competences = [
         {
-            id: 'developpement-frontend',
-            name: 'Développement Frontend',
-            category: 'technique'
+            id: 'frameworks-libraries',
+            name: 'Framework & Librairies',
+            category: 'technique',
+            items: [
+                { id: 'react', name: 'React' },
+                { id: 'next', name: 'Next.js' },
+                { id: 'prisma', name: 'Prisma' }
+            ]
         },
         {
-            id: 'developpement-backend',
-            name: 'Développement Backend',
-            category: 'technique'
+            id: 'langages',
+            name: 'Langages de Programmation',
+            category: 'technique',
+            items: [
+                { id: 'typescript', name: 'TypeScript' },
+                { id: 'python', name: 'Python' }
+            ]
         },
         {
-            id: 'architecture-logicielle',
-            name: 'Architecture Logicielle',
-            category: 'technique'
+            id: 'geo-systems',
+            name: 'Systèmes Géographiques',
+            category: 'technique',
+            items: [
+                { id: 'geoserver', name: 'Geoserver' },
+                { id: 'leaflet', name: 'Leaflet' }
+            ]
         },
         {
             id: 'base-de-donnees',
             name: 'Base de Données',
-            category: 'technique'
+            category: 'technique',
+            items: [
+                { id: 'postgresql', name: 'PostgreSQL' },
+                { id: 'mongodb', name: 'MongoDB' }
+            ]
         },
         {
-            id: 'communication',
-            name: 'Communication',
-            category: 'humaine'
-        },
-        {
-            id: 'leadership',
-            name: 'Leadership',
-            category: 'humaine'
-        },
-        {
-            id: 'adaptabilite',
-            name: 'Adaptabilité',
-            category: 'humaine'
-        },
-        {
-            id: 'resolution-de-problemes',
-            name: 'Résolution de Problèmes',
-            category: 'humaine'
+            id: 'competences-humaines',
+            name: 'Compétences Humaines',
+            category: 'humaine',
+            items: [
+                { id: 'communication', name: 'Communication' },
+                { id: 'leadership', name: 'Leadership' },
+                { id: 'adaptabilite', name: 'Adaptabilité' },
+                { id: 'resolution-de-problemes', name: 'Résolution de Problèmes' }
+            ]
         }
     ];
 
@@ -75,7 +83,7 @@ export default function CompetencesMenu() {
             boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
             zIndex: 1000,
             display: 'grid',
-            gridTemplateColumns: 'repeat(2, 1fr)',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
             gap: '1rem',
             width: 'max-content',
             maxWidth: '90vw'
@@ -90,58 +98,32 @@ export default function CompetencesMenu() {
             }}>
                 Compétences
             </div>
-            <div style={{
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '0.5rem'
-            }}>
-                <div style={{
-                    color: '#60A5FA',
-                    fontWeight: 'bold',
-                    marginBottom: '0.5rem'
+            {competences.map(category => (
+                <div key={category.id} style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '0.5rem'
                 }}>
-                    Techniques
-                </div>
-                {competences
-                    .filter(comp => comp.category === 'technique')
-                    .map(comp => (
+                    <div style={{
+                        color: '#60A5FA',
+                        fontWeight: 'bold',
+                        marginBottom: '0.5rem'
+                    }}>
+                        {category.name}
+                    </div>
+                    {category.items.map(item => (
                         <a
-                            key={comp.id}
-                            href={`/competences/${comp.id}`}
+                            key={item.id}
+                            href={`/competences/${item.id}`}
                             style={linkStyle}
                             onMouseEnter={handleMouseEnter}
                             onMouseLeave={handleMouseLeave}
                         >
-                            {comp.name}
+                            {item.name}
                         </a>
                     ))}
-            </div>
-            <div style={{
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '0.5rem'
-            }}>
-                <div style={{
-                    color: '#60A5FA',
-                    fontWeight: 'bold',
-                    marginBottom: '0.5rem'
-                }}>
-                    Humaines
                 </div>
-                {competences
-                    .filter(comp => comp.category === 'humaine')
-                    .map(comp => (
-                        <a
-                            key={comp.id}
-                            href={`/competences/${comp.id}`}
-                            style={linkStyle}
-                            onMouseEnter={handleMouseEnter}
-                            onMouseLeave={handleMouseLeave}
-                        >
-                            {comp.name}
-                        </a>
-                    ))}
-            </div>
+            ))}
         </div>
     );
 } 

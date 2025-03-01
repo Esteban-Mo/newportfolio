@@ -183,43 +183,10 @@ export default function Home() {
             gap: `2rem`,
             boxSizing: `border-box`
           }}>
-            {/* Architecture Logicielle */}
+            {/* Framework & Librairies */}
             <div 
-              id="architecture-logicielle"
+              id="frameworks-libraries"
               style={cardStyle}
-              onClick={() => router.push(`/competences/architecture-logicielle`)}
-              onMouseEnter={(e) => {
-                const target = e.currentTarget as HTMLDivElement;
-                target.style.transform = `translateY(-5px)`;
-                target.style.backgroundColor = `rgba(255,255,255,0.08)`;
-                target.style.boxShadow = `0 10px 20px rgba(0,0,0,0.2)`;
-                
-                const moreInfo = target.querySelector(`[data-more-info]`) as HTMLDivElement;
-                if (moreInfo) {
-                  moreInfo.style.color = `#93C5FD`;
-                  moreInfo.style.opacity = `1`;
-                  const arrow = moreInfo.querySelector(`span:last-child`) as HTMLSpanElement;
-                  if (arrow) {
-                    arrow.style.transform = `translateX(5px)`;
-                  }
-                }
-              }}
-              onMouseLeave={(e) => {
-                const target = e.currentTarget as HTMLDivElement;
-                target.style.transform = `translateY(0)`;
-                target.style.backgroundColor = `rgba(255,255,255,0.05)`;
-                target.style.boxShadow = `none`;
-                
-                const moreInfo = target.querySelector(`[data-more-info]`) as HTMLDivElement;
-                if (moreInfo) {
-                  moreInfo.style.color = `#60A5FA`;
-                  moreInfo.style.opacity = `0.8`;
-                  const arrow = moreInfo.querySelector(`span:last-child`) as HTMLSpanElement;
-                  if (arrow) {
-                    arrow.style.transform = `translateX(0)`;
-                  }
-                }
-              }}
             >
               {moreInfoIndicator}
               <div style={{
@@ -229,7 +196,7 @@ export default function Home() {
                 fontSize: `2.5rem`,
                 opacity: 0.2
               }}>
-                🏗️
+                🛠️
               </div>
               <h3 style={{
                 color: `#60A5FA`,
@@ -237,7 +204,7 @@ export default function Home() {
                 fontWeight: `600`,
                 margin: 0
               }}>
-                Architecture Logicielle
+                Framework & Librairies
               </h3>
               <p style={{
                 color: `#fff`,
@@ -246,106 +213,7 @@ export default function Home() {
                 margin: 0,
                 opacity: 0.9
               }}>
-                Conception d`architectures évolutives et maintenables en appliquant les principes SOLID et les patterns de conception.
-              </p>
-              <div style={{ display: `flex`, gap: `0.5rem`, flexWrap: `wrap`, marginTop: `0.5rem` }}>
-                <Chip 
-                  label="Design Patterns" 
-                  sx={{ 
-                    bgcolor: `rgba(255, 255, 255, 0.05)`, 
-                    color: `#fff`, 
-                    borderColor: `#34D399`, 
-                    border: `1px solid`,
-                    borderRadius: `5px`
-                  }} 
-                />
-                <Chip 
-                  label="SOLID" 
-                  sx={{ 
-                    bgcolor: `rgba(255, 255, 255, 0.05)`, 
-                    color: `#fff`, 
-                    borderColor: `#34D399`, 
-                    border: `1px solid`,
-                    borderRadius: `5px`
-                  }} 
-                />
-                <Chip 
-                  label="Clean Architecture" 
-                  sx={{ 
-                    bgcolor: `rgba(255, 255, 255, 0.05)`, 
-                    color: `#fff`, 
-                    borderColor: `#34D399`, 
-                    border: `1px solid`,
-                    borderRadius: `5px`
-                  }} 
-                />
-              </div>
-            </div>
-
-            {/* Développement Frontend */}
-            <div 
-              id="developpement-frontend"
-              style={cardStyle}
-              onClick={() => router.push(`/competences/developpement-frontend`)}
-              onMouseEnter={(e) => {
-                const target = e.currentTarget as HTMLDivElement;
-                target.style.transform = `translateY(-5px)`;
-                target.style.backgroundColor = `rgba(255,255,255,0.08)`;
-                target.style.boxShadow = `0 10px 20px rgba(0,0,0,0.2)`;
-                
-                const moreInfo = target.querySelector(`[data-more-info]`) as HTMLDivElement;
-                if (moreInfo) {
-                  moreInfo.style.color = `#93C5FD`;
-                  moreInfo.style.opacity = `1`;
-                  const arrow = moreInfo.querySelector(`span:last-child`) as HTMLSpanElement;
-                  if (arrow) {
-                    arrow.style.transform = `translateX(5px)`;
-                  }
-                }
-              }}
-              onMouseLeave={(e) => {
-                const target = e.currentTarget as HTMLDivElement;
-                target.style.transform = `translateY(0)`;
-                target.style.backgroundColor = `rgba(255,255,255,0.05)`;
-                target.style.boxShadow = `none`;
-                
-                const moreInfo = target.querySelector(`[data-more-info]`) as HTMLDivElement;
-                if (moreInfo) {
-                  moreInfo.style.color = `#60A5FA`;
-                  moreInfo.style.opacity = `0.8`;
-                  const arrow = moreInfo.querySelector(`span:last-child`) as HTMLSpanElement;
-                  if (arrow) {
-                    arrow.style.transform = `translateX(0)`;
-                  }
-                }
-              }}
-            >
-              {moreInfoIndicator}
-              <div style={{
-                position: `absolute`,
-                top: `1rem`,
-                right: `1rem`,
-                fontSize: `2.5rem`,
-                opacity: 0.2
-              }}>
-                🎨
-              </div>
-              <h3 style={{
-                color: `#60A5FA`,
-                fontSize: `clamp(1.2rem, 3vw, 1.5rem)`,
-                fontWeight: `600`,
-                margin: 0
-              }}>
-                Développement Frontend
-              </h3>
-              <p style={{
-                color: `#fff`,
-                fontSize: `clamp(0.9rem, 2vw, 1.1rem)`,
-                lineHeight: `1.6`,
-                margin: 0,
-                opacity: 0.9
-              }}>
-                Maîtrise des frameworks modernes et création d`interfaces utilisateur performantes et responsives.
+                Maîtrise des frameworks et librairies modernes pour le développement d'applications web performantes.
               </p>
               <div style={{ display: `flex`, gap: `0.5rem`, flexWrap: `wrap`, marginTop: `0.5rem` }}>
                 <Chip 
@@ -369,6 +237,52 @@ export default function Home() {
                   }} 
                 />
                 <Chip 
+                  label="Prisma" 
+                  sx={{ 
+                    bgcolor: `rgba(255, 255, 255, 0.05)`, 
+                    color: `#fff`, 
+                    borderColor: `#2D3748`, 
+                    border: `1px solid`,
+                    borderRadius: `5px`
+                  }} 
+                />
+              </div>
+            </div>
+
+            {/* Langages de Programmation */}
+            <div 
+              id="langages"
+              style={cardStyle}
+            >
+              {moreInfoIndicator}
+              <div style={{
+                position: `absolute`,
+                top: `1rem`,
+                right: `1rem`,
+                fontSize: `2.5rem`,
+                opacity: 0.2
+              }}>
+                💻
+              </div>
+              <h3 style={{
+                color: `#60A5FA`,
+                fontSize: `clamp(1.2rem, 3vw, 1.5rem)`,
+                fontWeight: `600`,
+                margin: 0
+              }}>
+                Langages de Programmation
+              </h3>
+              <p style={{
+                color: `#fff`,
+                fontSize: `clamp(0.9rem, 2vw, 1.1rem)`,
+                lineHeight: `1.6`,
+                margin: 0,
+                opacity: 0.9
+              }}>
+                Expertise dans les langages de programmation modernes pour le développement web.
+              </p>
+              <div style={{ display: `flex`, gap: `0.5rem`, flexWrap: `wrap`, marginTop: `0.5rem` }}>
+                <Chip 
                   label="TypeScript" 
                   sx={{ 
                     bgcolor: `rgba(255, 255, 255, 0.05)`, 
@@ -379,11 +293,11 @@ export default function Home() {
                   }} 
                 />
                 <Chip 
-                  label="JavaScript" 
+                  label="Python" 
                   sx={{ 
                     bgcolor: `rgba(255, 255, 255, 0.05)`, 
                     color: `#fff`, 
-                    borderColor: `#F7DF1E`, 
+                    borderColor: `#3776AB`, 
                     border: `1px solid`,
                     borderRadius: `5px`
                   }} 
@@ -391,43 +305,10 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Développement Backend */}
+            {/* Systèmes Géographiques */}
             <div 
-              id="developpement-backend"
+              id="geo-systems"
               style={cardStyle}
-              onClick={() => router.push(`/competences/developpement-backend`)}
-              onMouseEnter={(e) => {
-                const target = e.currentTarget as HTMLDivElement;
-                target.style.transform = `translateY(-5px)`;
-                target.style.backgroundColor = `rgba(255,255,255,0.08)`;
-                target.style.boxShadow = `0 10px 20px rgba(0,0,0,0.2)`;
-                
-                const moreInfo = target.querySelector(`[data-more-info]`) as HTMLDivElement;
-                if (moreInfo) {
-                  moreInfo.style.color = `#93C5FD`;
-                  moreInfo.style.opacity = `1`;
-                  const arrow = moreInfo.querySelector(`span:last-child`) as HTMLSpanElement;
-                  if (arrow) {
-                    arrow.style.transform = `translateX(5px)`;
-                  }
-                }
-              }}
-              onMouseLeave={(e) => {
-                const target = e.currentTarget as HTMLDivElement;
-                target.style.transform = `translateY(0)`;
-                target.style.backgroundColor = `rgba(255,255,255,0.05)`;
-                target.style.boxShadow = `none`;
-                
-                const moreInfo = target.querySelector(`[data-more-info]`) as HTMLDivElement;
-                if (moreInfo) {
-                  moreInfo.style.color = `#60A5FA`;
-                  moreInfo.style.opacity = `0.8`;
-                  const arrow = moreInfo.querySelector(`span:last-child`) as HTMLSpanElement;
-                  if (arrow) {
-                    arrow.style.transform = `translateX(0)`;
-                  }
-                }
-              }}
             >
               {moreInfoIndicator}
               <div style={{
@@ -437,7 +318,7 @@ export default function Home() {
                 fontSize: `2.5rem`,
                 opacity: 0.2
               }}>
-                ⚙️
+                🗺️
               </div>
               <h3 style={{
                 color: `#60A5FA`,
@@ -445,7 +326,7 @@ export default function Home() {
                 fontWeight: `600`,
                 margin: 0
               }}>
-                Développement Backend
+                Systèmes Géographiques
               </h3>
               <p style={{
                 color: `#fff`,
@@ -454,25 +335,25 @@ export default function Home() {
                 margin: 0,
                 opacity: 0.9
               }}>
-                Création d`APIs RESTful robustes et évolutives, gestion efficace des bases de données et des services web.
+                Expertise dans les outils et technologies de cartographie et de données géospatiales.
               </p>
               <div style={{ display: `flex`, gap: `0.5rem`, flexWrap: `wrap`, marginTop: `0.5rem` }}>
                 <Chip 
-                  label="Node.js" 
+                  label="Geoserver" 
                   sx={{ 
                     bgcolor: `rgba(255, 255, 255, 0.05)`, 
                     color: `#fff`, 
-                    borderColor: `#68A063`, 
+                    borderColor: `#4B9E4B`, 
                     border: `1px solid`,
                     borderRadius: `5px`
                   }} 
                 />
                 <Chip 
-                  label="Next.js API" 
+                  label="Leaflet" 
                   sx={{ 
                     bgcolor: `rgba(255, 255, 255, 0.05)`, 
                     color: `#fff`, 
-                    borderColor: `#fff`, 
+                    borderColor: `#199900`, 
                     border: `1px solid`,
                     borderRadius: `5px`
                   }} 
@@ -484,39 +365,6 @@ export default function Home() {
             <div 
               id="base-de-donnees"
               style={cardStyle}
-              onClick={() => router.push(`/competences/base-de-donnees`)}
-              onMouseEnter={(e) => {
-                const target = e.currentTarget as HTMLDivElement;
-                target.style.transform = `translateY(-5px)`;
-                target.style.backgroundColor = `rgba(255,255,255,0.08)`;
-                target.style.boxShadow = `0 10px 20px rgba(0,0,0,0.2)`;
-                
-                const moreInfo = target.querySelector(`[data-more-info]`) as HTMLDivElement;
-                if (moreInfo) {
-                  moreInfo.style.color = `#93C5FD`;
-                  moreInfo.style.opacity = `1`;
-                  const arrow = moreInfo.querySelector(`span:last-child`) as HTMLSpanElement;
-                  if (arrow) {
-                    arrow.style.transform = `translateX(5px)`;
-                  }
-                }
-              }}
-              onMouseLeave={(e) => {
-                const target = e.currentTarget as HTMLDivElement;
-                target.style.transform = `translateY(0)`;
-                target.style.backgroundColor = `rgba(255,255,255,0.05)`;
-                target.style.boxShadow = `none`;
-                
-                const moreInfo = target.querySelector(`[data-more-info]`) as HTMLDivElement;
-                if (moreInfo) {
-                  moreInfo.style.color = `#60A5FA`;
-                  moreInfo.style.opacity = `0.8`;
-                  const arrow = moreInfo.querySelector(`span:last-child`) as HTMLSpanElement;
-                  if (arrow) {
-                    arrow.style.transform = `translateX(0)`;
-                  }
-                }
-              }}
             >
               {moreInfoIndicator}
               <div style={{
@@ -543,7 +391,7 @@ export default function Home() {
                 margin: 0,
                 opacity: 0.9
               }}>
-                Conception et optimisation de bases de données relationnelles et NoSQL pour des applications performantes et scalables.
+                Maîtrise des systèmes de gestion de bases de données relationnelles et NoSQL.
               </p>
               <div style={{ display: `flex`, gap: `0.5rem`, flexWrap: `wrap`, marginTop: `0.5rem` }}>
                 <Chip 
@@ -563,16 +411,6 @@ export default function Home() {
                     color: `#fff`,
                     borderColor: `#4DB33D`,
                     border: `1px solid`, 
-                    borderRadius: `5px`
-                  }} 
-                />
-                <Chip 
-                  label="Redis" 
-                  sx={{ 
-                    bgcolor: `rgba(255, 255, 255, 0.05)`, 
-                    color: `#fff`,
-                    borderColor: `#DC382D`,
-                    border: `1px solid`,
                     borderRadius: `5px`
                   }} 
                 />
