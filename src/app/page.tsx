@@ -845,6 +845,68 @@ export default function Home() {
               }}>
                 Application web innovante de gestion de turbines industrielles avec une interface intuitive pour la création et l`administration des données. API RESTful sécurisée permettant l`exportation des données au format CSV pour une intégration transparente avec d`autres systèmes.
               </p>
+              <div style={{ display: `flex`, gap: `0.5rem`, flexWrap: `wrap`, marginTop: `0.5rem` }}>
+                <Chip 
+                  label="React" 
+                  sx={{ 
+                    bgcolor: `rgba(255, 255, 255, 0.05)`, 
+                    color: `#fff`, 
+                    borderColor: `#61DAFB`, 
+                    border: `1px solid`,
+                    borderRadius: `5px`
+                  }} 
+                />
+                <Chip 
+                  label="Next.js" 
+                  sx={{ 
+                    bgcolor: `rgba(255, 255, 255, 0.05)`, 
+                    color: `#fff`, 
+                    borderColor: `#fff`, 
+                    border: `1px solid`,
+                    borderRadius: `5px`
+                  }} 
+                />
+                <Chip 
+                  label="Prisma" 
+                  sx={{ 
+                    bgcolor: `rgba(255, 255, 255, 0.05)`, 
+                    color: `#fff`, 
+                    borderColor: `#2D3748`, 
+                    border: `1px solid`,
+                    borderRadius: `5px`
+                  }} 
+                />
+                <Chip 
+                  label="PostgreSQL" 
+                  sx={{ 
+                    bgcolor: `rgba(255, 255, 255, 0.05)`, 
+                    color: `#fff`,
+                    borderColor: `#336791`,
+                    border: `1px solid`,
+                    borderRadius: `5px`
+                  }} 
+                />
+                <Chip 
+                  label="TypeScript" 
+                  sx={{ 
+                    bgcolor: `rgba(255, 255, 255, 0.05)`, 
+                    color: `#fff`, 
+                    borderColor: `#3178C6`, 
+                    border: `1px solid`,
+                    borderRadius: `5px`
+                  }} 
+                />
+                <Chip 
+                  label="Python" 
+                  sx={{ 
+                    bgcolor: `rgba(255, 255, 255, 0.05)`, 
+                    color: `#fff`, 
+                    borderColor: `#3776AB`, 
+                    border: `1px solid`,
+                    borderRadius: `5px`
+                  }} 
+                />
+              </div>
             </div>
 
             {/* Atlas Eolien */}
@@ -910,6 +972,78 @@ export default function Home() {
               }}>
                 Solution cartographique interactive visualisant en temps réel les données éoliennes en France. Interface moderne intégrant les données météorologiques et techniques des installations publiques et privées pour une prise de décision optimale.
               </p>
+              <div style={{ display: `flex`, gap: `0.5rem`, flexWrap: `wrap`, marginTop: `0.5rem` }}>
+                <Chip 
+                  label="React" 
+                  sx={{ 
+                    bgcolor: `rgba(255, 255, 255, 0.05)`, 
+                    color: `#fff`, 
+                    borderColor: `#61DAFB`, 
+                    border: `1px solid`,
+                    borderRadius: `5px`
+                  }} 
+                />
+                <Chip 
+                  label="Next.js" 
+                  sx={{ 
+                    bgcolor: `rgba(255, 255, 255, 0.05)`, 
+                    color: `#fff`, 
+                    borderColor: `#fff`, 
+                    border: `1px solid`,
+                    borderRadius: `5px`
+                  }} 
+                />
+                <Chip 
+                  label="Prisma" 
+                  sx={{ 
+                    bgcolor: `rgba(255, 255, 255, 0.05)`, 
+                    color: `#fff`, 
+                    borderColor: `#2D3748`, 
+                    border: `1px solid`,
+                    borderRadius: `5px`
+                  }} 
+                />
+                <Chip 
+                  label="PostgreSQL" 
+                  sx={{ 
+                    bgcolor: `rgba(255, 255, 255, 0.05)`, 
+                    color: `#fff`,
+                    borderColor: `#336791`,
+                    border: `1px solid`,
+                    borderRadius: `5px`
+                  }} 
+                />
+                <Chip 
+                  label="TypeScript" 
+                  sx={{ 
+                    bgcolor: `rgba(255, 255, 255, 0.05)`, 
+                    color: `#fff`, 
+                    borderColor: `#3178C6`, 
+                    border: `1px solid`,
+                    borderRadius: `5px`
+                  }} 
+                />
+                <Chip 
+                  label="Geoserver" 
+                  sx={{ 
+                    bgcolor: `rgba(255, 255, 255, 0.05)`, 
+                    color: `#fff`, 
+                    borderColor: `#4B9E4B`, 
+                    border: `1px solid`,
+                    borderRadius: `5px`
+                  }} 
+                />
+                <Chip 
+                  label="Leaflet" 
+                  sx={{ 
+                    bgcolor: `rgba(255, 255, 255, 0.05)`, 
+                    color: `#fff`, 
+                    borderColor: `#199900`, 
+                    border: `1px solid`,
+                    borderRadius: `5px`
+                  }} 
+                />
+              </div>
             </div>
 
             {/* Module Foncier */}
@@ -975,6 +1109,58 @@ export default function Home() {
               }}>
                 Plateforme complète de gestion immobilière d`entreprise avec suivi des baux, optimisation des espaces et reporting avancé. Solution sur mesure permettant une gestion efficace et centralisée du patrimoine immobilier.
               </p>
+              <div style={{ display: `flex`, gap: `0.5rem`, flexWrap: `wrap`, marginTop: `0.5rem` }}>
+                <Chip 
+                  label="React" 
+                  sx={{ 
+                    bgcolor: `rgba(255, 255, 255, 0.05)`, 
+                    color: `#fff`, 
+                    borderColor: `#61DAFB`, 
+                    border: `1px solid`,
+                    borderRadius: `5px`
+                  }} 
+                />
+                <Chip 
+                  label="Next.js" 
+                  sx={{ 
+                    bgcolor: `rgba(255, 255, 255, 0.05)`, 
+                    color: `#fff`, 
+                    borderColor: `#fff`, 
+                    border: `1px solid`,
+                    borderRadius: `5px`
+                  }} 
+                />
+                <Chip 
+                  label="Prisma" 
+                  sx={{ 
+                    bgcolor: `rgba(255, 255, 255, 0.05)`, 
+                    color: `#fff`, 
+                    borderColor: `#2D3748`, 
+                    border: `1px solid`,
+                    borderRadius: `5px`
+                  }} 
+                />
+                <Chip 
+                  label="MongoDB" 
+                  sx={{ 
+                    bgcolor: `rgba(255, 255, 255, 0.05)`, 
+                    color: `#fff`,
+                    borderColor: `#4DB33D`,
+                    border: `1px solid`, 
+                    borderRadius: `5px`
+                  }} 
+                />
+                <Chip 
+                  label="TypeScript" 
+                  sx={{ 
+                    bgcolor: `rgba(255, 255, 255, 0.05)`, 
+                    color: `#fff`, 
+                    borderColor: `#3178C6`, 
+                    border: `1px solid`,
+                    borderRadius: `5px`
+                  }} 
+                />
+              </div>
             </div>
 
             {/* Agence Walker */}
@@ -1040,6 +1226,48 @@ export default function Home() {
               }}>
                 Application immobilière nouvelle génération avec cartographie interactive des biens. Interface élégante offrant une visualisation en temps réel des propriétés disponibles et louées, enrichie de fonctionnalités avancées de gestion locative.
               </p>
+              <div style={{ display: `flex`, gap: `0.5rem`, flexWrap: `wrap`, marginTop: `0.5rem` }}>
+                <Chip 
+                  label="React" 
+                  sx={{ 
+                    bgcolor: `rgba(255, 255, 255, 0.05)`, 
+                    color: `#fff`, 
+                    borderColor: `#61DAFB`, 
+                    border: `1px solid`,
+                    borderRadius: `5px`
+                  }} 
+                />
+                <Chip 
+                  label="Next.js" 
+                  sx={{ 
+                    bgcolor: `rgba(255, 255, 255, 0.05)`, 
+                    color: `#fff`, 
+                    borderColor: `#fff`, 
+                    border: `1px solid`,
+                    borderRadius: `5px`
+                  }} 
+                />
+                <Chip 
+                  label="Prisma" 
+                  sx={{ 
+                    bgcolor: `rgba(255, 255, 255, 0.05)`, 
+                    color: `#fff`, 
+                    borderColor: `#2D3748`, 
+                    border: `1px solid`,
+                    borderRadius: `5px`
+                  }} 
+                />
+                <Chip 
+                  label="MongoDB" 
+                  sx={{ 
+                    bgcolor: `rgba(255, 255, 255, 0.05)`, 
+                    color: `#fff`,
+                    borderColor: `#4DB33D`,
+                    border: `1px solid`, 
+                    borderRadius: `5px`
+                  }} 
+                />
+              </div>
             </div>
           </div>
         </div>
