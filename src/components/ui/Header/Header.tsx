@@ -4,6 +4,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import WorkIcon from '@mui/icons-material/Work';
 import CodeIcon from '@mui/icons-material/Code';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
+import PersonIcon from '@mui/icons-material/Person';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -105,6 +106,15 @@ export default function Header() {
                     onMouseLeave={() => setHoveredLink(null)}
                 >
                     <HomeIcon /> Accueil
+                </a>
+                <a 
+                    href="/presentation"
+                    className={styles.link}
+                    style={{ color: getLinkColor(`presentation`, `presentation`), cursor: `pointer` }}
+                    onMouseEnter={() => setHoveredLink(`presentation`)}
+                    onMouseLeave={() => setHoveredLink(null)}
+                >
+                    <PersonIcon /> Présentation
                 </a>
                 <div 
                     style={{ position: 'relative' }}

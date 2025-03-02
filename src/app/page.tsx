@@ -137,6 +137,92 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Section Présentation Générale */}
+      <section 
+        style={{
+          width: `100%`,
+          backgroundColor: `rgba(0, 0, 0, 0.1)`,
+          backdropFilter: `blur(10px)`,
+          borderTop: `1px solid rgba(255, 255, 255, 0.1)`,
+          padding: `4rem 1rem`,
+          boxSizing: `border-box`,
+          cursor: `pointer`,
+          transition: `all 0.3s ease`
+        }}
+        onClick={() => router.push('/presentation')}
+        onMouseEnter={(e) => {
+          const target = e.currentTarget as HTMLElement;
+          target.style.backgroundColor = `rgba(0, 0, 0, 0.2)`;
+        }}
+        onMouseLeave={(e) => {
+          const target = e.currentTarget as HTMLElement;
+          target.style.backgroundColor = `rgba(0, 0, 0, 0.1)`;
+        }}
+      >
+        <div style={{
+          maxWidth: `1400px`,
+          margin: `0 auto`,
+          display: `flex`,
+          flexDirection: `column`,
+          alignItems: `center`,
+          gap: `3rem`
+        }}>
+          <h2 style={{
+            color: `#fff`,
+            fontSize: `clamp(2rem, 5vw, 2.5rem)`,
+            fontWeight: `700`,
+            textAlign: `center`,
+            position: `relative`,
+            paddingBottom: `1rem`,
+            margin: 0
+          }}>
+            Présentation Générale
+            <div style={{
+              position: `absolute`,
+              bottom: 0,
+              left: `50%`,
+              transform: `translateX(-50%)`,
+              width: `60px`,
+              height: `4px`,
+              background: `#60A5FA`,
+              borderRadius: `2px`
+            }}/>
+          </h2>
+
+          <div style={{
+            width: `100%`,
+            maxWidth: `800px`,
+            margin: `0 auto`,
+            color: `#fff`,
+            fontSize: `clamp(1rem, 2vw, 1.1rem)`,
+            lineHeight: `1.8`,
+            textAlign: `justify`,
+            position: `relative`
+          }}>
+            <p style={{ marginBottom: `2rem` }}>
+              Curieux et motivé, j'aime me lancer dans des projets techniques et apprendre en avançant. Mes études d'ingénieur m'ont donné les bases, mon alternance m'a fait travailler sur Next.js et Prisma, et mes projets perso en Node.js m'ont permis d'essayer des choses. J'ai aussi créé un site pour des vignerons en auto-entrepreneur, et les bons retours m'ont confirmé que ce métier est fait pour moi.
+            </p>
+            <p>
+              En full stack, j'aime tout prendre en charge : discuter avec le client pour comprendre ses besoins, concevoir le projet, coder – souvent avec SQL ou TypeScript – et le déployer. Résoudre des problèmes et améliorer le code, c'est ce qui me plaît. Je me tiens à jour avec de la veille et des petits projets perso, et à terme, je me vois tech lead tout en gardant un pied dans le développement.
+            </p>
+            <div style={{
+              position: `absolute`,
+              bottom: `-2rem`,
+              right: 0,
+              color: `#60A5FA`,
+              fontSize: `0.9rem`,
+              display: `flex`,
+              alignItems: `center`,
+              gap: `0.5rem`,
+              opacity: 0.8
+            }}>
+              <span>En savoir plus</span>
+              <span style={{ fontSize: `1.2rem` }}>→</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Section Compétences Techniques */}
       <section id="competences" style={{
         width: `100%`,
