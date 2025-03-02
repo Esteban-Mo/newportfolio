@@ -12,22 +12,29 @@ import CloseIcon from '@mui/icons-material/Close';
 import SearchBar from '../SearchBar/SearchBar';
 import CompetencesMenu from '../CompetencesMenu/CompetencesMenu';
 import styles from './Header.module.css';
+import { usePathname } from 'next/navigation';
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [hoveredLink, setHoveredLink] = useState<string | null>(null);
     const [activeSection, setActiveSection] = useState(`home`);
     const [showCompetencesMenu, setShowCompetencesMenu] = useState(false);
+    const pathname = usePathname();
 
     useEffect(() => {
+        if (pathname === '/presentation') {
+            setActiveSection('presentation');
+            return;
+        }
+
         const handleScroll = () => {
             const sections = [`home`, `competences`, `realisations`, `contact`];
             const viewportHeight = window.innerHeight;
             
-            // Point de référence au centre de l`écran
+            // Point de référence au centre de l'écran
             const viewportMiddle = window.scrollY + (viewportHeight / 2);
 
-            // Trouver la section la plus proche du centre de l`écran
+            // Trouver la section la plus proche du centre de l'écran
             let closestSection = sections[0];
             let closestDistance = Infinity;
 
@@ -58,7 +65,7 @@ export default function Header() {
         handleScroll(); // Appel initial
         
         return () => window.removeEventListener(`scroll`, handleScroll);
-    }, []);
+    }, [pathname]);
 
     const getLinkColor = (sectionId: string, linkId: string) => {
         if (activeSection === sectionId) return `#60A5FA`;
