@@ -122,7 +122,8 @@ export default function Home() {
           display: `flex`,
           flexDirection: `column`,
           alignItems: `center`,
-          gap: `8px`
+          gap: `8px`,
+          pointerEvents: `none`
         }}>
           <div style={{
             display: `flex`,
