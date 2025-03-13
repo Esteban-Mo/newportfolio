@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { useRouter } from 'next/navigation';
-import { Chip } from '@mui/material';
+import { useRouter } from "next/navigation";
+import { Chip } from "@mui/material";
 
 interface Competence {
   nom: string;
@@ -61,7 +61,7 @@ export default function RealisationPage({
         }}
       >
         <span style={{ fontSize: `1.2rem` }}>←</span>
-        <span>Retour à l'accueil</span>
+        <span>Retour à l`accueil</span>
       </button>
 
       <h1 style={{
@@ -105,18 +105,18 @@ export default function RealisationPage({
               label={competence.nom} 
               onClick={() => naviguerVersCompetence(competence.lien)}
               sx={{ 
-                bgcolor: `rgba(255, 255, 255, 0.05)`, 
-                color: `#fff`, 
-                borderColor: `#60A5FA`, 
+                backgroundColor: `rgba(255, 255, 255, 0.05)`,
+                color: `#fff`,
+                borderColor: `#60A5FA`,
                 border: `1px solid`,
                 borderRadius: `5px`,
                 cursor: `pointer`,
                 transition: `all 0.3s ease`,
                 '&:hover': {
-                  bgcolor: `rgba(255, 255, 255, 0.1)`,
-                  transform: `translateY(-2px)`,
+                  backgroundColor: `rgba(255, 255, 255, 0.1)`,
+                  transform: `translateY(-2px)`
                 }
-              }} 
+              }}
             />
           ))}
         </div>

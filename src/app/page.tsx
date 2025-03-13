@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import './style.css';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import { Chip } from '@mui/material';
-import { useRouter } from 'next/navigation';
+import "./style.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { Chip } from "@mui/material";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
   // Style commun pour toutes les cartes
@@ -150,7 +150,7 @@ export default function Home() {
           cursor: `pointer`,
           transition: `all 0.3s ease`
         }}
-        onClick={() => router.push('/presentation')}
+        onClick={() => router.push(`/presentation`)}
         onMouseEnter={(e) => {
           const target = e.currentTarget as HTMLElement;
           target.style.backgroundColor = `rgba(0, 0, 0, 0.2)`;
@@ -201,10 +201,10 @@ export default function Home() {
             position: `relative`
           }}>
             <p style={{ marginBottom: `2rem` }}>
-              Curieux et motivé, j'aime me lancer dans des projets techniques et apprendre en avançant. Mes études d'ingénieur m'ont donné les bases, mon alternance m'a fait travailler sur Next.js et Prisma, et mes projets perso en Node.js m'ont permis d'essayer des choses. J'ai aussi créé un site pour des vignerons en auto-entrepreneur, et les bons retours m'ont confirmé que ce métier est fait pour moi.
+              Curieux et motivé, j`aime me lancer dans des projets techniques et apprendre en avançant. Mes études d`ingénieur m`ont donné les bases, mon alternance m`a fait travailler sur Next.js et Prisma, et mes projets perso en Node.js m`ont permis d`essayer des choses. J`ai aussi créé un site pour des vignerons en auto-entrepreneur, et les bons retours m`ont confirmé que ce métier est fait pour moi.
             </p>
             <p>
-              En full stack, j'aime tout prendre en charge : discuter avec le client pour comprendre ses besoins, concevoir le projet, coder – souvent avec SQL ou TypeScript – et le déployer. Résoudre des problèmes et améliorer le code, c'est ce qui me plaît. Je me tiens à jour avec de la veille et des petits projets perso, et à terme, je me vois tech lead tout en gardant un pied dans le développement.
+              En full stack, j`aime tout prendre en charge : discuter avec le client pour comprendre ses besoins, concevoir le projet, coder – souvent avec SQL ou TypeScript – et le déployer. Résoudre des problèmes et améliorer le code, c`est ce qui me plaît. Je me tiens à jour avec de la veille et des petits projets perso, et à terme, je me vois tech lead tout en gardant un pied dans le développement.
             </p>
             <div style={{
               position: `absolute`,
@@ -300,7 +300,7 @@ export default function Home() {
                 margin: 0,
                 opacity: 0.9
               }}>
-                Maîtrise des frameworks et librairies modernes pour le développement d'applications web performantes.
+                Maîtrise des frameworks et librairies modernes pour le développement d`applications web performantes.
               </p>
               <div style={{ display: `flex`, gap: `0.5rem`, flexWrap: `wrap`, marginTop: `0.5rem` }}>
                 <Chip 
@@ -872,7 +872,7 @@ export default function Home() {
             {/* BDD Turbine */}
             <div 
               style={cardStyle}
-              onClick={() => router.push('/realisations/bdd-turbine')}
+              onClick={() => router.push(`/realisations/bdd-turbine`)}
               onMouseEnter={(e) => {
                 const target = e.currentTarget as HTMLDivElement;
                 target.style.transform = `translateY(-5px)`;
@@ -1000,7 +1000,7 @@ export default function Home() {
             {/* Atlas Eolien */}
             <div 
               style={cardStyle}
-              onClick={() => router.push('/realisations/atlas-eolien')}
+              onClick={() => router.push(`/realisations/atlas-eolien`)}
               onMouseEnter={(e) => {
                 const target = e.currentTarget as HTMLDivElement;
                 target.style.transform = `translateY(-5px)`;
@@ -1138,7 +1138,7 @@ export default function Home() {
             {/* Module Foncier */}
             <div 
               style={cardStyle}
-              onClick={() => router.push('/realisations/module-foncier')}
+              onClick={() => router.push(`/realisations/module-foncier`)}
               onMouseEnter={(e) => {
                 const target = e.currentTarget as HTMLDivElement;
                 target.style.transform = `translateY(-5px)`;
@@ -1256,7 +1256,7 @@ export default function Home() {
             {/* Agence Walker */}
             <div 
               style={cardStyle}
-              onClick={() => router.push('/realisations/agence-walker')}
+              onClick={() => router.push(`/realisations/agence-walker`)}
               onMouseEnter={(e) => {
                 const target = e.currentTarget as HTMLDivElement;
                 target.style.transform = `translateY(-5px)`;

@@ -1,69 +1,69 @@
-'use client';
-import { useRouter } from 'next/navigation';
+"use client";
+import { useRouter } from "next/navigation";
 
 export default function ArchitectureLogicielle() {
   const router = useRouter();
 
   const handleRetour = () => {
-    router.push('/#competences');
+    router.push(`/#competences`);
   };
 
   const textStyle = {
-    textAlign: 'justify' as const,
-    fontSize: '1.1rem',
-    lineHeight: '1.8',
-    color: 'rgba(255,255,255,0.9)',
-    marginBottom: '1rem'
+    textAlign: `justify` as const,
+    fontSize: `1.1rem`,
+    lineHeight: `1.8`,
+    color: `rgba(255,255,255,0.9)`,
+    marginBottom: `1rem`
   };
 
   return (
     <div style={{
-      maxWidth: '1000px',
-      margin: '0 auto', 
-      padding: '2rem 1rem',
-      color: '#fff',
-      fontFamily: 'system-ui, -apple-system, sans-serif',
+      maxWidth: `1000px`,
+      margin: `0 auto`, 
+      padding: `2rem 1rem`,
+      color: `#fff`,
+      fontFamily: `system-ui, -apple-system, sans-serif`,
     }}>
       <button 
         onClick={handleRetour}
         style={{
-          display: 'flex',
-          alignItems: 'center', 
-          gap: '0.5rem',
-          background: 'none',
-          border: 'none',
-          color: '#60A5FA',
-          fontSize: '1rem',
-          cursor: 'pointer',
-          marginBottom: '2rem',
-          padding: '0.5rem 0',
+          display: `flex`,
+          alignItems: `center`, 
+          gap: `0.5rem`,
+          background: `none`,
+          border: `none`,
+          color: `#60A5FA`,
+          fontSize: `1rem`,
+          cursor: `pointer`,
+          marginBottom: `2rem`,
+          padding: `0.5rem 0`,
         }}
       >
-        <span style={{ fontSize: '1.2rem' }}>←</span>
+        <span style={{ fontSize: `1.2rem` }}>←</span>
         <span>Retour à l&apos;accueil</span>
       </button>
 
       <h1 style={{
-        fontSize: 'clamp(2rem, 5vw, 2.5rem)',
-        fontWeight: '700',
-        color: '#60A5FA',
-        marginBottom: '2rem',
+        fontSize: `clamp(2rem, 5vw, 2.5rem)`,
+        fontWeight: `700`,
+        color: `#60A5FA`,
+        marginBottom: `2rem`,
       }}>
         Architecture Logicielle
       </h1>
 
       <section style={{
-        marginBottom: '3rem',
-        backgroundColor: 'rgba(255,255,255,0.05)',
-        borderRadius: '1rem',
-        border: '1px solid rgba(255,255,255,0.1)',
-        padding: '2rem',
+        marginBottom: `3rem`,
+        backgroundColor: `rgba(255,255,255,0.05)`,
+        borderRadius: `1rem`,
+        border: `1px solid rgba(255,255,255,0.1)`,
+        padding: `2rem`,
       }}>
         <h2 style={{
-          fontSize: '1.5rem',
-          fontWeight: '600',
-          marginBottom: '1.5rem',
-          color: '#60A5FA',
+          fontSize: `1.5rem`,
+          fontWeight: `600`,
+          marginBottom: `1.5rem`,
+          color: `#60A5FA`,
         }}>
           Ma définition
         </h2>
@@ -84,79 +84,79 @@ export default function ArchitectureLogicielle() {
       </section>
 
       <section style={{
-        marginBottom: '3rem',
-        backgroundColor: 'rgba(255,255,255,0.05)',
-        borderRadius: '1rem',
-        border: '1px solid rgba(255,255,255,0.1)',
-        padding: '2rem',
+        marginBottom: `3rem`,
+        backgroundColor: `rgba(255,255,255,0.05)`,
+        borderRadius: `1rem`,
+        border: `1px solid rgba(255,255,255,0.1)`,
+        padding: `2rem`,
       }}>
         <h2 style={{
-          fontSize: '1.5rem',
-          fontWeight: '600',
-          marginBottom: '1.5rem',
-          color: '#60A5FA',
+          fontSize: `1.5rem`,
+          fontWeight: `600`,
+          marginBottom: `1.5rem`,
+          color: `#60A5FA`,
         }}>
           Mes éléments de preuve
         </h2>
         <div>
           <p style={textStyle}>
-            Mon intérêt pour l'architecture logicielle s'est construit au fil de mes études, de mon alternance et de mes projets perso, qui m'ont tous appris des choses différentes. Pendant mes études d'ingénieur, j'ai découvert les bases de la conception orientée objet et les patrons de conception. C'était parfois un peu théorique, mais ça m'a donné une première idée de comment structurer un système. Pour aller plus loin, j'ai lu des bouquins comme Clean Architecture de Robert C. Martin et Design Patterns de Gamma et ses coauteurs. Ces lectures m'ont fait comprendre ce qui rend une architecture efficace, et ça m'a donné envie de me lancer dans des projets concrets.
+            Mon intérêt pour l`architecture logicielle s`est construit au fil de mes études, de mon alternance et de mes projets perso, qui m`ont tous appris des choses différentes. Pendant mes études d`ingénieur, j`ai découvert les bases de la conception orientée objet et les patrons de conception. C`était parfois un peu théorique, mais ça m`a donné une première idée de comment structurer un système. Pour aller plus loin, j`ai lu des bouquins comme Clean Architecture de Robert C. Martin et Design Patterns de Gamma et ses coauteurs. Ces lectures m`ont fait comprendre ce qui rend une architecture efficace, et ça m`a donné envie de me lancer dans des projets concrets.
           </p>
           <p style={textStyle}>
-            En alternance, j'ai vraiment plongé dans le vif du sujet, notamment sur des projets pro avec Next.js et Prisma. Par exemple, j'ai travaillé sur une appli de gestion de données sensibles où j'ai utilisé Prisma pour gérer une base SQL de manière fluide et sécurisée – requêtes optimisées, migrations bien gérées, le tout intégré à un front Next.js pour une interface réactive. J'ai opté pour une architecture hexagonale afin de séparer la logique métier des détails techniques, comme l'accès à la base ou l'API REST qu'on exposait. Ça rendait le système clair, testable, et prêt à évoluer sans trop de complications.
+            En alternance, j`ai vraiment plongé dans le vif du sujet, notamment sur des projets pro avec Next.js et Prisma. Par exemple, j`ai travaillé sur une appli de gestion de données sensibles où j`ai utilisé Prisma pour gérer une base SQL de manière fluide et sécurisée – requêtes optimisées, migrations bien gérées, le tout intégré à un front Next.js pour une interface réactive. J`ai opté pour une architecture hexagonale afin de séparer la logique métier des détails techniques, comme l`accès à la base ou l`API REST qu`on exposait. Ça rendait le système clair, testable, et prêt à évoluer sans trop de complications.
           </p>
           <p style={textStyle}>
-            Mes projets perso, eux, je les ai surtout orientés autour de Node.js. Un qui m'a bien marqué, c'était une appli que j'avais codée à l'époque, un monolithe un peu poussif que j'ai repris pour le découper en microservices. Avec Node.js, j'ai monté des services légers, connectés à une base SQL pour stocker les données, et j'ai mis en place un système d'événements pour qu'ils communiquent sans se marcher dessus. Le résultat était plus robuste, plus facile à mettre à jour, et ça m'a fait réfléchir à la scalabilité et à la gestion des dépendances.
+            Mes projets perso, eux, je les ai surtout orientés autour de Node.js. Un qui m`a bien marqué, c`était une appli que j`avais codée à l`époque, un monolithe un peu poussif que j`ai repris pour le découper en microservices. Avec Node.js, j`ai monté des services légers, connectés à une base SQL pour stocker les données, et j`ai mis en place un système d`événements pour qu`ils communiquent sans se marcher dessus. Le résultat était plus robuste, plus facile à mettre à jour, et ça m`a fait réfléchir à la scalabilité et à la gestion des dépendances.
           </p>
           <p style={textStyle}>
-            En alternance, j'ai aussi pris le temps de partager ce que j'avais appris avec l'équipe. J'ai organisé des petites sessions pour les devs juniors, sur des trucs comme les principes SOLID ou l'utilisation de Prisma avec SQL. On passait de la théorie à la pratique, avec des exemples concrets – optimiser une requête ou structurer un composant Next.js. Les retours étaient positifs, et voir le code gagner en lisibilité, ça confirmait que ça valait le coup d'insister là-dessus.
+            En alternance, j`ai aussi pris le temps de partager ce que j`avais appris avec l`équipe. J`ai organisé des petites sessions pour les devs juniors, sur des trucs comme les principes SOLID ou l`utilisation de Prisma avec SQL. On passait de la théorie à la pratique, avec des exemples concrets – optimiser une requête ou structurer un composant Next.js. Les retours étaient positifs, et voir le code gagner en lisibilité, ça confirmait que ça valait le coup d`insister là-dessus.
           </p>
         </div>
       </section>
 
       <section style={{
-        marginBottom: '3rem',
-        backgroundColor: 'rgba(255,255,255,0.05)',
-        borderRadius: '1rem',
-        border: '1px solid rgba(255,255,255,0.1)',
-        padding: '2rem',
+        marginBottom: `3rem`,
+        backgroundColor: `rgba(255,255,255,0.05)`,
+        borderRadius: `1rem`,
+        border: `1px solid rgba(255,255,255,0.1)`,
+        padding: `2rem`,
       }}>
         <h2 style={{
-          fontSize: '1.5rem',
-          fontWeight: '600',
-          marginBottom: '1.5rem',
-          color: '#60A5FA',
+          fontSize: `1.5rem`,
+          fontWeight: `600`,
+          marginBottom: `1.5rem`,
+          color: `#60A5FA`,
         }}>
           Mon autocritique
         </h2>
         <div>
           <p style={textStyle}>
-            Entre mes études, mon alternance et mes projets perso, j'ai bâti une bonne maîtrise des principes d'architecture logicielle et des patrons de conception. Que ce soit en bossant sur Node.js dans mes expérimentations perso ou en utilisant Next.js et Prisma sur des projets pro, j'ai appris à concevoir des systèmes modulaires, qui peuvent évoluer et qu'on peut maintenir sans trop de prise de tête. Les principes SOLID, je les applique presque naturellement maintenant, et je choisis les patrons qui collent au contexte – un peu comme un réflexe qui se peaufine avec le temps.
+            Entre mes études, mon alternance et mes projets perso, j`ai bâti une bonne maîtrise des principes d`architecture logicielle et des patrons de conception. Que ce soit en bossant sur Node.js dans mes expérimentations perso ou en utilisant Next.js et Prisma sur des projets pro, j`ai appris à concevoir des systèmes modulaires, qui peuvent évoluer et qu`on peut maintenir sans trop de prise de tête. Les principes SOLID, je les applique presque naturellement maintenant, et je choisis les patrons qui collent au contexte – un peu comme un réflexe qui se peaufine avec le temps.
           </p>
           <p style={textStyle}>
-            Cela dit, je sais que l'architecture logicielle, c'est un univers immense qui bouge sans arrêt. J'ai une base solide, mais des trucs plus pointus, comme l'Event Sourcing ou les systèmes réactifs, ça reste des terrains où je pourrais creuser davantage. Pareil pour les environnements ultra-distribués ou à très grande échelle : j'ai les concepts en tête, mais les mettre en pratique dans des cas concrets, c'est un challenge que j'ai envie de relever. Mon alternance m'a donné un bon aperçu avec Prisma et SQL, mais il y a encore du chemin.
+            Cela dit, je sais que l`architecture logicielle, c`est un univers immense qui bouge sans arrêt. J`ai une base solide, mais des trucs plus pointus, comme l`Event Sourcing ou les systèmes réactifs, ça reste des terrains où je pourrais creuser davantage. Pareil pour les environnements ultra-distribués ou à très grande échelle : j`ai les concepts en tête, mais les mettre en pratique dans des cas concrets, c`est un challenge que j`ai envie de relever. Mon alternance m`a donné un bon aperçu avec Prisma et SQL, mais il y a encore du chemin.
           </p>
           <p style={textStyle}>
-            Un point où je pourrais m'améliorer, c'est dans la manière de faire passer mes idées. Je sais concevoir des architectures qui tiennent la route – par exemple, une API bien découpée en Next.js ou un service Node.js léger –, mais les expliquer clairement à tout le monde, surtout aux non-devs, c'est pas toujours évident. J'aimerais bosser sur des diagrammes plus parlants et me mettre aux ADR (ces petits docs qui justifient les choix d'architecture). Ça rendrait mes décisions plus lisibles et utiles pour l'équipe.
+            Un point où je pourrais m`améliorer, c`est dans la manière de faire passer mes idées. Je sais concevoir des architectures qui tiennent la route – par exemple, une API bien découpée en Next.js ou un service Node.js léger –, mais les expliquer clairement à tout le monde, surtout aux non-devs, c`est pas toujours évident. J`aimerais bosser sur des diagrammes plus parlants et me mettre aux ADR (ces petits docs qui justifient les choix d`architecture). Ça rendrait mes décisions plus lisibles et utiles pour l`équipe.
           </p>
           <p style={textStyle}>
-            Et puis, il y a cette réalité qu'on ne peut pas ignorer : entre la théorie et les projets réels, ça coince parfois. Les deadlines, les budgets ou les compétences dispo dans l'équipe forcent souvent à faire des compromis. J'ai appris à jongler entre l'idéal – genre une architecture hexagonale nickel – et ce qui est faisable, comme une solution rapide mais propre en Node.js pour un proto. Ça demande de rester flexible, de se poser les bonnes questions et d'ajuster le tir en permanence.
+            Et puis, il y a cette réalité qu`on ne peut pas ignorer : entre la théorie et les projets réels, ça coince parfois. Les deadlines, les budgets ou les compétences dispo dans l`équipe forcent souvent à faire des compromis. J`ai appris à jongler entre l`idéal – genre une architecture hexagonale nickel – et ce qui est faisable, comme une solution rapide mais propre en Node.js pour un proto. Ça demande de rester flexible, de se poser les bonnes questions et d`ajuster le tir en permanence.
           </p>
         </div>
       </section>
 
       <section style={{
-        marginBottom: '3rem',
-        backgroundColor: 'rgba(255,255,255,0.05)',
-        borderRadius: '1rem',
-        border: '1px solid rgba(255,255,255,0.1)',
-        padding: '2rem',
+        marginBottom: `3rem`,
+        backgroundColor: `rgba(255,255,255,0.05)`,
+        borderRadius: `1rem`,
+        border: `1px solid rgba(255,255,255,0.1)`,
+        padding: `2rem`,
       }}>
         <h2 style={{
-          fontSize: '1.5rem',
-          fontWeight: '600',
-          marginBottom: '1.5rem',
-          color: '#60A5FA',
+          fontSize: `1.5rem`,
+          fontWeight: `600`,
+          marginBottom: `1.5rem`,
+          color: `#60A5FA`,
         }}>
           Mon évolution dans cette compétence
         </h2>
