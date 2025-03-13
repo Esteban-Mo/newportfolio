@@ -1,7 +1,6 @@
 'use client';
 
 import HomeIcon from '@mui/icons-material/Home';
-import WorkIcon from '@mui/icons-material/Work';
 import CodeIcon from '@mui/icons-material/Code';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
 import PersonIcon from '@mui/icons-material/Person';
