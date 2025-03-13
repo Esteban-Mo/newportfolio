@@ -872,6 +872,7 @@ export default function Home() {
             {/* BDD Turbine */}
             <div 
               style={cardStyle}
+              onClick={() => router.push('/realisations/bdd-turbine')}
               onMouseEnter={(e) => {
                 const target = e.currentTarget as HTMLDivElement;
                 target.style.transform = `translateY(-5px)`;
@@ -999,6 +1000,7 @@ export default function Home() {
             {/* Atlas Eolien */}
             <div 
               style={cardStyle}
+              onClick={() => router.push('/realisations/atlas-eolien')}
               onMouseEnter={(e) => {
                 const target = e.currentTarget as HTMLDivElement;
                 target.style.transform = `translateY(-5px)`;
@@ -1136,6 +1138,7 @@ export default function Home() {
             {/* Module Foncier */}
             <div 
               style={cardStyle}
+              onClick={() => router.push('/realisations/module-foncier')}
               onMouseEnter={(e) => {
                 const target = e.currentTarget as HTMLDivElement;
                 target.style.transform = `translateY(-5px)`;
@@ -1253,6 +1256,7 @@ export default function Home() {
             {/* Agence Walker */}
             <div 
               style={cardStyle}
+              onClick={() => router.push('/realisations/agence-walker')}
               onMouseEnter={(e) => {
                 const target = e.currentTarget as HTMLDivElement;
                 target.style.transform = `translateY(-5px)`;
