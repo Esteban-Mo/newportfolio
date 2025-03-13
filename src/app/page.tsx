@@ -824,7 +824,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Section Réalisations */}
+      {/* Section Réalisations - Temporairement indisponible */}
+      {/* 
       <section id="realisations" style={{
         width: `100%`,
         backdropFilter: `blur(2px)`,
@@ -861,508 +862,74 @@ export default function Home() {
               borderRadius: `2px`
             }}/>
           </h2>
+      */}
 
-          <div style={{
-            width: `100%`,
-            display: `grid`,
-            gridTemplateColumns: `repeat(auto-fit, minmax(280px, 1fr))`,
-            gap: `2rem`,
-            boxSizing: `border-box`
+      {/* Message temporaire indiquant que la section est indisponible */}
+      <section style={{
+        width: `100%`,
+        backdropFilter: `blur(2px)`,
+        borderTop: `1px solid rgba(255, 255, 255, 0.1)`,
+        padding: `4rem 1rem`,
+        boxSizing: `border-box`
+      }}>
+        <div style={{
+          maxWidth: `1400px`,
+          margin: `0 auto`,
+          display: `flex`,
+          flexDirection: `column`,
+          alignItems: `center`,
+          gap: `3rem`
+        }}>
+          <h2 style={{
+            color: `#fff`,
+            fontSize: `clamp(2rem, 5vw, 2.5rem)`,
+            fontWeight: `700`,
+            textAlign: `center`,
+            position: `relative`,
+            paddingBottom: `1rem`,
+            margin: 0
           }}>
-            {/* BDD Turbine */}
-            <div 
-              style={cardStyle}
-              onClick={() => router.push(`/realisations/bdd-turbine`)}
-              onMouseEnter={(e) => {
-                const target = e.currentTarget as HTMLDivElement;
-                target.style.transform = `translateY(-5px)`;
-                target.style.backgroundColor = `rgba(255,255,255,0.08)`;
-                target.style.boxShadow = `0 10px 20px rgba(0,0,0,0.2)`;
-                
-                const moreInfo = target.querySelector(`[data-more-info]`) as HTMLDivElement;
-                if (moreInfo) {
-                  moreInfo.style.color = `#93C5FD`;
-                  moreInfo.style.opacity = `1`;
-                  const arrow = moreInfo.querySelector(`span:last-child`) as HTMLSpanElement;
-                  if (arrow) {
-                    arrow.style.transform = `translateX(5px)`;
-                  }
-                }
-              }}
-              onMouseLeave={(e) => {
-                const target = e.currentTarget as HTMLDivElement;
-                target.style.transform = `translateY(0)`;
-                target.style.backgroundColor = `rgba(255,255,255,0.05)`;
-                target.style.boxShadow = `none`;
-                
-                const moreInfo = target.querySelector(`[data-more-info]`) as HTMLDivElement;
-                if (moreInfo) {
-                  moreInfo.style.color = `#60A5FA`;
-                  moreInfo.style.opacity = `0.8`;
-                  const arrow = moreInfo.querySelector(`span:last-child`) as HTMLSpanElement;
-                  if (arrow) {
-                    arrow.style.transform = `translateX(0)`;
-                  }
-                }
-              }}
-            >
-              {moreInfoIndicator}
-              <div style={{
-                position: `absolute`,
-                top: `1rem`,
-                right: `1rem`,
-                fontSize: `2.5rem`,
-                opacity: 0.2
-              }}>
-                💾
-              </div>
-              <h3 style={{
-                color: `#60A5FA`,
-                fontSize: `clamp(1.2rem, 3vw, 1.5rem)`,
-                fontWeight: `600`,
-                margin: 0
-              }}>
-                BDD Turbine
-              </h3>
-              <p style={{
-                color: `#fff`,
-                fontSize: `clamp(0.9rem, 2vw, 1.1rem)`,
-                lineHeight: `1.6`,
-                margin: 0,
-                opacity: 0.9
-              }}>
-                Application web innovante de gestion de turbines industrielles avec une interface intuitive pour la création et l`administration des données. API RESTful sécurisée permettant l`exportation des données au format CSV pour une intégration transparente avec d`autres systèmes.
-              </p>
-              <div style={{ display: `flex`, gap: `0.5rem`, flexWrap: `wrap`, marginTop: `0.5rem` }}>
-                <Chip 
-                  label="React" 
-                  sx={{ 
-                    bgcolor: `rgba(255, 255, 255, 0.05)`, 
-                    color: `#fff`, 
-                    borderColor: `#61DAFB`, 
-                    border: `1px solid`,
-                    borderRadius: `5px`
-                  }} 
-                />
-                <Chip 
-                  label="Next.js" 
-                  sx={{ 
-                    bgcolor: `rgba(255, 255, 255, 0.05)`, 
-                    color: `#fff`, 
-                    borderColor: `#fff`, 
-                    border: `1px solid`,
-                    borderRadius: `5px`
-                  }} 
-                />
-                <Chip 
-                  label="Prisma" 
-                  sx={{ 
-                    bgcolor: `rgba(255, 255, 255, 0.05)`, 
-                    color: `#fff`, 
-                    borderColor: `#2D3748`, 
-                    border: `1px solid`,
-                    borderRadius: `5px`
-                  }} 
-                />
-                <Chip 
-                  label="PostgreSQL" 
-                  sx={{ 
-                    bgcolor: `rgba(255, 255, 255, 0.05)`, 
-                    color: `#fff`,
-                    borderColor: `#336791`,
-                    border: `1px solid`,
-                    borderRadius: `5px`
-                  }} 
-                />
-                <Chip 
-                  label="TypeScript" 
-                  sx={{ 
-                    bgcolor: `rgba(255, 255, 255, 0.05)`, 
-                    color: `#fff`, 
-                    borderColor: `#3178C6`, 
-                    border: `1px solid`,
-                    borderRadius: `5px`
-                  }} 
-                />
-                <Chip 
-                  label="Python" 
-                  sx={{ 
-                    bgcolor: `rgba(255, 255, 255, 0.05)`, 
-                    color: `#fff`, 
-                    borderColor: `#3776AB`, 
-                    border: `1px solid`,
-                    borderRadius: `5px`
-                  }} 
-                />
-              </div>
-            </div>
-
-            {/* Atlas Eolien */}
-            <div 
-              style={cardStyle}
-              onClick={() => router.push(`/realisations/atlas-eolien`)}
-              onMouseEnter={(e) => {
-                const target = e.currentTarget as HTMLDivElement;
-                target.style.transform = `translateY(-5px)`;
-                target.style.backgroundColor = `rgba(255,255,255,0.08)`;
-                target.style.boxShadow = `0 10px 20px rgba(0,0,0,0.2)`;
-                
-                const moreInfo = target.querySelector(`[data-more-info]`) as HTMLDivElement;
-                if (moreInfo) {
-                  moreInfo.style.color = `#93C5FD`;
-                  moreInfo.style.opacity = `1`;
-                  const arrow = moreInfo.querySelector(`span:last-child`) as HTMLSpanElement;
-                  if (arrow) {
-                    arrow.style.transform = `translateX(5px)`;
-                  }
-                }
-              }}
-              onMouseLeave={(e) => {
-                const target = e.currentTarget as HTMLDivElement;
-                target.style.transform = `translateY(0)`;
-                target.style.backgroundColor = `rgba(255,255,255,0.05)`;
-                target.style.boxShadow = `none`;
-                
-                const moreInfo = target.querySelector(`[data-more-info]`) as HTMLDivElement;
-                if (moreInfo) {
-                  moreInfo.style.color = `#60A5FA`;
-                  moreInfo.style.opacity = `0.8`;
-                  const arrow = moreInfo.querySelector(`span:last-child`) as HTMLSpanElement;
-                  if (arrow) {
-                    arrow.style.transform = `translateX(0)`;
-                  }
-                }
-              }}
-            >
-              {moreInfoIndicator}
-              <div style={{
-                position: `absolute`,
-                top: `1rem`,
-                right: `1rem`,
-                fontSize: `2.5rem`,
-                opacity: 0.2
-              }}>
-                🌪️
-              </div>
-              <h3 style={{
-                color: `#60A5FA`,
-                fontSize: `clamp(1.2rem, 3vw, 1.5rem)`,
-                fontWeight: `600`,
-                margin: 0
-              }}>
-                Atlas Eolien
-              </h3>
-              <p style={{
-                color: `#fff`,
-                fontSize: `clamp(0.9rem, 2vw, 1.1rem)`,
-                lineHeight: `1.6`,
-                margin: 0,
-                opacity: 0.9
-              }}>
-                Solution cartographique interactive visualisant en temps réel les données éoliennes en France. Interface moderne intégrant les données météorologiques et techniques des installations publiques et privées pour une prise de décision optimale.
-              </p>
-              <div style={{ display: `flex`, gap: `0.5rem`, flexWrap: `wrap`, marginTop: `0.5rem` }}>
-                <Chip 
-                  label="React" 
-                  sx={{ 
-                    bgcolor: `rgba(255, 255, 255, 0.05)`, 
-                    color: `#fff`, 
-                    borderColor: `#61DAFB`, 
-                    border: `1px solid`,
-                    borderRadius: `5px`
-                  }} 
-                />
-                <Chip 
-                  label="Next.js" 
-                  sx={{ 
-                    bgcolor: `rgba(255, 255, 255, 0.05)`, 
-                    color: `#fff`, 
-                    borderColor: `#fff`, 
-                    border: `1px solid`,
-                    borderRadius: `5px`
-                  }} 
-                />
-                <Chip 
-                  label="Prisma" 
-                  sx={{ 
-                    bgcolor: `rgba(255, 255, 255, 0.05)`, 
-                    color: `#fff`, 
-                    borderColor: `#2D3748`, 
-                    border: `1px solid`,
-                    borderRadius: `5px`
-                  }} 
-                />
-                <Chip 
-                  label="PostgreSQL" 
-                  sx={{ 
-                    bgcolor: `rgba(255, 255, 255, 0.05)`, 
-                    color: `#fff`,
-                    borderColor: `#336791`,
-                    border: `1px solid`,
-                    borderRadius: `5px`
-                  }} 
-                />
-                <Chip 
-                  label="TypeScript" 
-                  sx={{ 
-                    bgcolor: `rgba(255, 255, 255, 0.05)`, 
-                    color: `#fff`, 
-                    borderColor: `#3178C6`, 
-                    border: `1px solid`,
-                    borderRadius: `5px`
-                  }} 
-                />
-                <Chip 
-                  label="Geoserver" 
-                  sx={{ 
-                    bgcolor: `rgba(255, 255, 255, 0.05)`, 
-                    color: `#fff`, 
-                    borderColor: `#4B9E4B`, 
-                    border: `1px solid`,
-                    borderRadius: `5px`
-                  }} 
-                />
-                <Chip 
-                  label="Leaflet" 
-                  sx={{ 
-                    bgcolor: `rgba(255, 255, 255, 0.05)`, 
-                    color: `#fff`, 
-                    borderColor: `#199900`, 
-                    border: `1px solid`,
-                    borderRadius: `5px`
-                  }} 
-                />
-              </div>
-            </div>
-
-            {/* Module Foncier */}
-            <div 
-              style={cardStyle}
-              onClick={() => router.push(`/realisations/module-foncier`)}
-              onMouseEnter={(e) => {
-                const target = e.currentTarget as HTMLDivElement;
-                target.style.transform = `translateY(-5px)`;
-                target.style.backgroundColor = `rgba(255,255,255,0.08)`;
-                target.style.boxShadow = `0 10px 20px rgba(0,0,0,0.2)`;
-                
-                const moreInfo = target.querySelector(`[data-more-info]`) as HTMLDivElement;
-                if (moreInfo) {
-                  moreInfo.style.color = `#93C5FD`;
-                  moreInfo.style.opacity = `1`;
-                  const arrow = moreInfo.querySelector(`span:last-child`) as HTMLSpanElement;
-                  if (arrow) {
-                    arrow.style.transform = `translateX(5px)`;
-                  }
-                }
-              }}
-              onMouseLeave={(e) => {
-                const target = e.currentTarget as HTMLDivElement;
-                target.style.transform = `translateY(0)`;
-                target.style.backgroundColor = `rgba(255,255,255,0.05)`;
-                target.style.boxShadow = `none`;
-                
-                const moreInfo = target.querySelector(`[data-more-info]`) as HTMLDivElement;
-                if (moreInfo) {
-                  moreInfo.style.color = `#60A5FA`;
-                  moreInfo.style.opacity = `0.8`;
-                  const arrow = moreInfo.querySelector(`span:last-child`) as HTMLSpanElement;
-                  if (arrow) {
-                    arrow.style.transform = `translateX(0)`;
-                  }
-                }
-              }}
-            >
-              {moreInfoIndicator}
-              <div style={{
-                position: `absolute`,
-                top: `1rem`,
-                right: `1rem`,
-                fontSize: `2.5rem`,
-                opacity: 0.2
-              }}>
-                🏢
-              </div>
-              <h3 style={{
-                color: `#60A5FA`,
-                fontSize: `clamp(1.2rem, 3vw, 1.5rem)`,
-                fontWeight: `600`,
-                margin: 0
-              }}>
-                Module Foncier
-              </h3>
-              <p style={{
-                color: `#fff`,
-                fontSize: `clamp(0.9rem, 2vw, 1.1rem)`,
-                lineHeight: `1.6`,
-                margin: 0,
-                opacity: 0.9
-              }}>
-                Plateforme complète de gestion immobilière d`entreprise avec suivi des baux, optimisation des espaces et reporting avancé. Solution sur mesure permettant une gestion efficace et centralisée du patrimoine immobilier.
-              </p>
-              <div style={{ display: `flex`, gap: `0.5rem`, flexWrap: `wrap`, marginTop: `0.5rem` }}>
-                <Chip 
-                  label="React" 
-                  sx={{ 
-                    bgcolor: `rgba(255, 255, 255, 0.05)`, 
-                    color: `#fff`, 
-                    borderColor: `#61DAFB`, 
-                    border: `1px solid`,
-                    borderRadius: `5px`
-                  }} 
-                />
-                <Chip 
-                  label="Next.js" 
-                  sx={{ 
-                    bgcolor: `rgba(255, 255, 255, 0.05)`, 
-                    color: `#fff`, 
-                    borderColor: `#fff`, 
-                    border: `1px solid`,
-                    borderRadius: `5px`
-                  }} 
-                />
-                <Chip 
-                  label="Prisma" 
-                  sx={{ 
-                    bgcolor: `rgba(255, 255, 255, 0.05)`, 
-                    color: `#fff`, 
-                    borderColor: `#2D3748`, 
-                    border: `1px solid`,
-                    borderRadius: `5px`
-                  }} 
-                />
-                <Chip 
-                  label="MongoDB" 
-                  sx={{ 
-                    bgcolor: `rgba(255, 255, 255, 0.05)`, 
-                    color: `#fff`,
-                    borderColor: `#4DB33D`,
-                    border: `1px solid`, 
-                    borderRadius: `5px`
-                  }} 
-                />
-                <Chip 
-                  label="TypeScript" 
-                  sx={{ 
-                    bgcolor: `rgba(255, 255, 255, 0.05)`, 
-                    color: `#fff`, 
-                    borderColor: `#3178C6`, 
-                    border: `1px solid`,
-                    borderRadius: `5px`
-                  }} 
-                />
-              </div>
-            </div>
-
-            {/* Agence Walker */}
-            <div 
-              style={cardStyle}
-              onClick={() => router.push(`/realisations/agence-walker`)}
-              onMouseEnter={(e) => {
-                const target = e.currentTarget as HTMLDivElement;
-                target.style.transform = `translateY(-5px)`;
-                target.style.backgroundColor = `rgba(255,255,255,0.08)`;
-                target.style.boxShadow = `0 10px 20px rgba(0,0,0,0.2)`;
-                
-                const moreInfo = target.querySelector(`[data-more-info]`) as HTMLDivElement;
-                if (moreInfo) {
-                  moreInfo.style.color = `#93C5FD`;
-                  moreInfo.style.opacity = `1`;
-                  const arrow = moreInfo.querySelector(`span:last-child`) as HTMLSpanElement;
-                  if (arrow) {
-                    arrow.style.transform = `translateX(5px)`;
-                  }
-                }
-              }}
-              onMouseLeave={(e) => {
-                const target = e.currentTarget as HTMLDivElement;
-                target.style.transform = `translateY(0)`;
-                target.style.backgroundColor = `rgba(255,255,255,0.05)`;
-                target.style.boxShadow = `none`;
-                
-                const moreInfo = target.querySelector(`[data-more-info]`) as HTMLDivElement;
-                if (moreInfo) {
-                  moreInfo.style.color = `#60A5FA`;
-                  moreInfo.style.opacity = `0.8`;
-                  const arrow = moreInfo.querySelector(`span:last-child`) as HTMLSpanElement;
-                  if (arrow) {
-                    arrow.style.transform = `translateX(0)`;
-                  }
-                }
-              }}
-            >
-              {moreInfoIndicator}
-              <div style={{
-                position: `absolute`,
-                top: `1rem`,
-                right: `1rem`,
-                fontSize: `2.5rem`,
-                opacity: 0.2
-              }}>
-                🏠
-              </div>
-              <h3 style={{
-                color: `#60A5FA`,
-                fontSize: `clamp(1.2rem, 3vw, 1.5rem)`,
-                fontWeight: `600`,
-                margin: 0
-              }}>
-                Agence Walker
-              </h3>
-              <p style={{
-                color: `#fff`,
-                fontSize: `clamp(0.9rem, 2vw, 1.1rem)`,
-                lineHeight: `1.6`,
-                margin: 0,
-                opacity: 0.9
-              }}>
-                Application immobilière nouvelle génération avec cartographie interactive des biens. Interface élégante offrant une visualisation en temps réel des propriétés disponibles et louées, enrichie de fonctionnalités avancées de gestion locative.
-              </p>
-              <div style={{ display: `flex`, gap: `0.5rem`, flexWrap: `wrap`, marginTop: `0.5rem` }}>
-                <Chip 
-                  label="React" 
-                  sx={{ 
-                    bgcolor: `rgba(255, 255, 255, 0.05)`, 
-                    color: `#fff`, 
-                    borderColor: `#61DAFB`, 
-                    border: `1px solid`,
-                    borderRadius: `5px`
-                  }} 
-                />
-                <Chip 
-                  label="Next.js" 
-                  sx={{ 
-                    bgcolor: `rgba(255, 255, 255, 0.05)`, 
-                    color: `#fff`, 
-                    borderColor: `#fff`, 
-                    border: `1px solid`,
-                    borderRadius: `5px`
-                  }} 
-                />
-                <Chip 
-                  label="Prisma" 
-                  sx={{ 
-                    bgcolor: `rgba(255, 255, 255, 0.05)`, 
-                    color: `#fff`, 
-                    borderColor: `#2D3748`, 
-                    border: `1px solid`,
-                    borderRadius: `5px`
-                  }} 
-                />
-                <Chip 
-                  label="MongoDB" 
-                  sx={{ 
-                    bgcolor: `rgba(255, 255, 255, 0.05)`, 
-                    color: `#fff`,
-                    borderColor: `#4DB33D`,
-                    border: `1px solid`, 
-                    borderRadius: `5px`
-                  }} 
-                />
-              </div>
-            </div>
+            Réalisations
+            <div style={{
+              position: `absolute`,
+              bottom: 0,
+              left: `50%`,
+              transform: `translateX(-50%)`,
+              width: `60px`,
+              height: `4px`,
+              background: `#60A5FA`,
+              borderRadius: `2px`
+            }}/>
+          </h2>
+          
+          <div style={{
+            backgroundColor: `rgba(255,255,255,0.05)`,
+            borderRadius: `1rem`,
+            border: `1px solid rgba(255,255,255,0.1)`,
+            padding: `2rem`,
+            textAlign: `center`,
+            maxWidth: `600px`,
+            margin: `0 auto`
+          }}>
+            <p style={{
+              color: `#fff`,
+              fontSize: `clamp(1rem, 2vw, 1.2rem)`,
+              lineHeight: `1.6`,
+              margin: 0,
+              opacity: 0.9
+            }}>
+              La section des réalisations est temporairement indisponible. Elle sera de retour très prochainement avec de nouveaux projets.
+            </p>
           </div>
         </div>
       </section>
+
+      {/* Commentaire de la fin de la section des réalisations originale */}
+      {/*
+          </div>
+        </div>
+      </section>
+      */}
 
       {/* Section Contact */}
       <section id="contact" style={{

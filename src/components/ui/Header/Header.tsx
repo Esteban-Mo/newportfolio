@@ -28,7 +28,8 @@ export default function Header() {
         }
 
         const handleScroll = () => {
-            const sections = [`home`, `competences`, `realisations`, `contact`];
+            // Réalisations temporairement retiré
+            const sections = [`home`, `competences`, /* `realisations`, */ `contact`];
             const viewportHeight = window.innerHeight;
             
             // Point de référence au centre de l'écran
@@ -139,6 +140,7 @@ export default function Header() {
                     </a>
                     {showCompetencesMenu && <CompetencesMenu />}
                 </div>
+                {/* Temporairement retiré
                 <a 
                     onClick={() => scrollToSection(`realisations`)}
                     className={styles.link}
@@ -148,6 +150,7 @@ export default function Header() {
                 >
                     <WorkIcon /> Réalisations
                 </a>
+                */}
                 <a 
                     onClick={() => scrollToSection(`contact`)}
                     className={styles.link}
@@ -191,6 +194,7 @@ export default function Header() {
                     </a>
                     {showCompetencesMenu && <CompetencesMenu />}
                 </div>
+                {/* Temporairement retiré
                 <a 
                     onClick={() => scrollToSection(`realisations`)}
                     className={`${styles.link} ${styles.mobileLink}`}
@@ -200,6 +204,7 @@ export default function Header() {
                 >
                     <WorkIcon /> Réalisations
                 </a>
+                */}
                 <a 
                     onClick={() => scrollToSection(`contact`)}
                     className={`${styles.link} ${styles.mobileLink}`}
@@ -212,4 +217,4 @@ export default function Header() {
             </div>
         </header>
     );
-} 
+}

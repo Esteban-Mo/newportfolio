@@ -146,9 +146,6 @@ export default function Presentation() {
                     <p>
                         Sur le plan professionnel, j`aspire à devenir <strong>tech lead</strong> dans un avenir proche. J`aimerais avoir une équipe qui dirige des <strong>initiatives techniques</strong> et continuer à écrire du code. Mon programme d`alternance m`enseigne déjà bien sur ce sujet, et mes projets secondaires me permettent de tester des <strong>méthodes de gestion de projet</strong>, bien qu`en solo, cela me donne une idée au global. Je me tiens au courant des nouveautés en lisant des articles, suivant des conventions et en écoutant des tutoriels.
                     </p>
-                    <p>
-                        Personnellement, j`aimerais terminer un petit projet de bricolage à la maison, par exemple, avoir un coin agréable à regarder. Je voudrais aussi faire quelque chose de culturel - aller voir une pièce de théâtre ou assister à un opéra, juste pour en avoir une idée. Cela me sort de la bulle de la technologie et j`en suis absolument accro.
-                    </p>
                 </div>
             </section>
         </div>
