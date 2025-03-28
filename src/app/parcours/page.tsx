@@ -141,7 +141,7 @@ export default function Parcours() {
           </p>
           <div style={{ marginTop: `10px` }}>
             <p style={{ fontSize: `0.9rem`, color: `#aaa` }}>
-              Compétences : TypeScript · Scss · MySQL · AngularJS · Java
+              Compétences : TypeScript · Scss · MySQL · Angular · Java
             </p>
           </div>
         </VerticalTimelineElement>
