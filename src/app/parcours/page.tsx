@@ -51,21 +51,28 @@ export default function Parcours() {
         {/* Valeco - Alternance actuelle */}
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
-          date="Mars 2023 - Aujourd`hui (2 ans 1 mois)"
-          iconStyle={{ background: `#60A5FA`, color: `#fff` }}
+          date="Mars 2023 - Aujourd'hui (2 ans 1 mois)"
+          iconStyle={{ background: '#60A5FA', color: '#fff' }}
           icon={<WorkIcon />}
           contentStyle={{
-            background: `rgba(96, 165, 250, 0.1)`,
-            color: `#fff`,
-            border: `1px solid #60A5FA`
+            background: 'rgba(96, 165, 250, 0.1)',
+            color: '#fff',
+            border: '1px solid #60A5FA'
           }}
-          contentArrowStyle={{ borderRight: `7px solid #60A5FA` }}
+          contentArrowStyle={{ borderRight: '7px solid #60A5FA' }}
         >
-          <h3 style={{ color: `#60A5FA` }}>Ingénieur conception logiciels</h3>
-          <h4 style={{ color: `#ccc` }}>Valeco · Contrat en alternance</h4>
-          <p style={{ color: `#ddd` }}>Montpellier, Occitanie, France · Hybride</p>
-          <div style={{ marginTop: `10px` }}>
-            <p style={{ fontSize: `0.9rem`, color: `#aaa` }}>
+          <h3 style={{ color: '#60A5FA' }}>Ingénieur conception logiciels</h3>
+          <h4 style={{ color: '#ccc' }}>Valeco · Contrat en alternance</h4>
+          <p style={{ color: '#ddd' }}>Montpellier, Occitanie, France · Hybride</p>
+          <p>
+            - Conception et développement d'applications web de gestion interne pour les équipes opérationnelles<br/>
+            - Mise en place d'architectures logicielles modernes avec Next.js et Prisma<br/>
+            - Développement d'API RESTful pour l'interconnexion des systèmes<br/>
+            - Optimisation des performances et de l'expérience utilisateur<br/>
+            - Collaboration avec les équipes métier pour définir les fonctionnalités
+          </p>
+          <div style={{ marginTop: '10px' }}>
+            <p style={{ fontSize: '0.9rem', color: '#aaa' }}>
               Compétences : PostgreSQL · TypeScript · React.js · Next.js · Prisma
             </p>
           </div>
@@ -74,19 +81,31 @@ export default function Parcours() {
         {/* Groupe AEN - Formation */}
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
-          date="Septembre 2020 - Aujourd`hui (4 ans 7 mois)"
-          iconStyle={{ background: `#8B5CF6`, color: `#fff` }}
+          date="Septembre 2020 - Aujourd'hui (4 ans 7 mois)"
+          iconStyle={{ background: '#8B5CF6', color: '#fff' }}
           icon={<SchoolIcon />}
           contentStyle={{
-            background: `rgba(139, 92, 246, 0.1)`,
-            color: `#fff`,
-            border: `1px solid #8B5CF6`
+            background: 'rgba(139, 92, 246, 0.1)',
+            color: '#fff',
+            border: '1px solid #8B5CF6'
           }}
-          contentArrowStyle={{ borderRight: `7px solid #8B5CF6` }}
+          contentArrowStyle={{ borderRight: '7px solid #8B5CF6' }}
         >
-          <h3 style={{ color: `#8B5CF6` }}>Étudiant ingénieur (logiciels)</h3>
-          <h4 style={{ color: `#ccc` }}>Groupe AEN</h4>
-          <p style={{ color: `#ddd` }}>Nîmes, Occitanie, France</p>
+          <h3 style={{ color: '#8B5CF6' }}>Étudiant ingénieur (logiciels)</h3>
+          <h4 style={{ color: '#ccc' }}>Groupe AEN</h4>
+          <p style={{ color: '#ddd' }}>Nîmes, Occitanie, France</p>
+          <p>
+            - Formation en génie logiciel et développement d'applications<br/>
+            - Apprentissage des pratiques modernes de développement et d'architecture logicielle<br/>
+            - Participation à des projets d'équipe en méthodologie agile<br/>
+            - Spécialisation en développement web et applications mobiles<br/>
+            - Études des bases de données, réseaux, et systèmes distribués
+          </p>
+          <div style={{ marginTop: '10px' }}>
+            <p style={{ fontSize: '0.9rem', color: '#aaa' }}>
+              Compétences : Développement logiciel · Architecture logicielle · Méthodes agiles · Bases de données · Ingénierie système
+            </p>
+          </div>
         </VerticalTimelineElement>
 
         {/* Action environnementale */}
@@ -256,57 +275,88 @@ export default function Parcours() {
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
           date="2015 - 2018 (3 ans)"
-          iconStyle={{ background: `#F59E0B`, color: `#fff` }}
+          iconStyle={{ background: '#F59E0B', color: '#fff' }}
           icon={<WorkIcon />}
           contentStyle={{
-            background: `rgba(245, 158, 11, 0.1)`,
-            color: `#fff`,
-            border: `1px solid #F59E0B`
+            background: 'rgba(245, 158, 11, 0.1)',
+            color: '#fff',
+            border: '1px solid #F59E0B'
           }}
-          contentArrowStyle={{ borderRight: `7px solid #F59E0B` }}
+          contentArrowStyle={{ borderRight: '7px solid #F59E0B' }}
         >
-          <h3 style={{ color: `#F59E0B` }}>Intérimaire</h3>
-          <h4 style={{ color: `#ccc` }}>Manpower · Intérimaire</h4>
-          <p style={{ color: `#ddd` }}>L`Arbresle, Auvergne-Rhône-Alpes, France</p>
+          <h3 style={{ color: '#F59E0B' }}>Intérimaire</h3>
+          <h4 style={{ color: '#ccc' }}>Manpower · Intérimaire</h4>
+          <p style={{ color: '#ddd' }}>L'Arbresle, Auvergne-Rhône-Alpes, France</p>
+          <p>
+            - Missions variées dans différents secteurs d'activité (logistique, industrie, services)<br/>
+            - Adaptation rapide à différents environnements de travail et équipes<br/>
+            - Gestion d'inventaires et opérations logistiques<br/>
+            - Respect des normes de qualité et de sécurité dans divers contextes industriels<br/>
+            - Développement de compétences polyvalentes et d'une grande capacité d'adaptation
+          </p>
+          <div style={{ marginTop: '10px' }}>
+            <p style={{ fontSize: '0.9rem', color: '#aaa' }}>
+              Compétences : Adaptabilité · Travail d'équipe · Logistique · Gestion des priorités
+            </p>
+          </div>
         </VerticalTimelineElement>
 
         {/* ONET Sécurité */}
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
-          date="2015 (Moins d`un an)"
-          iconStyle={{ background: `#F59E0B`, color: `#fff` }}
+          date="2015 (Moins d'un an)"
+          iconStyle={{ background: '#F59E0B', color: '#fff' }}
           icon={<SecurityIcon />}
           contentStyle={{
-            background: `rgba(245, 158, 11, 0.1)`,
-            color: `#fff`,
-            border: `1px solid #F59E0B`
+            background: 'rgba(245, 158, 11, 0.1)',
+            color: '#fff',
+            border: '1px solid #F59E0B'
           }}
-          contentArrowStyle={{ borderRight: `7px solid #F59E0B` }}
+          contentArrowStyle={{ borderRight: '7px solid #F59E0B' }}
         >
-          <h3 style={{ color: `#F59E0B` }}>Agent de sécurité privé</h3>
-          <h4 style={{ color: `#ccc` }}>ONET Sécurité · CDD</h4>
-          <p style={{ color: `#ddd` }}>Lyon, Auvergne-Rhône-Alpes, France</p>
+          <h3 style={{ color: '#F59E0B' }}>Agent de sécurité privé</h3>
+          <h4 style={{ color: '#ccc' }}>ONET Sécurité · CDD</h4>
+          <p style={{ color: '#ddd' }}>Lyon, Auvergne-Rhône-Alpes, France</p>
+          <p>
+            - Surveillance et sécurisation des installations et des personnes<br/>
+            - Contrôle des accès et vérification des identités<br/>
+            - Gestion des situations d'urgence et mise en œuvre des protocoles de sécurité<br/>
+            - Rédaction de rapports d'activité et d'incidents<br/>
+            - Coordination avec les services de sécurité publique
+          </p>
+          <div style={{ marginTop: '10px' }}>
+            <p style={{ fontSize: '0.9rem', color: '#aaa' }}>
+              Compétences : Surveillance de sécurité · Gestion de crise · Communication · Vigilance
+            </p>
+          </div>
         </VerticalTimelineElement>
 
         {/* GiFi */}
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
           date="2010 - 2014 (4 ans)"
-          iconStyle={{ background: `#F59E0B`, color: `#fff` }}
+          iconStyle={{ background: '#F59E0B', color: '#fff' }}
           icon={<StoreIcon />}
           contentStyle={{
-            background: `rgba(245, 158, 11, 0.1)`,
-            color: `#fff`,
-            border: `1px solid #F59E0B`
+            background: 'rgba(245, 158, 11, 0.1)',
+            color: '#fff',
+            border: '1px solid #F59E0B'
           }}
-          contentArrowStyle={{ borderRight: `7px solid #F59E0B` }}
+          contentArrowStyle={{ borderRight: '7px solid #F59E0B' }}
         >
-          <h3 style={{ color: `#F59E0B` }}>Commercial de détail</h3>
-          <h4 style={{ color: `#ccc` }}>GiFi · CDI</h4>
-          <p style={{ color: `#ddd` }}>L`Arbresle, Auvergne-Rhône-Alpes, France</p>
-          <div style={{ marginTop: `10px` }}>
-            <p style={{ fontSize: `0.9rem`, color: `#aaa` }}>
-              Compétences : Gestion des stocks · Vente · Gestion du stockage · Prévisions
+          <h3 style={{ color: '#F59E0B' }}>Commercial de détail</h3>
+          <h4 style={{ color: '#ccc' }}>GiFi · CDI</h4>
+          <p style={{ color: '#ddd' }}>L'Arbresle, Auvergne-Rhône-Alpes, France</p>
+          <p>
+            - Conseil et accompagnement des clients dans leurs achats<br/>
+            - Gestion et optimisation des stocks en rayon<br/>
+            - Participation à l'aménagement et à la mise en valeur des produits<br/>
+            - Organisation et participation aux inventaires périodiques<br/>
+            - Traitement des livraisons et réapprovisionnement des rayons
+          </p>
+          <div style={{ marginTop: '10px' }}>
+            <p style={{ fontSize: '0.9rem', color: '#aaa' }}>
+              Compétences : Gestion des stocks · Vente · Gestion du stockage · Prévisions · Service client · Merchandising
             </p>
           </div>
         </VerticalTimelineElement>
