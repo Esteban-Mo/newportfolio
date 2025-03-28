@@ -10,6 +10,7 @@ import StarIcon from "@mui/icons-material/Star";
 import VolunteerActivismIcon from "@mui/icons-material/VolunteerActivism";
 import SecurityIcon from "@mui/icons-material/Security";
 import StoreIcon from "@mui/icons-material/Store";
+import Link from "next/link";
 
 export default function Parcours() {
   // Animation au scroll
@@ -323,7 +324,7 @@ export default function Parcours() {
         justifyContent: `center`,
         gap: `20px`
       }}>
-        <a href="/" style={{
+        <Link href="/" style={{
           padding: `12px 24px`,
           backgroundColor: `rgba(96, 165, 250, 0.2)`,
           borderRadius: `8px`,
@@ -334,7 +335,7 @@ export default function Parcours() {
           transition: `all 0.3s ease`
         }}>
           Retour à l`accueil
-        </a>
+        </Link>
       </div>
     </div>
   );
