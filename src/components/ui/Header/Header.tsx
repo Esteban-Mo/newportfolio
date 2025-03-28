@@ -26,6 +26,11 @@ export default function Header() {
             setActiveSection('presentation');
             return;
         }
+        
+        if (pathname === '/parcours') {
+            setActiveSection('parcours');
+            return;
+        }
 
         const handleScroll = () => {
             // Réalisations temporairement retiré
