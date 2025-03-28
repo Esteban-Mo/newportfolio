@@ -4,6 +4,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import CodeIcon from '@mui/icons-material/Code';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
 import PersonIcon from '@mui/icons-material/Person';
+import WorkHistoryIcon from '@mui/icons-material/WorkHistory';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -123,6 +124,15 @@ export default function Header() {
                 >
                     <PersonIcon /> Présentation
                 </a>
+                <a 
+                    href="/parcours"
+                    className={styles.link}
+                    style={{ color: getLinkColor(`parcours`, `parcours`), cursor: `pointer` }}
+                    onMouseEnter={() => setHoveredLink(`parcours`)}
+                    onMouseLeave={() => setHoveredLink(null)}
+                >
+                    <WorkHistoryIcon /> Parcours
+                </a>
                 <div 
                     style={{ position: 'relative' }}
                     onMouseEnter={() => setShowCompetencesMenu(true)}
@@ -178,6 +188,24 @@ export default function Header() {
                     onMouseLeave={() => setHoveredLink(null)}
                 >
                     <HomeIcon /> Accueil
+                </a>
+                <a 
+                    href="/presentation"
+                    className={`${styles.link} ${styles.mobileLink}`}
+                    style={{ color: getLinkColor(`presentation`, `presentation`), cursor: `pointer` }}
+                    onMouseEnter={() => setHoveredLink(`presentation`)}
+                    onMouseLeave={() => setHoveredLink(null)}
+                >
+                    <PersonIcon /> Présentation
+                </a>
+                <a 
+                    href="/parcours"
+                    className={`${styles.link} ${styles.mobileLink}`}
+                    style={{ color: getLinkColor(`parcours`, `parcours`), cursor: `pointer` }}
+                    onMouseEnter={() => setHoveredLink(`parcours`)}
+                    onMouseLeave={() => setHoveredLink(null)}
+                >
+                    <WorkHistoryIcon /> Parcours
                 </a>
                 <div 
                     style={{ position: 'relative' }}

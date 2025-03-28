@@ -1,0 +1,72 @@
+/* Styles personnalisés pour la chronologie */
+
+/* Amélioration des animations */
+.vertical-timeline-element {
+  transition: all 0.5s ease-in-out !important;
+}
+
+.vertical-timeline-element:hover {
+  transform: scale(1.02);
+}
+
+/* Personnalisation des étiquettes de date */
+.vertical-timeline-element-date {
+  color: #ddd !important;
+  font-weight: bold !important;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5) !important;
+  padding: 5px 10px !important;
+  border-radius: 4px !important;
+  background: rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Amélioration des contenus pour un meilleur contraste */
+.vertical-timeline-element-content {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5) !important;
+  transition: all 0.3s ease !important;
+}
+
+.vertical-timeline-element-content:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7) !important;
+}
+
+/* Animation des icônes */
+.vertical-timeline-element-icon {
+  transition: all 0.3s ease !important;
+}
+
+.vertical-timeline-element:hover .vertical-timeline-element-icon {
+  transform: scale(1.2) !important;
+}
+
+/* Responsive design adjustments */
+@media only screen and (max-width: 1169px) {
+  .vertical-timeline-element-date {
+    display: block !important;
+    float: none !important;
+    margin-top: 10px !important;
+    margin-left: 0 !important;
+    text-align: center !important;
+  }
+}
+
+/* Style spécial pour le dernier élément */
+.vertical-timeline-element:last-child .vertical-timeline-element-icon {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+  
+  70% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
+  }
+  
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+} 
