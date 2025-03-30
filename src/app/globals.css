@@ -17,7 +17,7 @@
 }
 
 /* Protection contre la copie */
-.no-copy-enabled * {
+.enhanced-ui * {
   /* Désactiver la sélection de texte */
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -31,7 +31,45 @@
   user-drag: none;
 }
 
-.no-copy-enabled img {
+/* Protections des DevTools */
+/* Suppression des règles trop agressives */
+
+/* Protection passive des DevTools */
+.enhanced-ui p::after,
+.enhanced-ui h1::after,
+.enhanced-ui h2::after,
+.enhanced-ui h3::after,
+.enhanced-ui h4::after,
+.enhanced-ui h5::after,
+.enhanced-ui h6::after,
+.enhanced-ui span::after,
+.enhanced-ui div::after,
+.enhanced-ui li::after,
+.enhanced-ui a::after {
+  content: " \2060\2061\2062\2063\200B\200C\200D\FEFF";
+  display: inline;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  font-size: 0;
+}
+
+/* Protection contre l'inspection */
+@media print {
+  body * {
+    display: none !important;
+  }
+  body:after {
+    content: "Impression indisponible" !important;
+    display: block !important;
+    font-size: 48px !important;
+    text-align: center !important;
+    margin-top: 40vh !important;
+  }
+}
+
+.enhanced-ui img {
   pointer-events: none;
 }
 
@@ -183,7 +221,46 @@ a:hover::after {
   }
 }
 
-/* Protection des images */
-.no-copy-enabled img {
-  pointer-events: none;
+/* Protection via obscurcissement du texte */
+.enhanced-ui .protected-text {
+  -webkit-text-security: disc;
+  text-security: disc;
+}
+
+/* Style qui n'apparaît que dans les DevTools */
+html:has(input:focus) body {
+  filter: blur(10px);
+}
+
+.enhanced-ui p::before,
+.enhanced-ui h1::before,
+.enhanced-ui h2::before,
+.enhanced-ui h3::before,
+.enhanced-ui h4::before,
+.enhanced-ui h5::before,
+.enhanced-ui h6::before,
+.enhanced-ui span::before,
+.enhanced-ui div::before,
+.enhanced-ui li::before,
+.enhanced-ui a::before {
+  content: " \2060\2061\2062\2063\200B\200C\200D\FEFF";
+  display: inline;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  font-size: 0;
+}
+
+.enhanced-ui p,
+.enhanced-ui h1,
+.enhanced-ui h2,
+.enhanced-ui h3,
+.enhanced-ui h4,
+.enhanced-ui h5,
+.enhanced-ui h6,
+.enhanced-ui span,
+.enhanced-ui div {
+  word-spacing: 0.1em;
+  letter-spacing: 0.01em;
 } 

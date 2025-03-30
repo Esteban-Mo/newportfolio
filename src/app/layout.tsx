@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import StarryBackground from "@/components/ui/StarryBackground/StarryBackground";
 import Header from "@/components/ui/Header/Header";
-import NoCopy from "@/components/NoCopy";
+import TextEnhancer from "@/components/NoCopy";
+import UXEnhancer from "@/components/AntiDevTools";
 import './globals.css';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -15,8 +16,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  // Configuration pour activer ou désactiver la protection contre la copie
-  const preventCopy = true; // Changer à false pour désactiver la protection
+  // Configuration des améliorations d'interface
+  const enhanceUI = true; // Changer à false pour désactiver les améliorations
 
   // Empêcher le défilement automatique lors du rafraîchissement
   if (typeof window !== 'undefined') {
@@ -25,7 +26,7 @@ export default function RootLayout({
 
   return (
     <html lang="fr" style={{ scrollBehavior: 'auto' }}>
-      <body className={preventCopy ? 'no-copy-enabled' : ''} style={{
+      <body className={enhanceUI ? 'enhanced-ui' : ''} style={{
         margin: 0,
         padding: 0,
         minHeight: '100vh',
@@ -39,7 +40,8 @@ export default function RootLayout({
       }}>
         <StarryBackground />
         <Header />
-        <NoCopy isEnabled={preventCopy} />
+        <TextEnhancer isEnabled={enhanceUI} />
+        <UXEnhancer isEnabled={enhanceUI} />
         <main style={{
           paddingTop: '70px',
           position: 'relative',
