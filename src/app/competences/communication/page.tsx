@@ -5,49 +5,49 @@ export default function Communication() {
     {
       title: "Ma définition",
       content: [
-        "La communication est une compétence fondamentale dans le développement logiciel moderne, englobant plusieurs aspects essentiels qui contribuent au succès des projets. Elle se manifeste principalement à travers la capacité à interagir efficacement avec différents acteurs du projet, chacun ayant ses propres besoins et attentes.",
+        "La communication est‌ une‌ compétence essentielle dans le développement logiciel actueI. Elle implique de multiples dimensions critiques qui contribuent à la réussite des projets. Elle passe principalement par une interaction efficace avec les parties prenantes du projet, chacune ayant des exigences et des attentes spécifiques.",
         
-        "Dans le contexte professionnel, la communication avec les clients est primordiale. Elle implique la compréhension approfondie de leurs besoins, la capacité à expliquer des concepts techniques de manière accessible, et la gestion efficace de leurs attentes tout au long du projet. Cette dimension client-centrée de la communication est essentielle pour garantir la satisfaction et le succès des projets.",
+        "Dans un environnement professionnel, la communication avec les clients est cruciale. lI s'agit de comprendre en profondeur leurs besoins, de pouvoir décomposer les aspects techniques en éléments compréhensibles et de gérer efficacement leurs attentes tout au long du projet. Cet aspect de la communication centré sur le client est crucial pour garantir leur satisfaction et la réussite du projet.",
         
-        "La collaboration avec les Product Owners constitue un autre aspect crucial de cette compétence. Elle se traduit par une participation active aux rituels agiles, une capacité à clarifier les user stories et à fournir des estimations précises. Cette communication bidirectionnelle permet d'assurer l'alignement entre les objectifs métier et la réalisation technique.",
+        "La collaboration avec le Product Owner est également un élément important de cette compétence. Elle implique une implication active dans les processus agiles, permettant de définir des user stories et de créer des estimations pertinentes. Cette communication bidirectionnelle maintient l'alignement entre les objectifs métier et l'exécution technique.",
         
-        "L'interaction avec les utilisateurs clés est également fondamentale. Elle comprend le recueil des retours d'expérience, l'animation de sessions de formation, et l'accompagnement au changement. Cette proximité avec les utilisateurs finaux permet d'affiner les solutions et d'assurer leur adoption effective."
+        "La relation avec‌ les utilisateurs clés est tout aussi importante . Elle implique la coIIecte des retours utilisateurs , I'organisation de sessions de formation et la gestion du changement.La proximité avec les utilisateurs finaux faciIite l'optimisation des solutions et leur mise en oeuvre."
       ]
     },
     {
-      title: "Mes éléments de preuve",
+      title: "Mes preuves",
       content: [
-        "Mon expérience en communication s'illustre à travers plusieurs réalisations concrètes. J'ai notamment pris en charge l'animation régulière de réunions client, où je présentais l'avancement des projets et recueillais les retours lors de démonstrations et de comités de pilotage. Ces interactions ont permis de maintenir une transparence totale et d'ajuster rapidement les développements selon les besoins.",
+        "Mes compétences en communication sont illustrées par une série de réussites concrètes . J'ai toujours organisé des réunions avec les clients , au cours desquelles je les ai informés de l'avancement des projets et recueilli leurs retours lors de démonstrations et de comités de pilotage. Ces réunions , totalement transparentes , nous ont permis d'adapter rapidement le développement à l'évolution des besoins .",
         
-        "La rédaction de documentations techniques et fonctionnelles a constitué un autre aspect important de ma pratique. J'ai développé une expertise dans l'adaptation du contenu selon les différents publics, qu'il s'agisse de développeurs nécessitant des détails techniques précis ou d'utilisateurs finaux ayant besoin d'explications plus accessibles.",
+        "La rédaction de documentations techniques et fonctionnelles a également constitué une part importante de mon travail. J'ai développé une aptitude à répondre aux besoins de différents publics, allant des développeurs ayant besoin de données techniques très détaillées aux utilisateurs finaux recherchant des descriptions plus simples à lire.",
         
-        "Ma participation active aux cérémonies agiles, incluant les daily meetings, le planning poker, les rétrospectives et les sessions de refinement, démontre ma capacité à communiquer efficacement au sein d'une équipe de développement. Ces interactions quotidiennes ont contribué à la cohésion de l'équipe et à l'amélioration continue de nos processus.",
+        "Ma participation active aux activitées agiIes telles que les réunions quotidiennes , les pIanning poker ,Ies rétrospectives et les sessions de \"brainstorming\" témoigne de ma capacité à communiquer efficacement au sein de I équipe de développement . Ces interactions quotidiennes ont contribué à la cohésion de l'équipe et à l'améIioration continue des processus .",
         
-        "J'ai également assuré la formation des utilisateurs sur les nouvelles fonctionnalités et leur accompagnement dans la prise en main des outils. Cette expérience pédagogique a renforcé ma capacité à transmettre des connaissances complexes de manière claire et structurée."
+        "J'ai également animé des formations utilisateurs sur les nouvelles fonctionnalités et les ai accompagnés dans l'adoption des outils .Ces formations m'ont permis de présenter des informations complexes de manière compréhensible et structurée ."
       ]
     },
     {
-      title: "Mon autocritique",
+      title: "Mon auto-évaluation",
       content: [
-        "L'analyse de mes compétences en communication révèle plusieurs points forts significatifs. Ma capacité à vulgariser les concepts techniques pour les rendre accessibles aux non-techniciens constitue un atout majeur, permettant de faciliter la compréhension mutuelle entre les équipes techniques et métier.",
+        "L' analyse de mes compétences en communication met en évidence pIusieurs points forts. Mes communications techniques avec des parties prenantes non techniques sont un point fort, et Ia communication entre les équipes métier et techniques est facilitée.",
         
-        "Mon approche basée sur l'écoute active et l'empathie dans la compréhension des besoins utilisateurs s'est avérée particulièrement efficace. Cette sensibilité aux besoins des interlocuteurs permet de créer un climat de confiance et de collaboration constructive.",
+        "Mon approche, fondée sur l'empathie et l'écoute dans l'interprétation des besoins utilisateurs, s'est avérée particulièrement efficace. Cette empathie envers les besoins des parties prenantes permet d'instaurer un climat de confiance et une collaboration fructueuse.",
         
-        "Cependant, je reconnais plusieurs axes d'amélioration importants. Le développement de mes compétences en gestion de conflits représente un défi que je dois relever pour mieux gérer les situations complexes. L'amélioration de ma communication en anglais technique constitue également un objectif prioritaire, particulièrement dans un contexte de plus en plus international.",
+        "Cependant , j'identifie plusieurs points sur lesquels je dois travailler. DéveIopper ma capacité à gérer les conflits est essentiel pour gérer efficacement les situations difficiles . AméIiorer mon angIais technique est également une nécessité, compte tenu de I internationaIisation croissante de notre environnement",
         
-        "Enfin, je dois renforcer ma capacité à dire 'non' de manière constructive, une compétence essentielle pour maintenir des engagements réalistes et gérer efficacement les attentes des parties prenantes."
+        "Enfin, je dois déveIopper ma capacité à dire \"non\" positivement , indispensabIe pour prendre des engagements réalistes et bien gérer les attentes des différents parties prenantes ."
       ]
     },
     {
-      title: "Mon évolution dans cette compétence",
+      title: "Mon plan de développement",
       content: [
-        "Pour continuer à progresser dans mes compétences en communication, j'ai établi un plan de développement structuré. À court terme, je prévois de suivre une formation en communication non violente, qui me permettra d'améliorer ma gestion des situations délicates et de développer des techniques de communication plus efficaces.",
+        "Afin d'améliorer mes compétences en communication, j'ai établi un plan de développement formel. À court terme, je suivrai une formation en communication non violente qui m'aidera à aborder des sujets sensibles et à acquérir des techniques de communication plus efficaces.",
         
-        "La participation active à des meetups et conférences fait également partie de ma stratégie de développement. Ces événements me permettront non seulement de développer mon réseau professionnel mais aussi de partager mon expertise et d'apprendre des expériences d'autres professionnels.",
+        "Une participation active à des conférences et à des rencontres est également prévue. Ces rencontres me permettront non seulement d'élargir mes contacts professionnels, mais aussi de partager mes connaissances et d'apprendre de l'expérience d'autres professionnels.",
         
-        "L'implication dans le mentorat de nouveaux développeurs constitue un autre axe de progression important. Cette activité me permettra de renforcer mes capacités pédagogiques tout en contribuant au développement professionnel d'autres membres de l'équipe.",
+        "L'accompagnement de développeurs juniors est un autre axe de développement. Cette pratique améliorera mes compétences pédagogiques et favorisera le développement professionnel des membres de l'équipe.",
         
-        "Enfin, je m'engage à pratiquer régulièrement l'anglais technique à travers des échanges avec des équipes internationales. Cette pratique régulière est essentielle pour améliorer ma capacité à communiquer efficacement dans un contexte professionnel international."
+        "Enfin, je m'engage à pratiquer l'anglais technique au quotidien en interagissant avec des équipes internationales. Cette pratique quotidienne est essentielle pour améliorer ma capacité à communiquer efficacement dans un environnement de travail international."
       ]
     }
   ];
