@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import StarryBackground from "@/components/ui/StarryBackground/StarryBackground";
 import Header from "@/components/ui/Header/Header";
+import NoCopy from "@/components/NoCopy";
 import './globals.css';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -14,6 +15,9 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  // Configuration pour activer ou désactiver la protection contre la copie
+  const preventCopy = true; // Changer à false pour désactiver la protection
+
   // Empêcher le défilement automatique lors du rafraîchissement
   if (typeof window !== 'undefined') {
     window.history.scrollRestoration = 'manual';
@@ -21,7 +25,7 @@ export default function RootLayout({
 
   return (
     <html lang="fr" style={{ scrollBehavior: 'auto' }}>
-      <body style={{
+      <body className={preventCopy ? 'no-copy-enabled' : ''} style={{
         margin: 0,
         padding: 0,
         minHeight: '100vh',
@@ -35,6 +39,7 @@ export default function RootLayout({
       }}>
         <StarryBackground />
         <Header />
+        <NoCopy isEnabled={preventCopy} />
         <main style={{
           paddingTop: '70px',
           position: 'relative',
